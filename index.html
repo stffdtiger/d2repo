@@ -13,13 +13,18 @@ button { background-color: silver; color: #262626; padding: 10px; border: 1px so
 table  { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
 th, td { border: 1px solid #262626; padding: 2px; }
 
+#div-page   { height: 100vh; display: flex; align-items: center; justify-content: center; }
+#div-toggle { position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; z-index: 1; }
+
+.container-breakpoints         { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
+.container-breakpoints > table { flex: 0 100%; }
+
+.container-crafting         { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
+.container-crafting > table { flex: 0 25%; }
+.container-crafting > div   { flex: 0 100%; }
+
 .hidden { display: none; }
 .show   { display: block; }
-
-.container-breakpoints > table { flex: 1 100%; }
-
-.container-crafting > table { flex: 1 25%; }
-.container-crafting > div   { flex: 1 100%; }
 
 a:link    { color: silver; }
 a:visited { color: silver; }
@@ -29,13 +34,13 @@ a:active  { color: silver; }
 
   </head>
   <body onload="InitDisplay()">
-    <div style="height: 100vh; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
-      <div style="position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; z-index: 1;">
-        <p><button onclick="ToggleInfoSections()">TOGGLE INFO</span></p>
+    <div id="div-page">
+      <div id="div-toggle">
+        <button onclick="ToggleInfoSections()">TOGGLE INFO</button>
       </div>
 <!-- BREAKPOINTS DIV -->
-      <div id="div-breakpoints" class="hidden" style="width: 800px;">
-        <div class="container-breakpoints" style="display: flex; flex-flow: row wrap; align-items: center; justify-content: center;">
+      <div class="hidden" id="div-breakpoints" style="width: 800px;">
+        <div class="container-breakpoints">
           <table>
             <tr>
               <th rowspan="2">Character</th>
@@ -657,12 +662,11 @@ a:active  { color: silver; }
             <p>*1H swinging weapons include 1-handed axes, clubs, 1-handed maces, orbs, scepters, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, and wands.</p>
             <p>Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a></p>
           </div>
-		</div>
+        </div>
       </div>
 <!-- CRAFTING DIV -->
-      <div id="div-crafting" class="hidden" style="width: 1400px;">
-          
-		<div class="container-crafting" style="display: flex; flex-flow: row wrap; align-items: center; justify-content: center;">
+      <div class="hidden" id="div-crafting" style="width: 1400px;">
+        <div class="container-crafting">
           <table>
             <tr>
               <th colspan="3">HIT POWER</th>
