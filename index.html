@@ -13,11 +13,13 @@ button { background-color: silver; color: #262626; padding: 10px; border: 1px so
 table  { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
 th, td { border: 1px solid #262626; padding: 2px; }
 
-#div-page   { height: 100vh; display: flex; align-items: center; justify-content: center; }
-#div-toggle { position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; z-index: 1; }
+#div-page        { height: 100vh; display: flex; align-items: center; justify-content: center; }
+#div-toggle      { position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; z-index: 1; }
+#div-breakpoints { width: 1000px; }
+#div-crafting    { width: 1400px; }
 
-.container-breakpoints         { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
-.container-breakpoints > table { flex: 0 100%; }
+.container-breakpoints         { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.container-breakpoints > table { width: 800px; }
 
 .container-crafting         { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
 .container-crafting > table { flex: 0 25%; }
@@ -39,7 +41,7 @@ a:active  { color: silver; }
         <button onclick="ToggleInfoSections()">TOGGLE INFO</button>
       </div>
 <!-- BREAKPOINTS DIV -->
-      <div class="hidden" id="div-breakpoints" style="width: 800px;">
+      <div class="hidden" id="div-breakpoints">
         <div class="container-breakpoints">
           <table>
             <tr>
@@ -659,13 +661,13 @@ a:active  { color: silver; }
             </tr>
           </table>
           <div>
-            <p>*1H swinging weapons include 1-handed axes, clubs, 1-handed maces, orbs, scepters, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, and wands.</p>
+            <p>*1H swinging weapons are: 1-handed axes, clubs, maces, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, orbs, scepters and wands.</p>
             <p>Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a></p>
           </div>
         </div>
       </div>
 <!-- CRAFTING DIV -->
-      <div class="hidden" id="div-crafting" style="width: 1400px;">
+      <div class="hidden" id="div-crafting">
         <div class="container-crafting">
           <table>
             <tr>
@@ -976,8 +978,8 @@ a:active  { color: silver; }
             </tr>
           </table>
           <div>
-            <p>*Blunt Weapons are Club, Spiked Club, War Hammer, Maul, Great Maul, Mace, Flail, Morning Star, Scepters, Staves and Wands.</p>
-            <p>**Rods are Scepters, Staves and Wands.</p>
+            <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.</p>
+            <p>**Rods are: scepters, staves and wands.</p>
             <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
           </div>
         </div>
