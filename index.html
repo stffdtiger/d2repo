@@ -35,10 +35,12 @@ a:active  { color: silver; }
     </style>
 
   </head>
-  <body onload="InitDisplay()">
+  <body onload="InitDisplay();AddListener();">
     <div id="div-page">
       <div id="div-toggle">
-        <button onclick="ToggleInfoSections()">TOGGLE INFO</button>
+        <button onclick="ActivateSection('breakpoints')">BREAKPOINTS</button>
+        <button onclick="ActivateSection('crafting')">CRAFTING</button>
+        <button onclick="ActivateSection('ethcalc')">ETH CALC</button>
       </div>
 <!-- BREAKPOINTS DIV -->
       <div class="hidden" id="div-breakpoints">
@@ -982,6 +984,14 @@ a:active  { color: silver; }
             <p>**Rods are: scepters, staves and wands.</p>
             <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
           </div>
+        </div>
+      </div>
+<!-- ETHCALC DIV -->
+      <div class="hidden" id="div-ethcalc">
+        <div>
+          <p><input id="calc-input" type="text" /><input id="calc-submit" type="button" value="Calculate" onclick="DoMath(document.getElementById('calc-input').value)" /></p>
+          <p>entered number: <span id="calc-origin" style="font-weight: bold;">0</span></p>
+          <p>before ebug: <span id="calc-result-eth" style="font-weight: bold;">0</span> / non-eth: <span id="calc-result-noneth" style="font-weight: bold;">0</span></p>
         </div>
       </div>
     </div>
