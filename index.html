@@ -35,12 +35,12 @@ a:active  { color: silver; }
     </style>
 
   </head>
-  <body onload="InitDisplay();AddListener();">
+  <body onload="InitDisplay();AddListeners();">
     <div id="div-page">
       <div id="div-toggle">
         <button onclick="ActivateSection('breakpoints')">BREAKPOINTS</button>
         <button onclick="ActivateSection('crafting')">CRAFTING</button>
-        <button onclick="ActivateSection('ethcalc')">ETH CALC</button>
+        <button onclick="ActivateSection('defcalc')">DEFENSE CALC</button>
       </div>
 <!-- BREAKPOINTS DIV -->
       <div class="hidden" id="div-breakpoints">
@@ -987,11 +987,17 @@ a:active  { color: silver; }
         </div>
       </div>
 <!-- ETHCALC DIV -->
-      <div class="hidden" id="div-ethcalc">
+      <div class="hidden" id="div-defcalc">
         <div>
-          <p><input id="calc-input" type="text" /><input id="calc-submit" type="button" value="Calculate" onclick="DoMath(document.getElementById('calc-input').value)" /></p>
-          <p>entered number: <span id="calc-origin" style="font-weight: bold;">0</span></p>
-          <p>before ebug: <span id="calc-result-eth" style="font-weight: bold;">0</span> / non-eth: <span id="calc-result-noneth" style="font-weight: bold;">0</span></p>
+          <div>ENTER AN EBUGGED DEFENSE</div>
+          <div><input id="calc-input-eth" type="text" placeholder="Defense" /><input id="calc-submit-eth" type="button" value="Calculate" onclick="CalcEth(document.getElementById('calc-input-eth').value)" /></div>
+          <div>(input) : final defense: <span id="calc-origin-eth" style="font-weight: bold;">0</span></div>
+          <div>before ebug: <span id="calc-result-eth" style="font-weight: bold;">0</span> / non-eth: <span id="calc-result-noneth" style="font-weight: bold;">0</span></div>
+          <br />
+          <div>ENTER AN ENHANCED DEFENSE & %ED</div>
+          <div><input id="calc-input-ed-defense" type="text" placeholder="Defense" /><input id="calc-input-ed-ed" type="text" placeholder="%ED" /><input id="calc-submit-ed" type="button" value="Calculate" onclick="CalcEd(document.getElementById('calc-input-ed-defense').value, document.getElementById('calc-input-ed-ed').value)" /></div>
+          <div>(input) : final defense: <span id="calc-origin-ed-defense" style="font-weight: bold;">0</span> / %ed: <span id="calc-origin-ed-ed" style="font-weight: bold;">0</span></div>
+          <div>before ed: <span id="calc-result-ed" style="font-weight: bold;">0</span></div>
         </div>
       </div>
     </div>
