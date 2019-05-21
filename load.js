@@ -25,6 +25,12 @@ function AddListeners() {
       document.getElementById("calc-submit-eth").click();
     }
   });
+  document.getElementById("calc-input-ebug").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+      document.getElementById("calc-submit-ebug").click();
+    }
+  });
   document.getElementById("calc-input-ed-defense").addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode == 13) {
@@ -47,12 +53,24 @@ function CalcEth(def) {
     if (result != Math.floor(result)) {
       result = Math.floor(result)+1;
     }
-    document.getElementById("calc-result-eth").innerHTML = result;
+    document.getElementById("calc-result-eth-noneth").innerHTML = result;
+  }
+}
+
+function CalcEbug(def) {
+  document.getElementById("calc-origin-ebug").innerHTML = def;
+  if (def != "" && !isNaN(def)) {
+    var result;
+    result = parseInt(def)*(100/150);
+    if (result != Math.floor(result)) {
+      result = Math.floor(result)+1;
+    }
+    document.getElementById("calc-result-ebug-eth").innerHTML = result;
     result = result*(100/150);
     if (result != Math.floor(result)) {
       result = Math.floor(result)+1;
     }
-    document.getElementById("calc-result-noneth").innerHTML = result;
+    document.getElementById("calc-result-ebug-noneth").innerHTML = result;
   }
 }
 
@@ -65,6 +83,6 @@ function CalcEd(def, ed) {
     if (result != Math.floor(result)) {
       result = Math.floor(result)+1;
     }
-    document.getElementById("calc-result-ed").innerHTML = result;
+    document.getElementById("calc-result-ed-defense").innerHTML = result;
   }
 }
