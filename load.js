@@ -18,71 +18,38 @@ function ActivateSection(section) {
   }
 }
 
-function AddListeners() {
-  document.getElementById("calc-input-eth").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13) {
-      document.getElementById("calc-submit-eth").click();
-    }
-  });
-  document.getElementById("calc-input-ebug").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13) {
-      document.getElementById("calc-submit-ebug").click();
-    }
-  });
-  document.getElementById("calc-input-ed-defense").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13) {
-      document.getElementById("calc-submit-ed").click();
-    }
-  });
-  document.getElementById("calc-input-ed-ed").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode == 13) {
-      document.getElementById("calc-submit-ed").click();
-    }
-  });
+function CalcEth() {
+  var def = parseInt(document.getElementById("calc-input-eth").value);
+  var result;
+  result = def*(100/150);
+  if (result != Math.floor(result)) {
+    result = Math.floor(result)+1;
+  }
+  document.getElementById("calc-result-eth-noneth").innerHTML = result;
 }
 
-function CalcEth(def) {
-  document.getElementById("calc-origin-eth").innerHTML = def;
-  if (def != "" && !isNaN(def)) {
-    var result;
-    result = parseInt(def)*(100/150);
-    if (result != Math.floor(result)) {
-      result = Math.floor(result)+1;
-    }
-    document.getElementById("calc-result-eth-noneth").innerHTML = result;
+function CalcEbug() {
+  var def = parseInt(document.getElementById("calc-input-ebug").value);
+  var result;
+  result = def*(100/150);
+  if (result != Math.floor(result)) {
+    result = Math.floor(result)+1;
   }
+  document.getElementById("calc-result-ebug-eth").innerHTML = result;
+  result = result*(100/150);
+  if (result != Math.floor(result)) {
+    result = Math.floor(result)+1;
+  }
+  document.getElementById("calc-result-ebug-noneth").innerHTML = result;
 }
 
-function CalcEbug(def) {
-  document.getElementById("calc-origin-ebug").innerHTML = def;
-  if (def != "" && !isNaN(def)) {
-    var result;
-    result = parseInt(def)*(100/150);
-    if (result != Math.floor(result)) {
-      result = Math.floor(result)+1;
-    }
-    document.getElementById("calc-result-ebug-eth").innerHTML = result;
-    result = result*(100/150);
-    if (result != Math.floor(result)) {
-      result = Math.floor(result)+1;
-    }
-    document.getElementById("calc-result-ebug-noneth").innerHTML = result;
+function CalcEd() {
+  var def = parseInt(document.getElementById("calc-input-ed-defense").value);
+  var ed = parseInt(document.getElementById("calc-input-ed-ed").value);
+  var result;
+  result = def*(100/(100 + ed));
+  if (result != Math.floor(result)) {
+    result = Math.floor(result)+1;
   }
-}
-
-function CalcEd(def, ed) {
-  document.getElementById("calc-origin-ed-defense").innerHTML = def;
-  document.getElementById("calc-origin-ed-ed").innerHTML = ed;
-  if (def != "" && ed != "" && !isNaN(def) && !isNaN(ed)) {
-    var result;
-    result = parseInt(def)*(100/(100 + parseInt(ed)));
-    if (result != Math.floor(result)) {
-      result = Math.floor(result)+1;
-    }
-    document.getElementById("calc-result-ed-defense").innerHTML = result;
-  }
+  document.getElementById("calc-result-ed-defense").innerHTML = result;
 }

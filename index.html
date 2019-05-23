@@ -989,20 +989,16 @@ a:active  { color: silver; }
 <!-- ETHCALC DIV -->
       <div class="hidden" id="div-defcalc">
         <div>
-          <div>ENTER AN ETHEREAL DEFENSE</div>
-          <div><input id="calc-input-eth" type="text" placeholder="Defense" /><input id="calc-submit-eth" type="button" value="Calculate" onclick="CalcEth(document.getElementById('calc-input-eth').value)" /></div>
-          <div>(input) : final defense <span id="calc-origin-eth" style="font-weight: bold;">0</span></div>
-          <div>non-eth: <span id="calc-result-eth-noneth" style="font-weight: bold;">0</span></div>
-          <br />
-          <div>ENTER AN EBUGGED DEFENSE</div>
-          <div><input id="calc-input-ebug" type="text" placeholder="Defense" /><input id="calc-submit-ebug" type="button" value="Calculate" onclick="CalcEbug(document.getElementById('calc-input-ebug').value)" /></div>
-          <div>(input) : final defense: <span id="calc-origin-ebug" style="font-weight: bold;">0</span></div>
-          <div>before ebug: <span id="calc-result-ebug-eth" style="font-weight: bold;">0</span> / non-eth: <span id="calc-result-ebug-noneth" style="font-weight: bold;">0</span></div>
-          <br />
-          <div>ENTER AN ENHANCED DEFENSE & %ED</div>
-          <div><input id="calc-input-ed-defense" type="text" placeholder="Defense" /><input id="calc-input-ed-ed" type="text" placeholder="%ED" /><input id="calc-submit-ed" type="button" value="Calculate" onclick="CalcEd(document.getElementById('calc-input-ed-defense').value, document.getElementById('calc-input-ed-ed').value)" /></div>
-          <div>(input) : final defense: <span id="calc-origin-ed-defense" style="font-weight: bold;">0</span> / %ed: <span id="calc-origin-ed-ed" style="font-weight: bold;">0</span></div>
-          <div>before ed: <span id="calc-result-ed-defense" style="font-weight: bold;">0</span></div>
+          ENTER AN ETHEREAL DEFENSE<br />
+          <input id="calc-input-eth" type="number" placeholder="Defense" onchange="CalcEth()" /><br />
+          non-eth: <span id="calc-result-eth-noneth" style="font-weight: bold;">0</span><br /><br />
+          ENTER AN EBUGGED DEFENSE<br />
+          <input id="calc-input-ebug" type="number" placeholder="Defense" onchange="CalcEbug()" /><br />
+          before ebug: <span id="calc-result-ebug-eth" style="font-weight: bold;">0</span><br />
+          non-eth: <span id="calc-result-ebug-noneth" style="font-weight: bold;">0</span><br /><br />
+          ENTER AN ENHANCED DEFENSE & %ED<br />
+          <input id="calc-input-ed-defense" type="number" placeholder="Defense" onchange="CalcEd()" /><input id="calc-input-ed-ed" type="number" placeholder="%ED" onchange="CalcEd()" /><br />
+          before ed: <span id="calc-result-ed-defense" style="font-weight: bold;">0</span>
         </div>
       </div>
     </div>
