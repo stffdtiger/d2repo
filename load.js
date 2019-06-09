@@ -47,9 +47,20 @@ function CalcEd() {
   var def = parseInt(document.getElementById("calc-input-ed-defense").value);
   var ed = parseInt(document.getElementById("calc-input-ed-ed").value);
   var result;
-  result = def*(100/(100 + ed));
+  result = def*(100/(100+ed));
   if (result != Math.floor(result)) {
     result = Math.floor(result)+1;
   }
   document.getElementById("calc-result-ed-defense").innerHTML = result;
+}
+
+function CalcEnhance() {
+  var def = parseInt(document.getElementById("calc-input-enhance-defense").value);
+  var ed = parseInt(document.getElementById("calc-input-enhance-ed").value);
+  var result;
+  result = def*((100+ed)/100);
+  if (result != Math.floor(result)) {
+    result = Math.floor(result);
+  }
+  document.getElementById("calc-result-enhance-defense").innerHTML = result;
 }

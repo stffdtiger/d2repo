@@ -989,16 +989,17 @@ a:active  { color: silver; }
 <!-- ETHCALC DIV -->
       <div class="hidden" id="div-defcalc">
         <div>
-          ENTER AN ETHEREAL DEFENSE<br />
-          <input id="calc-input-eth" type="number" placeholder="Defense" onchange="CalcEth()" /><br />
+          <input id="calc-input-eth" type="number" placeholder="Ethereal Defense" onchange="CalcEth()" /><br />
           non-eth: <span id="calc-result-eth-noneth" style="font-weight: bold;">0</span><br /><br />
-          ENTER AN EBUGGED DEFENSE<br />
-          <input id="calc-input-ebug" type="number" placeholder="Defense" onchange="CalcEbug()" /><br />
+          <input id="calc-input-ebug" type="number" placeholder="Ebugged Defense" onchange="CalcEbug()" /><br />
           before ebug: <span id="calc-result-ebug-eth" style="font-weight: bold;">0</span><br />
           non-eth: <span id="calc-result-ebug-noneth" style="font-weight: bold;">0</span><br /><br />
-          ENTER AN ENHANCED DEFENSE & %ED<br />
-          <input id="calc-input-ed-defense" type="number" placeholder="Defense" onchange="CalcEd()" /><input id="calc-input-ed-ed" type="number" placeholder="%ED" onchange="CalcEd()" /><br />
-          before ed: <span id="calc-result-ed-defense" style="font-weight: bold;">0</span>
+          <input id="calc-input-ed-defense" type="number" placeholder="Enhanced Defense" onchange="CalcEd()" /><br />
+          <input id="calc-input-ed-ed" type="number" placeholder="%ED" onchange="CalcEd()" /><br />
+          before ed: <span id="calc-result-ed-defense" style="font-weight: bold;">0</span><br /><br />
+          <input id="calc-input-enhance-defense" type="number" placeholder="Base Defense" onchange="CalcEnhance()" /><br />
+          <input id="calc-input-enhance-ed" type="number" placeholder="%ED" onchange="CalcEnhance()" /><br />
+          after ed: <span id="calc-result-enhance-defense" style="font-weight: bold;">0</span>
         </div>
       </div>
     </div>
