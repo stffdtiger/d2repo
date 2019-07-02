@@ -1,28 +1,45 @@
 function InitDisplay() {
-  document.getElementById("div-crafting").classList.add("show");
+  document.getElementById("div-breakpoints").classList.add("show");
+  document.getElementById("button-breakpoints").classList.add("highlight");
 }
 
 function ActivateSection(section) {
   if (section == "breakpoints") {
     document.getElementById("div-crafting").classList.remove("show");
+    document.getElementById("button-crafting").classList.remove("highlight");
     document.getElementById("div-cuberecipes").classList.remove("show");
+    document.getElementById("button-cuberecipes").classList.remove("highlight");
     document.getElementById("div-defensecalc").classList.remove("show");
+    document.getElementById("button-defensecalc").classList.remove("highlight");
     document.getElementById("div-breakpoints").classList.add("show");
+    document.getElementById("button-breakpoints").classList.add("highlight");
   } else if (section == "crafting") {
     document.getElementById("div-breakpoints").classList.remove("show");
+    document.getElementById("button-breakpoints").classList.remove("highlight");
     document.getElementById("div-cuberecipes").classList.remove("show");
+    document.getElementById("button-cuberecipes").classList.remove("highlight");
     document.getElementById("div-defensecalc").classList.remove("show");
+    document.getElementById("button-defensecalc").classList.remove("highlight");
     document.getElementById("div-crafting").classList.add("show");
+    document.getElementById("button-crafting").classList.add("highlight");
   } else if (section == "cuberecipes") {
     document.getElementById("div-breakpoints").classList.remove("show");
+    document.getElementById("button-breakpoints").classList.remove("highlight");
     document.getElementById("div-crafting").classList.remove("show");
+    document.getElementById("button-crafting").classList.remove("highlight");
     document.getElementById("div-defensecalc").classList.remove("show");
+    document.getElementById("button-defensecalc").classList.remove("highlight");
     document.getElementById("div-cuberecipes").classList.add("show");
+    document.getElementById("button-cuberecipes").classList.add("highlight");
   } else if (section == "defensecalc") {
     document.getElementById("div-breakpoints").classList.remove("show");
+    document.getElementById("button-breakpoints").classList.remove("highlight");
     document.getElementById("div-crafting").classList.remove("show");
+    document.getElementById("button-crafting").classList.remove("highlight");
     document.getElementById("div-cuberecipes").classList.remove("show");
+    document.getElementById("button-cuberecipes").classList.remove("highlight");
     document.getElementById("div-defensecalc").classList.add("show");
+    document.getElementById("button-defensecalc").classList.add("highlight");
   }
 }
 

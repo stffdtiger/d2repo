@@ -14,7 +14,7 @@ th, td { border: 1px solid #262626; padding: 2px; }
 
 #div-page        { height: 100vh; display: flex; align-items: center; justify-content: center; }
 #div-toggle      { position: fixed; top: 0; left: 0; right: 0; margin: 0 auto; z-index: 1; }
-#div-breakpoints { width: 1000px; }
+#div-breakpoints { width: 1100px; }
 #div-crafting    { width: 1400px; }
 
 #container-breakpoints         { display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -26,8 +26,9 @@ th, td { border: 1px solid #262626; padding: 2px; }
 
 #container-cuberecipes { text-align: left; }
 
-.hidden { display: none; }
-.show   { display: block; }
+.hidden      { display: none; }
+.show        { display: block; }
+.highlight   { font-weight: bold; color: #F1F1F1; }
 
 a:link    { color: silver; }
 a:visited { color: silver; }
@@ -39,10 +40,10 @@ a:active  { color: silver; }
   <body onload="InitDisplay()">
     <div id="div-page">
       <div id="div-toggle">
-        <button onclick="ActivateSection('breakpoints')">BREAKPOINTS</button>
-        <button onclick="ActivateSection('crafting')">CRAFTING</button>
-        <button onclick="ActivateSection('cuberecipes')">CUBE RECIPES</button>
-        <button onclick="ActivateSection('defensecalc')">DEFENSE CALC</button>
+        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">BREAKPOINTS</button>
+        <button id="button-crafting" onclick="ActivateSection('crafting')">CRAFTING</button>
+        <button id="button-cuberecipes" onclick="ActivateSection('cuberecipes')">CUBE RECIPES</button>
+        <button id="button-defensecalc" onclick="ActivateSection('defensecalc')">DEFENSE CALC</button>
       </div>
 <!-- BREAKPOINTS DIV -->
       <div class="hidden" id="div-breakpoints">
@@ -1014,11 +1015,6 @@ a:active  { color: silver; }
           2 Ber Runes + Flawless Sapphire -> Jah Rune<br />
           2 Jah Runes + Flawless Ruby -> Cham Rune<br />
           2 Cham Runes + Flawless Emerald -> Zod Rune<br /><br />
-          <span style="font-weight: bold;">Gear Socketing:</span><br />
-          Body Armor: Tal Rune + Thul Rune + Perfect Topaz<br />
-          Weapon: Ral Rune + Amn Rune + Perfect Amethyst<br />
-          Helm: Ral Rune + Thul Rune + Perfect Sapphire<br />
-          Shield: Tal Rune + Amn Rune + Perfect Ruby<br /><br />
           <span style="font-weight: bold;">Gear Upgrades:</span><br />
           Rare Weapon (Normal to Exceptional): Ort Rune + Amn Rune + Perfect Sapphire<br />
           Rare Weapon (Exceptional to Elite): Fal Rune + Um Rune + Perfect Sapphire<br />
@@ -1028,11 +1024,17 @@ a:active  { color: silver; }
           Unique Weapon (Exceptional to Elite): Lum Rune + Pul Rune + Perfect Emerald<br />
           Unique Armor (Normal to Exceptional): Tal Rune + Shael Rune + Perfect Diamond<br />
           Unique Armor (Exceptional to Elite): Ko Rune + Lem Rune + Perfect Diamond<br /><br />
+          <span style="font-weight: bold;">Gear Socketing:</span><br />
+          Body Armor: Tal Rune + Thul Rune + Perfect Topaz<br />
+          Weapon: Ral Rune + Amn Rune + Perfect Amethyst<br />
+          Helm: Ral Rune + Thul Rune + Perfect Sapphire<br />
+          Shield: Tal Rune + Amn Rune + Perfect Ruby<br /><br />
           <span style="font-weight: bold;">Gear Repair/Recharge:</span><br />
           Repair Weapon: Ort Rune<br />
           Repair Armor: Ral Rune<br />
           Repair + Recharge Weapon: Ort Rune + 1 Chipped Gem<br />
-          Repair + Recharge Armor: Ral Rune + 1 Flawed Gem
+          Repair + Recharge Armor: Ral Rune + 1 Flawed Gem<br /><br />
+          Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/cube.shtml">The Arreat Summit</a>
         </div>
       </div>
 <!-- ETHCALC DIV -->
