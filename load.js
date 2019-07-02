@@ -5,16 +5,24 @@ function InitDisplay() {
 function ActivateSection(section) {
   if (section == "breakpoints") {
     document.getElementById("div-crafting").classList.remove("show");
-    document.getElementById("div-defcalc").classList.remove("show");
+    document.getElementById("div-cuberecipes").classList.remove("show");
+    document.getElementById("div-defensecalc").classList.remove("show");
     document.getElementById("div-breakpoints").classList.add("show");
   } else if (section == "crafting") {
     document.getElementById("div-breakpoints").classList.remove("show");
-    document.getElementById("div-defcalc").classList.remove("show");
+    document.getElementById("div-cuberecipes").classList.remove("show");
+    document.getElementById("div-defensecalc").classList.remove("show");
     document.getElementById("div-crafting").classList.add("show");
-  } else if (section == "defcalc") {
+  } else if (section == "cuberecipes") {
     document.getElementById("div-breakpoints").classList.remove("show");
     document.getElementById("div-crafting").classList.remove("show");
-    document.getElementById("div-defcalc").classList.add("show");
+    document.getElementById("div-defensecalc").classList.remove("show");
+    document.getElementById("div-cuberecipes").classList.add("show");
+  } else if (section == "defensecalc") {
+    document.getElementById("div-breakpoints").classList.remove("show");
+    document.getElementById("div-crafting").classList.remove("show");
+    document.getElementById("div-cuberecipes").classList.remove("show");
+    document.getElementById("div-defensecalc").classList.add("show");
   }
 }
 

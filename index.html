@@ -7,7 +7,6 @@
 
     <style>
 body   { margin: 0; background-color: #262626; color: #F1F1F1; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
-p      { margin: 0; }
 hr     { opacity: 0; }
 button { background-color: silver; color: #262626; padding: 10px; border: 1px solid #262626; cursor: pointer; }
 table  { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
@@ -18,12 +17,14 @@ th, td { border: 1px solid #262626; padding: 2px; }
 #div-breakpoints { width: 1000px; }
 #div-crafting    { width: 1400px; }
 
-.container-breakpoints         { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.container-breakpoints > table { width: 800px; }
+#container-breakpoints         { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+#container-breakpoints > table { width: 800px; }
 
-.container-crafting         { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
-.container-crafting > table { flex: 0 25%; }
-.container-crafting > div   { flex: 0 100%; }
+#container-crafting         { display: flex; flex-flow: row wrap; align-items: center; justify-content: center; }
+#container-crafting > table { flex: 0 25%; }
+#container-crafting > div   { flex: 0 100%; }
+
+#container-cuberecipes { text-align: left; }
 
 .hidden { display: none; }
 .show   { display: block; }
@@ -40,11 +41,12 @@ a:active  { color: silver; }
       <div id="div-toggle">
         <button onclick="ActivateSection('breakpoints')">BREAKPOINTS</button>
         <button onclick="ActivateSection('crafting')">CRAFTING</button>
-        <button onclick="ActivateSection('defcalc')">DEFENSE CALC</button>
+        <button onclick="ActivateSection('cuberecipes')">CUBE RECIPES</button>
+        <button onclick="ActivateSection('defensecalc')">DEFENSE CALC</button>
       </div>
 <!-- BREAKPOINTS DIV -->
       <div class="hidden" id="div-breakpoints">
-        <div class="container-breakpoints">
+        <div id="container-breakpoints">
           <table>
             <tr>
               <th rowspan="2">Character</th>
@@ -663,14 +665,14 @@ a:active  { color: silver; }
             </tr>
           </table>
           <div>
-            <p>*1H swinging weapons are: 1-handed axes, clubs, maces, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, orbs, scepters and wands.</p>
-            <p>Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a></p>
+            *1H swinging weapons are: 1-handed axes, clubs, maces, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, orbs, scepters and wands.<br />
+            Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a>
           </div>
         </div>
       </div>
 <!-- CRAFTING DIV -->
       <div class="hidden" id="div-crafting">
-        <div class="container-crafting">
+        <div id="container-crafting">
           <table>
             <tr>
               <th colspan="3">HIT POWER</th>
@@ -980,14 +982,61 @@ a:active  { color: silver; }
             </tr>
           </table>
           <div>
-            <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.</p>
-            <p>**Rods are: scepters, staves and wands.</p>
-            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
+            *Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br />
+            **Rods are: scepters, staves and wands.<br />
+            Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a>
           </div>
         </div>
       </div>
+      <div class="hidden" id="div-cuberecipes">
+        <div id="container-cuberecipes">
+          <span style="font-weight: bold;">Rune Upgrades:</span><br />
+          3 Thul Runes + Chipped Topaz -> Amn Rune<br />
+          3 Amn Runes + Chipped Amethyst -> Sol Rune<br />
+          3 Sol Runes + Chipped Sapphire -> Shael Rune<br />
+          3 Shael Runes + Chipped Ruby -> Dol Rune<br />
+          3 Dol Runes + Chipped Emerald -> Hel Rune<br />
+          3 Hel Runes + Chipped Diamond -> Io Rune<br />
+          3 Io Runes + Flawed Topaz -> Lum Rune<br />
+          3 Lum Runes + Flawed Amethyst -> Ko Rune<br />
+          3 Ko Runes + Flawed Sapphire -> Fal Rune<br />
+          3 Fal Runes + Flawed Ruby -> Lem Rune<br />
+          3 Lem Runes + Flawed Emerald -> Pul Rune<br />
+          2 Pul Runes + Flawed Diamond -> Um Rune<br />
+          2 Um Runes + Topaz -> Mal Rune<br />
+          2 Mal Runes + Amethyst -> Ist Rune<br />
+          2 Ist Runes + Sapphire -> Gul Rune<br />
+          2 Gul Runes + Ruby -> Vex Rune<br />
+          2 Vex Runes + Emerald -> Ohm Rune<br />
+          2 Ohm Runes + Diamond -> Lo Rune<br />
+          2 Lo Runes + Flawless Topaz -> Sur Rune<br />
+          2 Sur Runes + Flawless Amethyst -> Ber Rune<br />
+          2 Ber Runes + Flawless Sapphire -> Jah Rune<br />
+          2 Jah Runes + Flawless Ruby -> Cham Rune<br />
+          2 Cham Runes + Flawless Emerald -> Zod Rune<br /><br />
+          <span style="font-weight: bold;">Gear Socketing:</span><br />
+          Body Armor: Tal Rune + Thul Rune + Perfect Topaz<br />
+          Weapon: Ral Rune + Amn Rune + Perfect Amethyst<br />
+          Helm: Ral Rune + Thul Rune + Perfect Sapphire<br />
+          Shield: Tal Rune + Amn Rune + Perfect Ruby<br /><br />
+          <span style="font-weight: bold;">Gear Upgrades:</span><br />
+          Rare Weapon (Normal to Exceptional): Ort Rune + Amn Rune + Perfect Sapphire<br />
+          Rare Weapon (Exceptional to Elite): Fal Rune + Um Rune + Perfect Sapphire<br />
+          Rare Armor (Normal to Exceptional): Ral Rune + Thul Rune + Perfect Amethyst<br />
+          Rare Armor (Exceptional to Elite): Ko Rune + Pul Rune + Perfect Amethyst<br />
+          Unique Weapon (Normal to Exceptional): Ral Rune + Sol Rune + Perfect Emerald<br />
+          Unique Weapon (Exceptional to Elite): Lum Rune + Pul Rune + Perfect Emerald<br />
+          Unique Armor (Normal to Exceptional): Tal Rune + Shael Rune + Perfect Diamond<br />
+          Unique Armor (Exceptional to Elite): Ko Rune + Lem Rune + Perfect Diamond<br /><br />
+          <span style="font-weight: bold;">Gear Repair/Recharge:</span><br />
+          Repair Weapon: Ort Rune<br />
+          Repair Armor: Ral Rune<br />
+          Repair + Recharge Weapon: Ort Rune + 1 Chipped Gem<br />
+          Repair + Recharge Armor: Ral Rune + 1 Flawed Gem
+        </div>
+      </div>
 <!-- ETHCALC DIV -->
-      <div class="hidden" id="div-defcalc">
+      <div class="hidden" id="div-defensecalc">
         <div>
           <input id="calc-input-eth" type="number" placeholder="Ethereal Defense" onchange="CalcEth()" /><br />
           non-eth: <span id="calc-result-eth-noneth" style="font-weight: bold;">0</span><br /><br />
