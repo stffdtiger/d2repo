@@ -89,3 +89,7 @@ function CalcEnhance() {
   }
   document.getElementById("calc-result-enhance-defense").innerHTML = result;
 }
+
+function MakeMeFamous() {
+  document.getElementById("button-contact").classList.toggle("highlight");
+}
