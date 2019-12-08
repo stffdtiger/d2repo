@@ -7,9 +7,9 @@ function InitDisplay() {
 
 function ActivateSection(section) {
   document.getElementById("div-"+opensection).classList.remove("show");
-  document.getElementById("div-"+opensection).classList.remove("highlight");
+  document.getElementById("button-"+opensection).classList.remove("highlight");
   document.getElementById("div-"+section).classList.add("show");
-  document.getElementById("div-"+section).classList.add("highlight");
+  document.getElementById("button-"+section).classList.add("highlight");
   opensection = section;
 }
 
