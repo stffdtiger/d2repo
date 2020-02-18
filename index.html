@@ -29,7 +29,7 @@ p.runealign { margin: 93px 0px 0px 0px; }
 #container-craftingrune     { margin: 0 20px 5px 0; white-space: nowrap; }
 #craftingrunetables > table { display: inline-table; }
 
-#container-cuberecipes { margin: 0 20px 5px 0; white-space: nowrap; text-align: left; }
+#container-cube { margin: 0 20px 5px 0; white-space: nowrap; text-align: left; }
 
 .hidden      { display: none; }
 .show        { display: block; }
@@ -42,15 +42,15 @@ a:active  { color: silver; }
     </style>
 
   </head>
-  <body onload="InitDisplay()">
+  <body onload="ActivateSection('breakpoints')">
     <div id="div-page">
       <div id="div-toggle">
-        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">BREAKPOINTS</button>
-        <button id="button-craftingitem" onclick="ActivateSection('craftingitem')">CRAFTING (by item)</button>
-        <button id="button-craftingrune" onclick="ActivateSection('craftingrune')">CRAFTING (by rune)</button>
-        <button id="button-cuberecipes" onclick="ActivateSection('cuberecipes')">CUBE RECIPES</button>
-        <button id="button-defensecalc" onclick="ActivateSection('defensecalc')">DEFENSE CALC</button>
-        <button id="button-contact" onclick="MakeMeFamous()">DISCORD CONTACT: stuffedtiger#9803</button>
+        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">Breakpoints</button>
+        <button id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
+        <button id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
+        <button id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
+        <button id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
+        <button id="button-contact" onclick="MakeMeFamous()">Discord Contact: stuffedtiger#9803</button>
       </div>
 <!-- CONTENT DIV -->
       <div id="div-content">
@@ -1335,8 +1335,8 @@ a:active  { color: silver; }
           </div>
         </div>
 <!-- CUBE RECIPES DIV -->
-        <div class="hidden" id="div-cuberecipes">
-          <div id="container-cuberecipes">
+        <div class="hidden" id="div-cube">
+          <div id="container-cube">
             <span style="font-weight: bold;">Rune Upgrades:</span><br>
             3 Thul Runes + Chipped Topaz -> Amn Rune<br>
             3 Amn Runes + Chipped Amethyst -> Sol Rune<br>
@@ -1383,20 +1383,25 @@ a:active  { color: silver; }
             Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/cube.shtml">The Arreat Summit</a>
           </div>
         </div>
-  <!-- DEFENSE CALC DIV -->
-        <div class="hidden" id="div-defensecalc">
+  <!-- CALCULATOR DIV -->
+        <div class="hidden" id="div-calc">
           <div>
+            <span style="font-weight: bold;">Item Defense</span><br><br>
             <input id="calc-input-eth" type="number" placeholder="Ethereal Defense" onchange="CalcEth()"><br>
-            non-eth: <span id="calc-result-eth-noneth" style="font-weight: bold;">0</span><br><br>
+            non-eth: <span id="calc-result-eth" style="font-weight: bold;">0</span><br><br>
             <input id="calc-input-ebug" type="number" placeholder="Ebugged Defense" onchange="CalcEbug()"><br>
             before ebug: <span id="calc-result-ebug-eth" style="font-weight: bold;">0</span><br>
             non-eth: <span id="calc-result-ebug-noneth" style="font-weight: bold;">0</span><br><br>
-            <input id="calc-input-ed-defense" type="number" placeholder="Defense" onchange="CalcEd()"><br>
-            <input id="calc-input-ed-ed" type="number" placeholder="%ED" onchange="CalcEd()"><br>
-            before ed: <span id="calc-result-ed-defense" style="font-weight: bold;">0</span><br><br>
-            <input id="calc-input-enhance-defense" type="number" placeholder="Defense" onchange="CalcEnhance()"><br>
-            <input id="calc-input-enhance-ed" type="number" placeholder="%ED" onchange="CalcEnhance()"><br>
-            after ed: <span id="calc-result-enhance-defense" style="font-weight: bold;">0</span>
+            <input id="calc-input-beforeed-defense" type="number" placeholder="Defense" onchange="CalcBeforeEd()"><br>
+            <input id="calc-input-beforeed-ed" type="number" placeholder="%ED" onchange="CalcBeforeEd()"><br>
+            before ed: <span id="calc-result-beforeed" style="font-weight: bold;">0</span><br><br>
+            <input id="calc-input-aftered-defense" type="number" placeholder="Defense" onchange="CalcAfterEd()"><br>
+            <input id="calc-input-aftered-ed" type="number" placeholder="%ED" onchange="CalcAfterEd()"><br>
+            after ed: <span id="calc-result-aftered" style="font-weight: bold;">0</span><br><br>
+            <span style="font-weight: bold;">Affix Level</span><br><br>
+            <input id="calc-input-affix-ilvl" type="number" placeholder="ilvl" onchange="CalcAffixLevel()"><br>
+            <input id="calc-input-affix-qlvl" type="number" placeholder="qlvl" onchange="CalcAffixLevel()"><br>
+            affix lvl: <span id="calc-result-affix" style="font-weight: bold;">0</span>
           </div>
         </div>
       </div>

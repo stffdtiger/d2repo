@@ -1,13 +1,10 @@
-var opensection = "breakpoints";
-
-function InitDisplay() {
-  document.getElementById("div-breakpoints").classList.add("show");
-  document.getElementById("button-breakpoints").classList.add("highlight");
-}
+var opensection = "";
 
 function ActivateSection(section) {
-  document.getElementById("div-"+opensection).classList.remove("show");
-  document.getElementById("button-"+opensection).classList.remove("highlight");
+  if (opensection != "") {
+    document.getElementById("div-"+opensection).classList.remove("show");
+    document.getElementById("button-"+opensection).classList.remove("highlight");
+  }
   document.getElementById("div-"+section).classList.add("show");
   document.getElementById("button-"+section).classList.add("highlight");
   opensection = section;
@@ -16,48 +13,66 @@ function ActivateSection(section) {
 function CalcEth() {
   var def = parseInt(document.getElementById("calc-input-eth").value);
   var result;
-  result = def*(100/150);
+  result = def * (100 / 150);
   if (result != Math.floor(result)) {
-    result = Math.floor(result)+1;
+    result = Math.floor(result) + 1;
   }
-  document.getElementById("calc-result-eth-noneth").innerHTML = result;
+  document.getElementById("calc-result-eth").innerHTML = result;
 }
 
 function CalcEbug() {
   var def = parseInt(document.getElementById("calc-input-ebug").value);
   var result;
-  result = def*(100/150);
+  result = def * (100 / 150);
   if (result != Math.floor(result)) {
-    result = Math.floor(result)+1;
+    result = Math.floor(result) + 1;
   }
   document.getElementById("calc-result-ebug-eth").innerHTML = result;
-  result = result*(100/150);
+  result = result * (100 / 150);
   if (result != Math.floor(result)) {
-    result = Math.floor(result)+1;
+    result = Math.floor(result) + 1;
   }
   document.getElementById("calc-result-ebug-noneth").innerHTML = result;
 }
 
-function CalcEd() {
-  var def = parseInt(document.getElementById("calc-input-ed-defense").value);
-  var ed = parseInt(document.getElementById("calc-input-ed-ed").value);
+function CalcBeforeEd() {
+  var def = parseInt(document.getElementById("calc-input-beforeed-defense").value);
+  var ed = parseInt(document.getElementById("calc-input-beforeed-ed").value);
   var result;
-  result = def*(100/(100+ed));
+  result = def * (100 / (100 + ed));
   if (result != Math.floor(result)) {
-    result = Math.floor(result)+1;
+    result = Math.floor(result) + 1;
   }
-  document.getElementById("calc-result-ed-defense").innerHTML = result;
+  document.getElementById("calc-result-beforeed").innerHTML = result;
 }
 
-function CalcEnhance() {
-  var def = parseInt(document.getElementById("calc-input-enhance-defense").value);
-  var ed = parseInt(document.getElementById("calc-input-enhance-ed").value);
+function CalcAfterEd() {
+  var def = parseInt(document.getElementById("calc-input-aftered-defense").value);
+  var ed = parseInt(document.getElementById("calc-input-aftered-ed").value);
   var result;
-  result = def*((100+ed)/100);
+  result = def * ((100 + ed) / 100);
   if (result != Math.floor(result)) {
     result = Math.floor(result);
   }
-  document.getElementById("calc-result-enhance-defense").innerHTML = result;
+  document.getElementById("calc-result-aftered").innerHTML = result;
+}
+
+function CalcAffixLevel() {
+  var ilvl = parseInt(document.getElementById("calc-input-affix-ilvl").value);
+  var qlvl = parseInt(document.getElementById("calc-input-affix-qlvl").value);
+  var result;
+  if (ilvl > 99) {
+    ilvl = 99;
+  }
+  if (qlvl > ilvl) {
+    ilvl = qlvl;
+  }
+  if (ilvl < (99 - Math.floor(qlvl / 2))) {
+    result = ilvl - Math.floor(qlvl / 2);
+  } else {
+    result = ilvl * 2 - 99;
+  }
+  document.getElementById("calc-result-affix").innerHTML = result;
 }
 
 function MakeMeFamous() {
