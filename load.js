@@ -2,11 +2,13 @@ var opensection = "";
 
 function ActivateSection(section) {
   if (opensection != "") {
-    document.getElementById("div-"+opensection).classList.remove("show");
-    document.getElementById("button-"+opensection).classList.remove("highlight");
+    document.getElementById("content-"+opensection).classList.toggle("hidden");
+    document.getElementById("notes-"+opensection).classList.toggle("hidden");
+    document.getElementById("button-"+opensection).classList.toggle("highlight");
   }
-  document.getElementById("div-"+section).classList.add("show");
-  document.getElementById("button-"+section).classList.add("highlight");
+  document.getElementById("content-"+section).classList.toggle("hidden");
+  document.getElementById("notes-"+section).classList.toggle("hidden");
+  document.getElementById("button-"+section).classList.toggle("highlight");
   opensection = section;
 }
 
