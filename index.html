@@ -8,7 +8,7 @@
     <style>
 body   { margin: 0; background-color: #262626; color: #F1F1F1; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
 p      { margin: 0; }
-button { background-color: silver; color: #262626; padding: 10px; border: 1px solid #262626; cursor: pointer; }
+button { background-color: silver; color: #262626; padding: 9px; cursor: pointer; }
 table  { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
 th, td { border: 1px solid #262626; padding: 2px; }
 
@@ -17,16 +17,16 @@ p.runealign { margin: 93px 0px 0px 0px; }
 
 #page    { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 #header  { height: 5vh; }
-#content { height: 89vh; overflow-x: hidden; overflow-y: auto; }
-#notes   { height: 6vh; }
+#content { height: 88vh; overflow-x: hidden; overflow-y: auto; }
+#notes   { height: 7vh; }
 
-#content-breakpoints          { margin: 0 20px 0 0; width: 800px; white-space: nowrap; }
+#content-breakpoints          { margin: 0 2vw 0 0; width: 800px; white-space: nowrap; }
 #content-breakpoints > table  { width: 100%; }
-#content-craftingitem         { margin: 0 20px 0 0; white-space: nowrap; }
+#content-craftingitem         { margin: 0 2vw 0 0; white-space: nowrap; }
 #content-craftingitem > table { display: inline-table; }
-#content-craftingrune         { margin: 0 20px 0 0; white-space: nowrap; }
+#content-craftingrune         { margin: 0 2vw 0 0; white-space: nowrap; }
 #content-craftingrune > table { display: inline-table; }
-#content-cube                 { margin: 0 20px 0 0; white-space: nowrap; text-align: left; }
+#content-cube                 { margin: 0 2vw 0 0; white-space: nowrap; text-align: left; }
 
 .showblock   { display: block; }
 .hidden      { display: none; }
@@ -43,12 +43,12 @@ a:active  { color: silver; }
     <div id="page">
 <!-- HEADER DIV -->
       <div id="header">
-        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">Breakpoints</button>
-        <button id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
-        <button id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
-        <button id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
-        <button id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
-        <button id="button-contact" onclick="MakeMeFamous()">Discord Contact: stuffedtiger#9803</button>
+        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">Breakpoints</button><!--
+        --><button id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button><!--
+        --><button id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button><!--
+        --><button id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button><!--
+        --><button id="button-calc" onclick="ActivateSection('calc')">Calculator</button><!--
+        --><button id="button-contact" onclick="MakeMeFamous()">Discord Contact: stuffedtiger#9803</button>
       </div>
 <!-- CONTENT DIV -->
       <div id="content">
