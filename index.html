@@ -8,25 +8,25 @@
     <style>
 body   { margin: 0; background-color: #262626; color: #F1F1F1; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
 p      { margin: 0; }
-button { background-color: silver; color: #262626; padding: 9px; cursor: pointer; }
+button { background-color: silver; color: #262626; padding: 10px; border: 1px solid #262626; cursor: pointer; }
 table  { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
-th, td { border: 1px solid #262626; padding: 2px; }
+th, td { border: 1px solid #262626; }
 
-p.linealign { margin: 17px 0px 0px 0px; }
-p.runealign { margin: 93px 0px 0px 0px; }
+td.linealign { height: 65px; }
+td.rowalign  { height: 87px; }
 
 #page    { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 #header  { height: 5vh; }
-#content { height: 88vh; overflow-x: hidden; overflow-y: auto; }
-#notes   { height: 7vh; }
+#content { height: 89vh; overflow-x: hidden; overflow-y: auto; }
+#notes   { height: 6vh; }
 
-#content-breakpoints          { margin: 0 2vw 0 0; width: 800px; white-space: nowrap; }
+#content-breakpoints          { margin: 0 20px 0 0; width: 800px; white-space: nowrap; }
 #content-breakpoints > table  { width: 100%; }
-#content-craftingitem         { margin: 0 2vw 0 0; white-space: nowrap; }
+#content-craftingitem         { margin: 0 20px 0 0; white-space: nowrap; }
 #content-craftingitem > table { display: inline-table; }
-#content-craftingrune         { margin: 0 2vw 0 0; white-space: nowrap; }
+#content-craftingrune         { margin: 0 20px 0 0; white-space: nowrap; }
 #content-craftingrune > table { display: inline-table; }
-#content-cube                 { margin: 0 2vw 0 0; white-space: nowrap; text-align: left; }
+#content-cube                 { margin: 0 20px 0 0; white-space: nowrap; text-align: left; }
 
 .showblock   { display: block; }
 .hidden      { display: none; }
@@ -684,7 +684,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Chain Gloves</th>
@@ -692,7 +692,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Heavy Belt</th>
@@ -700,7 +700,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -708,7 +708,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -716,7 +716,7 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)</td>
             </tr>
             <tr>
               <th>Full Helm</th>
@@ -724,7 +724,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Gothic Shield</th>
@@ -732,7 +732,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
             </tr>
             <tr>
               <th>Field Plate</th>
@@ -740,7 +740,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
             </tr>
             <tr>
               <th>Blunt Weapon*</th>
@@ -748,7 +748,7 @@ a:active  { color: silver; }
               <td>Tir</td>
             </tr>
             <tr>
-              <td colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
           </table><!--
           --><table>
@@ -761,7 +761,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Heavy Gloves</th>
@@ -769,7 +769,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Belt</th>
@@ -777,7 +777,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -785,7 +785,7 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -793,7 +793,7 @@ a:active  { color: silver; }
               <td>Sol</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Helm</th>
@@ -801,7 +801,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Spiked Shield</th>
@@ -809,7 +809,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Plate Mail</th>
@@ -817,7 +817,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Axe</th>
@@ -825,7 +825,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
           </table><!--
           --><table>
@@ -838,7 +838,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Leather Gloves</th>
@@ -846,7 +846,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Light Belt</th>
@@ -854,7 +854,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -862,7 +862,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -870,7 +870,7 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Mask</th>
@@ -878,7 +878,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Small Shield</th>
@@ -886,7 +886,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Light Plate</th>
@@ -894,7 +894,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Rod**</th>
@@ -902,7 +902,7 @@ a:active  { color: silver; }
               <td>Tir</td>
             </tr>
             <tr>
-              <td colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
           </table><!--
           --><table>
@@ -915,7 +915,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Gauntlets</th>
@@ -923,7 +923,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Sash</th>
@@ -931,7 +931,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -939,7 +939,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -947,7 +947,7 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Crown</th>
@@ -955,7 +955,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Kite Shield</th>
@@ -963,7 +963,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Breast Plate</th>
@@ -971,7 +971,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Spear or Javelin</th>
@@ -979,7 +979,7 @@ a:active  { color: silver; }
               <td>Sol</td>
             </tr>
             <tr>
-              <td colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
           </table>
         </div>
@@ -995,7 +995,7 @@ a:active  { color: silver; }
               <td>Tir</td>
             </tr>
             <tr>
-              <td colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Field Plate</th>
@@ -1003,7 +1003,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
             </tr>
             <tr>
               <th>Gothic Shield</th>
@@ -1011,7 +1011,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
             </tr>
             <tr>
               <th>Full Helm</th>
@@ -1019,7 +1019,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Heavy Belt</th>
@@ -1027,7 +1027,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Chain Boots</th>
@@ -1035,7 +1035,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Chain Gloves</th>
@@ -1043,7 +1043,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -1051,7 +1051,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -1059,10 +1059,10 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)</td>
             </tr>
             <tr>
-              <td colspan="3"><p class="runealign"></p></td>
+              <td class="rowalign" colspan="3"></td>
             </tr>
           </table><!--
           --><table>
@@ -1070,7 +1070,7 @@ a:active  { color: silver; }
               <th colspan="3">BLOOD</th>
             </tr>
             <tr>
-              <td colspan="3"><p class="runealign"></p></td>
+              <td class="rowalign" colspan="3"></td>
             </tr>
             <tr>
               <th>Heavy Gloves</th>
@@ -1078,7 +1078,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Light Plated Boots</th>
@@ -1086,7 +1086,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Spiked Shield</th>
@@ -1094,7 +1094,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Belt</th>
@@ -1102,7 +1102,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Helm</th>
@@ -1110,7 +1110,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Axe</th>
@@ -1118,7 +1118,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Plate Mail</th>
@@ -1126,7 +1126,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -1134,7 +1134,7 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -1142,7 +1142,7 @@ a:active  { color: silver; }
               <td>Sol</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
             </tr>
           </table><!--
           --><table>
@@ -1155,7 +1155,7 @@ a:active  { color: silver; }
               <td>Tir</td>
             </tr>
             <tr>
-              <td colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Mask</th>
@@ -1163,7 +1163,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Small Shield</th>
@@ -1171,7 +1171,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Light Belt</th>
@@ -1179,7 +1179,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Light Plate</th>
@@ -1187,7 +1187,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -1195,7 +1195,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Leather Gloves</th>
@@ -1203,7 +1203,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Boots</th>
@@ -1211,7 +1211,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -1219,10 +1219,10 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
             </tr>
             <tr>
-              <td colspan="3"><p class="runealign"></p></td>
+              <td class="rowalign" colspan="3"></td>
             </tr>
           </table><!--
           --><table>
@@ -1230,7 +1230,7 @@ a:active  { color: silver; }
               <th colspan="3">SAFETY</th>
             </tr>
             <tr>
-              <td colspan="3"><p class="runealign"></p></td>
+              <td class="rowalign" colspan="3"></td>
             </tr>
             <tr>
               <th>Kite Shield</th>
@@ -1238,7 +1238,7 @@ a:active  { color: silver; }
               <td>Nef</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Breast Plate</th>
@@ -1246,7 +1246,7 @@ a:active  { color: silver; }
               <td>Eth</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Crown</th>
@@ -1254,7 +1254,7 @@ a:active  { color: silver; }
               <td>Ith</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Sash</th>
@@ -1262,7 +1262,7 @@ a:active  { color: silver; }
               <td>Tal</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Gauntlets</th>
@@ -1270,7 +1270,7 @@ a:active  { color: silver; }
               <td>Ral</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Greaves</th>
@@ -1278,7 +1278,7 @@ a:active  { color: silver; }
               <td>Ort</td>
             </tr>
             <tr>
-              <td colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Amulet</th>
@@ -1286,7 +1286,7 @@ a:active  { color: silver; }
               <td>Thul</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Ring</th>
@@ -1294,7 +1294,7 @@ a:active  { color: silver; }
               <td>Amn</td>
             </tr>
             <tr>
-              <td colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
             <tr>
               <th>Spear or Javelin</th>
@@ -1302,7 +1302,7 @@ a:active  { color: silver; }
               <td>Sol</td>
             </tr>
             <tr>
-              <td colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)<br><p class="linealign"></p></td>
+              <td class="linealign" colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
             </tr>
           </table>
         </div>
