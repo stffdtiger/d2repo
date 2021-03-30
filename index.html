@@ -16,9 +16,9 @@ td.linealign { height: 65px; }
 td.rowalign  { height: 87px; }
 
 #page    { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-#header  { height: 5vh; }
-#content { height: 89vh; overflow-x: hidden; overflow-y: auto; }
-#notes   { height: 6vh; }
+#header  { height: 50px; min-height: 50px; width: 800px; min-width: 800px; z-index: 2; position: absolute; top: 0; }
+#content { height: 85vh; overflow-x: hidden; overflow-y: auto; }
+#notes   { height: 50px; min-height: 50px; z-index: 1; position: absolute; bottom: 0; background: #262626}
 
 #content-breakpoints          { margin: 0 20px 0 0; width: 800px; white-space: nowrap; }
 #content-breakpoints > table  { width: 100%; }
