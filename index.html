@@ -15,18 +15,18 @@ th, td { border: 1px solid #262626; }
 td.linealign { height: 65px; }
 td.rowalign  { height: 87px; }
 
-#page    { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-#header  { height: 50px; min-height: 50px; width: 800px; min-width: 800px; z-index: 2; position: absolute; top: 0; }
-#content { height: 85vh; overflow-x: hidden; overflow-y: auto; }
-#notes   { height: 50px; min-height: 50px; z-index: 1; position: absolute; bottom: 0; background: #262626}
+#page    { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
+#header  { height: 50px; min-height: 50px; width: 800px; min-width: 800px; z-index: 2; }
+#content { height: 100%; overflow-x: hidden; overflow-y: auto; }
+#notes   { height: 50px; min-height: 50px; background: #262626; z-index: 1; }
 
-#content-breakpoints          { margin: 0 20px 0 0; width: 800px; white-space: nowrap; }
+#content-breakpoints          { width: 800px; white-space: nowrap; }
 #content-breakpoints > table  { width: 100%; }
-#content-craftingitem         { margin: 0 20px 0 0; white-space: nowrap; }
+#content-craftingitem         { white-space: nowrap; }
 #content-craftingitem > table { display: inline-table; }
-#content-craftingrune         { margin: 0 20px 0 0; white-space: nowrap; }
+#content-craftingrune         { white-space: nowrap; }
 #content-craftingrune > table { display: inline-table; }
-#content-cube                 { margin: 0 20px 0 0; white-space: nowrap; text-align: left; }
+#content-cube                 { white-space: nowrap; text-align: left; }
 
 .showblock   { display: block; }
 .hidden      { display: none; }
