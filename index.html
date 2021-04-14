@@ -6,19 +6,25 @@
     <script src="load.js"></script>
 
     <style>
-body   { margin: 0; background-color: #262626; color: #F1F1F1; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
-p      { margin: 0; }
-button { background-color: silver; color: #262626; padding: 10px; border: 1px solid #262626; cursor: pointer; }
-table  { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
-th, td { border: 1px solid #262626; }
+html,body { margin: 0; width: 100vw; height: 100vh; }
+body      { background-color: #262626; color: #F1F1F1; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; }
+p         { margin: 0; }
+button    { background-color: silver; color: #262626; border: 1px solid #262626; border-radius: 4px; padding: 10px; cursor: pointer; }
+table     { background-color: #F1F1F1; color: #262626; border: 0px solid #262626; }
+th, td    { border: 1px solid #262626; }
 
-td.linealign { height: 65px; }
-td.rowalign  { height: 87px; }
+button:focus { outline: none; }
 
-#page    { height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: space-between; }
-#header  { height: 50px; min-height: 50px; width: 800px; min-width: 800px; z-index: 2; }
-#content { height: 100%; overflow-x: hidden; overflow-y: auto; }
-#notes   { height: 50px; min-height: 50px; background: #262626; z-index: 1; }
+td.linealign { height: 72px; }
+td.rowalign  { height: 94px; }
+
+#page    { width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; }
+#header  { width: 100vw; min-width: 800px; min-height: 50px; z-index: 2; }
+#content { flex: 1 1 auto; overflow-x: hidden; overflow-y: auto; }
+#notes   { width: 100vw; min-width: 1020px; min-height: 60px; background: #262626; z-index: 1; }
+
+#content::-webkit-scrollbar { display: none; }
+#content { -ms-overflow-style: none; scrollbar-width: none; } 
 
 #content-breakpoints          { width: 800px; white-space: nowrap; }
 #content-breakpoints > table  { width: 100%; }
@@ -39,16 +45,16 @@ a:active  { color: silver; }
     </style>
 
   </head>
-  <body onload="ActivateSection('breakpoints')">
+  <body onload="ActivateSection('breakpoints');">
     <div id="page">
 <!-- HEADER DIV -->
       <div id="header">
-        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">Breakpoints</button><!--
-        --><button id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button><!--
-        --><button id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button><!--
-        --><button id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button><!--
-        --><button id="button-calc" onclick="ActivateSection('calc')">Calculator</button><!--
-        --><button id="button-contact" onclick="MakeMeFamous()">Discord Contact: stuffedtiger#9803</button>
+        <button id="button-breakpoints" onclick="ActivateSection('breakpoints')">Breakpoints</button>
+        <button id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
+        <button id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
+        <button id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
+        <button id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
+        <button id="button-contact" onclick="MakeMeFamous()">Discord Contact: stuffedtiger#9803</button>
       </div>
 <!-- CONTENT DIV -->
       <div id="content">
