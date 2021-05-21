@@ -1,15 +1,20 @@
-var opensection;
-
 function ActivateSection(section) {
-  if (opensection) {
-    document.getElementById("content-" + opensection).classList.add("hidden");
-    document.getElementById("notes-" + opensection).classList.add("hidden");
-    document.getElementById("button-" + opensection).classList.remove("highlight");
+  var element = document.getElementById("content-" + section);
+  if (!element.classList.contains("showblock")) {
+    var elements = document.getElementsByClassName("display showblock");
+    while (elements[0]) {
+      elements[0].classList.remove("showblock");
+      elements = document.getElementsByClassName("display showblock");
+    }
+    elements = document.getElementsByClassName("display highlight");
+    while (elements[0]) {
+      elements[0].classList.remove("highlight");
+      elements = document.getElementsByClassName("display highlight");
+    }
+    document.getElementById("content-" + section).classList.add("showblock");
+    document.getElementById("notes-" + section).classList.add("showblock");
+    document.getElementById("button-" + section).classList.add("highlight");
   }
-  document.getElementById("content-" + section).classList.remove("hidden");
-  document.getElementById("notes-" + section).classList.remove("hidden");
-  document.getElementById("button-" + section).classList.add("highlight");
-  opensection = section;
 }
 
 function CalcEth() {
