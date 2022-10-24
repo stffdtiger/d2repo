@@ -26,7 +26,7 @@ td.rowalign  { height: 91px; }
 
 #header-left   { display: flex; justify-content: center; align-items: center; min-width: 200px; }
 #header-middle { display: flex; justify-content: center; align-items: center; min-width: 800px; }
-#header-right  { min-width: 200px; }
+#header-right  { width: 200px; min-width: 200px; }
 
 #content::-webkit-scrollbar { display: none; }
 #content { -ms-overflow-style: none; scrollbar-width: none; } 
@@ -1630,20 +1630,17 @@ a:active  { color: #B1B1B1; }
   <!-- CALCULATOR CONTENT DIV -->
         <div class="display hide" id="content-calc">
           <span style="font-weight: bold;">Item Defense</span><br><br>
-          <input id="calc-input-eth" type="number" placeholder="Ethereal Defense" onchange="CalcEth()"><br>
+          Ethereal Defense: <input id="calc-input-eth" type="number" value="0" min="0" onchange="CalcEth()"><br>
           non-eth: <span id="calc-result-eth" style="font-weight: bold;">0</span><br><br>
-          <input id="calc-input-ebug" type="number" placeholder="Ebugged Defense" onchange="CalcEbug()"><br>
-          before ebug: <span id="calc-result-ebug-eth" style="font-weight: bold;">0</span><br>
-          non-eth: <span id="calc-result-ebug-noneth" style="font-weight: bold;">0</span><br><br>
-          <input id="calc-input-beforeed-defense" type="number" placeholder="Defense" onchange="CalcBeforeEd()"><br>
-          <input id="calc-input-beforeed-ed" type="number" placeholder="%ED" onchange="CalcBeforeEd()"><br>
+          Defense: <input id="calc-input-beforeed-defense" type="number" value="0" min="0" onchange="CalcBeforeEd()"><br>
+          %ED: <input id="calc-input-beforeed-ed" type="number" value="0" min="0" onchange="CalcBeforeEd()"><br>
           before ed: <span id="calc-result-beforeed" style="font-weight: bold;">0</span><br><br>
-          <input id="calc-input-aftered-defense" type="number" placeholder="Defense" onchange="CalcAfterEd()"><br>
-          <input id="calc-input-aftered-ed" type="number" placeholder="%ED" onchange="CalcAfterEd()"><br>
+          Defense: <input id="calc-input-aftered-defense" type="number" value="0" min="0" onchange="CalcAfterEd()"><br>
+          %ED: <input id="calc-input-aftered-ed" type="number" value="0" min="0" onchange="CalcAfterEd()"><br>
           after ed: <span id="calc-result-aftered" style="font-weight: bold;">0</span><br><br>
           <span style="font-weight: bold;">Affix Level</span><br><br>
-          <input id="calc-input-affix-ilvl" type="number" placeholder="ilvl" onchange="CalcAffixLevel()"><br>
-          <input id="calc-input-affix-qlvl" type="number" placeholder="qlvl" onchange="CalcAffixLevel()"><br>
+          ilvl: <input id="calc-input-affix-ilvl" type="number" value="0" min="0" max="99" onchange="CalcAffixLevel()"><br>
+          qlvl: <input id="calc-input-affix-qlvl" type="number" value="0" min="0" max="99"  onchange="CalcAffixLevel()"><br>
           affix lvl: <span id="calc-result-affix" style="font-weight: bold;">0</span><!--
         --></div>
       </div>

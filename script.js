@@ -31,29 +31,6 @@ function CalcEth() {
   }
 }
 
-function CalcEbug() {
-  var def = parseInt(document.getElementById("calc-input-ebug").value);
-  var result;
-  result = def * (100 / 150);
-  if (result != Math.floor(result)) {
-    result = Math.floor(result) + 1;
-  }
-  if (isNaN(result)) {
-    document.getElementById("calc-result-ebug-eth").innerHTML = "0";
-  } else {
-    document.getElementById("calc-result-ebug-eth").innerHTML = result;
-  }
-  result = result * (100 / 150);
-  if (result != Math.floor(result)) {
-    result = Math.floor(result) + 1;
-  }
-  if (isNaN(result)) {
-    document.getElementById("calc-result-ebug-noneth").innerHTML = "0";
-  } else {
-    document.getElementById("calc-result-ebug-noneth").innerHTML = result;
-  }
-}
-
 function CalcBeforeEd() {
   var def = parseInt(document.getElementById("calc-input-beforeed-defense").value);
   var ed = parseInt(document.getElementById("calc-input-beforeed-ed").value);
