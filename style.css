@@ -1,0 +1,48 @@
+html,body { margin: 0; width: 100vw; height: 100vh; }
+body      { background-color: #060606; color: #A1A1A1; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; white-space: nowrap; }
+p         { margin: 0; }
+button    { background-color: #B1B1B1; color: #262626; border: 1px solid #262626; border-radius: 4px; padding: 10px; cursor: pointer; }
+table     { background-color: #262626; border: 2px solid #A1A1A1; border-collapse: collapse; }
+th, td    { border: 1px solid black; }
+th        { background-color: #161616; }
+
+button:focus { outline: none; }
+
+td.linealign { height: 72px; }
+td.rowalign  { height: 91px; }
+
+#page    { width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; }
+
+#header  { width: 100%; flex: 1 1 auto; height: 80px; min-height: 80px; background-color: #262626; display: flex; justify-content: space-evenly; z-index: 2; }
+#content { width: 100%; flex: 1 1 100%; display: flex; justify-content: center; overflow-x: hidden; overflow-y: auto; }
+#notes   { width: 100%; flex: 1 1 auto; min-width: 1020px; height: 60px; min-height: 60px; background-color: #262626; z-index: 1; }
+
+#header-left   { display: flex; justify-content: center; align-items: center; width: 200px; min-width: 200px; }
+#header-middle { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; width: 800px; min-width: 800px; }
+#header-right  { width: 200px; min-width: 200px; }
+
+#content::-webkit-scrollbar { display: none; }
+#content { -ms-overflow-style: none; scrollbar-width: none; } 
+
+#content-breakpoints > table        { width: 800px; }
+#content-craftingitem > table       { display: inline-table; }
+#content-craftingrune > table       { display: inline-table; }
+#content-runewordsweapons > table   { width: 1000px; }
+#content-runewordsbodyarmor > table { width: 1000px; }
+#content-runewordshelms > table     { width: 1000px; }
+#content-runewordsshields > table   { width: 1000px; }
+#content-cube                       { text-align: left; }
+
+#content-runewordsweapons tr:nth-child(even)   { background-color: #060606; }
+#content-runewordsbodyarmor tr:nth-child(even) { background-color: #060606; }
+#content-runewordshelms tr:nth-child(even)     { background-color: #060606; }
+#content-runewordsshields tr:nth-child(even)   { background-color: #060606; }
+
+.hide      { display: none; }
+.showblock { display: block; }
+.highlight { color: #F1F1F1; }
+
+a:link    { color: #B1B1B1; }
+a:visited { color: #B1B1B1; }
+a:hover   { color: #B1B1B1; }
+a:active  { color: #B1B1B1; }
