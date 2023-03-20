@@ -17,6 +17,20 @@ function ActivateSection(section) {
   }
 }
 
+function ToggleDisplay(section) {
+  var element = document.getElementById(section);
+  if (element.classList.contains("showblock")) {
+    element.classList.remove("showblock");
+  } else {
+    let elements = document.getElementsByClassName("dropdown-content showblock");
+    while (elements[0]) {
+      elements[0].classList.remove("showblock");
+      elements = document.getElementsByClassName("dropdown-content showblock");
+    }
+    element.classList.add("showblock");
+  }
+}
+
 function CalcEth() {
   var def = parseInt(document.getElementById("calc-input-eth").value);
   var result;

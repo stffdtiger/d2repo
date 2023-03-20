@@ -17,12 +17,16 @@
           <button class="display" id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
           <button class="display" id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
           <button class="display" id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
+          <div>
+            <button class="display" id="button-runewords" onclick="ToggleDisplay('runewords-dropdown')">Rune Words</button>
+            <div class="dropdown-content hide" id="runewords-dropdown">
+              <span class="display" id="button-runewordsweapons" onclick="ActivateSection('runewordsweapons');ToggleDisplay('runewords-dropdown');">Weapons</span>
+              <span class="display" id="button-runewordsbodyarmor" onclick="ActivateSection('runewordsbodyarmor');ToggleDisplay('runewords-dropdown');">Body Armor</span>
+              <span class="display" id="button-runewordshelms" onclick="ActivateSection('runewordshelms');ToggleDisplay('runewords-dropdown');">Helms</span>
+              <span class="display" id="button-runewordsshields" onclick="ActivateSection('runewordsshields');ToggleDisplay('runewords-dropdown');">Shields</span>
+            </div>
+          </div>
           <button class="display" id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
-          <button id="button-contact" onclick="MakeMeFamous()">Discord Contact: stuffedtiger#9803</button>
-          <button class="display" id="button-runewordsweapons" onclick="ActivateSection('runewordsweapons')">Rune Words (weapons)</button>
-          <button class="display" id="button-runewordsbodyarmor" onclick="ActivateSection('runewordsbodyarmor')">Rune Words (body armor)</button>
-          <button class="display" id="button-runewordshelms" onclick="ActivateSection('runewordshelms')">Rune Words (helms)</button>
-          <button class="display" id="button-runewordsshields" onclick="ActivateSection('runewordsshields')">Rune Words (shields)</button>
         </div>
         <div id="header-right"></div>
       </div>
@@ -1809,6 +1813,22 @@
                 +10-15 Life After Each Kill (varies)</td>
             </tr>
             <tr>
+              <td>Hand of Justice</td>
+              <td>Weapons (4)</td>
+              <td>Sur + Cham + Amn + Lo</td>
+              <td>100% Chance To Cast Level 36 Blaze When You Level-Up<br>
+                100% Chance To Cast Level 48 Meteor When You Die<br>
+                Level 16 Holy Fire Aura When Equipped<br>
+                +33% Increased Attack Speed<br>
+                +280-330% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                7% Life Stolen Per Hit<br>
+                -20% To Enemy Fire Resistance<br>
+                20% Deadly Strike<br>
+                Hit Blinds Target<br>
+                Freezes Target +3</td>
+            </tr>
+            <tr>
               <td>Harmony</td>
               <td>Missile Weapons (4)</td>
               <td>Tir + Ith + Sol + Ko</td>
@@ -1825,22 +1845,6 @@
                 +2 To Mana After Each Kill<br>
                 +2 To Light Radius<br>
                 Level 20 Revive (25 Charges)</td>
-            </tr>
-            <tr>
-              <td>Hand of Justice</td>
-              <td>Weapons (4)</td>
-              <td>Sur + Cham + Amn + Lo</td>
-              <td>100% Chance To Cast Level 36 Blaze When You Level-Up<br>
-                100% Chance To Cast Level 48 Meteor When You Die<br>
-                Level 16 Holy Fire Aura When Equipped<br>
-                +33% Increased Attack Speed<br>
-                +280-330% Enhanced Damage (varies)<br>
-                Ignore Target's Defense<br>
-                7% Life Stolen Per Hit<br>
-                -20% To Enemy Fire Resistance<br>
-                20% Deadly Strike<br>
-                Hit Blinds Target<br>
-                Freezes Target +3</td>
             </tr>
             <tr>
               <td>Heart of the Oak</td>
@@ -1889,6 +1893,18 @@
                 +10 To Strength<br>
                 +1 To Light Radius<br>
                 +2 To Mana After Each Kill</td>
+            </tr>
+            <tr>
+              <td>Hustle</td>
+              <td>Weapons (3)</td>
+              <td>Shael + Ko + Eld</td>
+              <td>5% Chance to cast level 1 Burst of Speed on striking<br>
+                Level 1 Fanaticism Aura When Equipped<br>
+                +30% Increased Attack Speed<br>
+                +180-200% Enhanced Damage (varies)<br>
+                +75% Damage to Undead<br>
+                +50 to Attack Rating against Undead<br>
+                +10 to Dexterity</td>
             </tr>
             <tr>
               <td>Ice</td>
@@ -2067,6 +2083,23 @@
                 Freezes Target +3<br>
                 +24 Vitality<br>
                 All Resistances +40</td>
+            </tr>
+            <tr>
+              <td>Mosaic</td>
+              <td>Claws (3)</td>
+              <td>Mal + Gul + Amn</td>
+              <td>+50% chance for finishing moves to not consume charges<br>
+                When a finisher is executed this way, it now refreshes the expiration timer of the stack<br>
+                +2 to Martial Arts (Assassin only)<br>
+                +20% Increased Attack Speed<br>
+                +200-250% Enhanced Damage (varies)<br>
+                +20% Bonus to Attack Rating<br>
+                7% Life Stolen Per Hit<br>
+                +8-15% to Cold Skill Damage (varies)<br>
+                +8-15% to Lightning Skill Damage (varies)<br>
+                +8-15% to Fire Skill Damage (varies)<br>
+                Adds 3-14 Cold Damage<br>
+                Prevent Monster Heal</td>
             </tr>
             <tr>
               <td>Oath</td>
@@ -2513,6 +2546,18 @@
               -3 To Light Radius</td>
             </tr>
             <tr>
+              <td>Hustle</td>
+              <td>Body Armor (3)</td>
+              <td>Shael + Ko + Eld</td>
+              <td>+65% Faster Run/Walk<br>
+                +40% Increased Attack Speed<br>
+                +20% Faster Hit Recovery<br>
+                +6 to Evade<br>
+                +10 to Dexterity<br>
+                50% Slower Stamina Drain<br>
+                All Resistances +10</td>
+            </tr>
+            <tr>
               <td>Lionheart</td>
               <td>Body Armor (3)</td>
               <td>Hel + Lum + Fal</td>
@@ -2651,6 +2696,31 @@
         <div class="display hide" id="content-runewordshelms">
           <table>
             <tr>
+              <td>Bulwark</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Sol</td>
+              <td>+20% Faster Hit Recovery<br>
+                +4-6% Life Stolen Per Hit (varies)<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Replenish Life +30<br>
+                Damage Reduced by 7<br>
+                Physical Damage Received Reduced by 10-15% (varies)</td>
+            </tr>
+            <tr>
+              <td>Cure</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Tal</td>
+              <td>Level 1 Cleansing Aura when Equipped<br>
+                +20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Poison Resist +40-60% (varies)<br>
+                Poison Length Reduced by 50%</td>
+            </tr>
+            <tr>
               <td>Delirium</td>
               <td>Helms (3)</td>
               <td>Lem + Ist + Io</td>
@@ -2695,6 +2765,29 @@
                 Poison Length Reduced by 50%</td>
             </tr>
             <tr>
+              <td>Ground</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Ort</td>
+              <td>+20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Lightning Resist +40-60% (varies)<br>
+                Lightning Absorb +10-15% (varies)</td>
+            </tr>
+            <tr>
+              <td>Hearth</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Thul</td>
+              <td>+20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Cold Resist +40-60% (varies)<br>
+                Cold Absorb +10-15% (varies)<br>
+                Cannot be Frozen</td>
+            </tr>
+            <tr>
               <td>Lore</td>
               <td>Helms (2)</td>
               <td>Ort + Sol</td>
@@ -2704,6 +2797,26 @@
                 Lightning Resist +30%<br>
                 Damage Reduced By 7<br>
                 +2 To Light Radius</td>
+            </tr>
+            <tr>
+              <td>Metamorphosis</td>
+              <td>Helms (3)</td>
+              <td>Io + Cham + Fal</td>
+              <td>Werewolf strikes grant Mark for 180 seconds<br>
+                Mark of the Wolf:<br>
+                - +30% Bonus to Attack Rating<br>
+                - Increase Maximum Life 40%<br>
+                Werebear strikes grant Mark for 180 seconds<br>
+                Mark of the Bear:<br>
+                - +25% Attack Speed<br>
+                - Physical Damage Received Reduced by 20%<br>
+                +5 to Shape Shifting Skills (Druid only)<br>
+                +25% Chance of Crushing Blow<br>
+                +50-80% Enhanced Defense (varies)<br>
+                +10 to Strength<br>
+                +10 to Vitality<br>
+                All Resistances +10<br>
+                Cannot be Frozen</td>
             </tr>
             <tr>
               <td>Nadir</td>
@@ -2731,6 +2844,17 @@
                 +33 To Mana<br>
                 Damage Reduced By 7<br>
                 +5 To Light Radius</td>
+            </tr>
+            <tr>
+              <td>Temper</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Ral</td>
+              <td>+20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Fire Resist +40-60% (varies)<br>
+                Fire Absorb +10-15% (varies)</td>
             </tr>
             <tr>
               <td>Wisdom</td>
