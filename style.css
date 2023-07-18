@@ -41,9 +41,10 @@ td.rowalign  { height: 91px; }
 .showblock { display: block; }
 .highlight { color: #F1F1F1; }
 
-.dropdown-content { position: absolute; z-index: 3; }
+.dropdown-content            { position: absolute; z-index: 3; }
+.dropdown-content span       { cursor: pointer; display: block; width: 125px; min-width: 125px; padding: 5px 0px; background-color: #1F1F1F; }
+.dropdown-content span:hover { background-color: #A1A1A1; color: #1F1F1F; transition: 0.3s; }
 
-.dropdown-content span { cursor: pointer; display: block; width: 150px; min-width: 150px; padding: 5px 0px; border-radius: 4px; background-color: #1F1F1F; }
 
 a:link    { color: #B1B1B1; }
 a:visited { color: #B1B1B1; }
