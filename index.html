@@ -6,32 +6,32 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body onload="ActivateSection('breakpoints');">
+  <body onload="ActivateSection('breakpoints');DefineRuneWords('weapons');DefineRuneWords('bodyarmors');DefineRuneWords('helms');DefineRuneWords('shields');">
     <div id="page">
       <div id="header">
         <div id="header-left">
           <span>(middle section scrolls)</span>
         </div>
         <div id="header-middle">
-          <button class="display" id="button-breakpoints" onclick="ActivateSection('breakpoints')">Break Points</button>
-          <button class="display" id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
-          <button class="display" id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
-          <button class="display" id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
+          <button class="sectiondisplay" id="button-breakpoints" onclick="ActivateSection('breakpoints')">Break Points</button>
+          <button class="sectiondisplay" id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
+          <button class="sectiondisplay" id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
+          <button class="sectiondisplay" id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
           <div>
-            <button class="display" id="button-runewords" onclick="ToggleDisplay('runewords-dropdown')">Rune Words</button>
-            <div class="dropdown-content hide" id="runewords-dropdown">
-              <span class="display" id="button-runewordsweapons" onclick="ActivateSection('runewordsweapons');ToggleDisplay('runewords-dropdown');">Weapons</span>
-              <span class="display" id="button-runewordsbodyarmor" onclick="ActivateSection('runewordsbodyarmor');ToggleDisplay('runewords-dropdown');">Body Armor</span>
-              <span class="display" id="button-runewordshelms" onclick="ActivateSection('runewordshelms');ToggleDisplay('runewords-dropdown');">Helms</span>
-              <span class="display" id="button-runewordsshields" onclick="ActivateSection('runewordsshields');ToggleDisplay('runewords-dropdown');">Shields</span>
+            <button class="sectiondisplay" id="button-runewords" onclick="ToggleDropdownDisplay('runewords')">Rune Words</button>
+            <div class="dropdowncontent dropdowndisplay hide" id="dropdown-runewords">
+              <span class="sectiondisplay" id="button-runewordsweapons" onclick="ActivateSection('runewordsweapons');ToggleDropdownDisplay('runewords');">Weapons</span>
+              <span class="sectiondisplay" id="button-runewordsbodyarmors" onclick="ActivateSection('runewordsbodyarmors');ToggleDropdownDisplay('runewords');">Body Armor</span>
+              <span class="sectiondisplay" id="button-runewordshelms" onclick="ActivateSection('runewordshelms');ToggleDropdownDisplay('runewords');">Helms</span>
+              <span class="sectiondisplay" id="button-runewordsshields" onclick="ActivateSection('runewordsshields');ToggleDropdownDisplay('runewords');">Shields</span>
             </div>
           </div>
-          <button class="display" id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
+          <button class="sectiondisplay" id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
         </div>
         <div id="header-right"></div>
       </div>
       <div id="content">
-        <div class="display hide" id="content-breakpoints">
+        <div class="sectiondisplay hide" id="content-breakpoints">
           <table>
             <tr>
               <th rowspan="2">Character</th>
@@ -905,7 +905,7 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-craftingitem">
+        <div class="sectiondisplay hide" id="content-craftingitem">
           <table>
             <tr>
               <th colspan="3">HIT POWER</th>
@@ -1215,7 +1215,7 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-craftingrune">
+        <div class="sectiondisplay hide" id="content-craftingrune">
           <table>
             <tr>
               <th colspan="3">HIT POWER</th>
@@ -1537,9 +1537,53 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-runewordsweapons">
+        <div class="sectiondisplay hide" id="content-runewordsweapons">
+          <div id="define-rw-weapons">
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-0" name="define-rw-weapons-sockets" value="0" checked="checked">
+            <label for="define-rw-weapons-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-2" name="define-rw-weapons-sockets" value="2">
+            <label for="define-rw-weapons-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-3" name="define-rw-weapons-sockets" value="3">
+            <label for="define-rw-weapons-sockets-3">: 3 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-4" name="define-rw-weapons-sockets" value="4">
+            <label for="define-rw-weapons-sockets-4">: 4 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-5" name="define-rw-weapons-sockets" value="5">
+            <label for="define-rw-weapons-sockets-5">: 5 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-6" name="define-rw-weapons-sockets" value="6">
+            <label for="define-rw-weapons-sockets-6">: 6 Sockets</label><br>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-weapon" value="weapon">
+            <label for="define-rw-weapons-type-weapon">: All Weapon Types</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-melee" value="melee">
+            <label for="define-rw-weapons-type-melee">: Melee Weapons</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-missile" value="missile">
+            <label for="define-rw-weapons-type-missile">: Missile Weapons</lable><br>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-axe" value="axe">
+            <label for="define-rw-weapons-type-axe">: Axes</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-club" value="club">
+            <label for="define-rw-weapons-type-club">: Clubs</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-hammer" value="hammer">
+            <label for="define-rw-weapons-type-hammer">: Hammers</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-mace" value="mace">
+            <label for="define-rw-weapons-type-mace">: Maces</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-polearm" value="polearm">
+            <label for="define-rw-weapons-type-polearm">: Polearms</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-scepter" value="scepter">
+            <label for="define-rw-weapons-type-scepter">: Scepters</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-spear" value="spear">
+            <label for="define-rw-weapons-type-spear">: Spears</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-stave" value="stave">
+            <label for="define-rw-weapons-type-stave">: Staves</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-sword" value="sword">
+            <label for="define-rw-weapons-type-sword">: Swords</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-wand" value="wand">
+            <label for="define-rw-weapons-type-wand">: Wands</lable><br>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-amazonspear" value="amazonspear">
+            <label for="define-rw-weapons-type-amazonspear">: Amazon Spears</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-claw" value="claw">
+            <label for="define-rw-weapons-type-claw">: Claws</lable>
+          </div>
           <table>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-hammer rw-type-scepter">
               <td><span style="font-weight:bold;">Beast</span></td>
               <td>Axes / Hammers / Scepters (5)</td>
               <td>Ber + Tir + Um + Mal + Lum</td>
@@ -1556,7 +1600,7 @@
                 +2 To Mana After Each Kill<br>
                 Level 13 Summon Grizzly (5 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-club rw-type-hammer rw-type-mace">
               <td><span style="font-weight:bold;">Black</span></td>
               <td>Clubs / Hammers / Maces (3)</td>
               <td>Thul + Io + Nef</td>
@@ -1570,7 +1614,7 @@
                 Magic Damage Reduced By 2<br>
                 Level 4 Corpse Explosion (12 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
               <td><span style="font-weight:bold;">Brand</span></span></td>
               <td>Missile Weapons (4)</td>
               <td>Jah + Lo + Mal + Gul</td>
@@ -1585,7 +1629,7 @@
                 Knockback<br>
                 Fires Explosive Arrows or Bolts (15)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-weapon">
               <td><span style="font-weight:bold;">Breath of the Dying</span></td>
               <td>Weapons (6)</td>
               <td>Vex + Hel + El + Eld + Zod + Eth</td>
@@ -1604,7 +1648,7 @@
                 +1 To Light Radius<br>
                 Requirements -20%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-weapon">
               <td><span style="font-weight:bold;">Call to Arms</span></td>
               <td>Weapons (5)</td>
               <td>Amn + Ral + Mal + Ist + Ohm</td>
@@ -1620,7 +1664,7 @@
                 Replenish Life +12<br>
                 30% Better Chance of Getting Magic Items</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw">
               <td><span style="font-weight:bold;">Chaos</span></td>
               <td>Claws (3)</td>
               <td>Fal + Ohm + Um</td>
@@ -1634,7 +1678,7 @@
                 +10 To Strength<br>
                 +15 Life After Each Demon Kill</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-axe rw-type-sword rw-type polearm">
               <td><span style="font-weight:bold;">Crescent Moon</span></td>
               <td>Axes / Swords / Polearms (3)</td>
               <td>Shael + Um + Tir</td>
@@ -1649,7 +1693,7 @@
                 +2 To Mana After Each Kill<br>
                 Level 18 Summon Spirit Wolf (30 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-sword">
               <td><span style="font-weight:bold;">Death</span></td>
               <td>Axes / Swords (5)</td>
               <td>Hel + El + Vex + Ort + Gul</td>
@@ -1667,7 +1711,7 @@
                 Level 22 Blood Golem (15 Charges)<br>
                 Requirements -20%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-sword rw-type-polearm">
               <td><span style="font-weight:bold;">Destruction</span></td>
               <td>Swords / Polearms (5)</td>
               <td>Vex + Lo + Ber + Jah + Ko</td>
@@ -1684,7 +1728,7 @@
                 Prevent Monster Heal<br>
                 +10 To Dexterity</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-hammer rw-type-polearm">
               <td><span style="font-weight:bold;">Doom</span></td>
               <td>Axes / Hammers / Polearms (5)</td>
               <td>Hel + Ohm + Um + Lo + Cham</td>
@@ -1700,7 +1744,7 @@
                 Freezes Target +3<br>
                 Requirements -20% </td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-missile">
               <td><span style="font-weight:bold;">Edge</span></td>
               <td>Missile Weapons (3)</td>
               <td>Tir + Tal + Amn</td>
@@ -1715,7 +1759,7 @@
                 +2 To Mana After Each Kill<br>
                 Reduces All Vendor Prices 15%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-melee">
               <td><span style="font-weight:bold;">Eternity</span></td>
               <td>Melee Weapons (5)</td>
               <td>Amn + Ber + Ist + Sol + Sur</td>
@@ -1732,7 +1776,7 @@
                 30% Better Chance Of Getting Magic Items<br>
                 Level 8 Revive (88 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
               <td><span style="font-weight:bold;">Faith</span></td>
               <td>Missile Weapons (4)</td>
               <td>Ohm + Jah + Lem + Eld</td>
@@ -1748,7 +1792,7 @@
                 10% Reanimate As: Returned<br>
                 75% Extra Gold From Monsters</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-axe rw-type-hammer">
               <td><span style="font-weight:bold;">Famine</span></td>
               <td>Axes / Hammers (4)</td>
               <td>Fal + Ohm + Ort + Jah</td>
@@ -1763,7 +1807,7 @@
                 Prevent Monster Heal<br>
                 +10 To Strength</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
               <td><span style="font-weight:bold;">Fortitude</span></td>
               <td>Weapons (4)</td>
               <td>El + Sol + Dol + Lo</td>
@@ -1780,7 +1824,7 @@
                 12% Damage Taken Goes To Mana<br>
                 +1 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-melee">
               <td><span style="font-weight:bold;">Fury</span></td>
               <td>Melee Weapons (3)</td>
               <td>Jah + Gul + Eth</td>
@@ -1795,7 +1839,7 @@
                 6% Life Stolen Per Hit<br>
                 +5 To Frenzy (Barbarian Only)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-sword">
               <td><span style="font-weight:bold;">Grief</span></td>
               <td>Axes / Swords (5)</td>
               <td>Eth + Tir + Lo + Mal + Ral</td>
@@ -1812,7 +1856,7 @@
                 +2 To Mana After Each Kill<br>
                 +10-15 Life After Each Kill (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
               <td><span style="font-weight:bold;">Hand of Justice</span></td>
               <td>Weapons (4)</td>
               <td>Sur + Cham + Amn + Lo</td>
@@ -1828,7 +1872,7 @@
                 Hit Blinds Target<br>
                 Freezes Target +3</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
               <td><span style="font-weight:bold;">Harmony</span></td>
               <td>Missile Weapons (4)</td>
               <td>Tir + Ith + Sol + Ko</td>
@@ -1846,7 +1890,7 @@
                 +2 To Light Radius<br>
                 Level 20 Revive (25 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-mace rw-type-stave" >
               <td><span style="font-weight:bold;">Heart of the Oak</span></td>
               <td>Maces / Staves (4)</td>
               <td>Ko + Vex + Pul + Thul</td>
@@ -1863,7 +1907,7 @@
                 Level 4 Oak Sage (25 Charges)<br>
                 Level 14 Raven (60 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-scepter">
               <td><span style="font-weight:bold;">Holy Thunder</span></td>
               <td>Scepters (4)</td>
               <td>Eth + Ral + Ort + Tal</td>
@@ -1878,7 +1922,7 @@
                 +3 To Holy Shock (Paladin Only)<br>
                 Level 7 Chain Lightning (60 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-melee">
               <td><span style="font-weight:bold;">Honor</span></td>
               <td>Melee Weapons (5)</td>
               <td>Amn + El + Ith + Tir + Sol</td>
@@ -1894,7 +1938,7 @@
                 +1 To Light Radius<br>
                 +2 To Mana After Each Kill</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-weapon">
               <td><span style="font-weight:bold;">Hustle</span><br>(Single Player / Ladder)</td>
               <td>Weapons (3)</td>
               <td>Shael + Ko + Eld</td>
@@ -1906,7 +1950,7 @@
                 +50 to Attack Rating against Undead<br>
                 +10 to Dexterity</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
               <td><span style="font-weight:bold;">Ice</span></td>
               <td>Missile Weapons (4)</td>
               <td>Amn + Shael + Jah + Lo</td>
@@ -1922,7 +1966,7 @@
                 20% Deadly Strike<br>
                 3.125-309.375 Extra Gold From Monsters (Based on Character Level)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-polearm rw-type-spear rw-type-amazonspear">
               <td><span style="font-weight:bold;">Infinity</span></td>
               <td>Polearms / Spears / Amazon Spears (4)</td>
               <td>Ber + Mal + Ber + Ist</td>
@@ -1937,7 +1981,7 @@
                 30% Better Chance of Getting Magic Items<br>
                 Level 21 Cyclone Armor (30 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-polearm rw-type-stave rw-type-missile">
               <td><span style="font-weight:bold;">Insight</span></td>
               <td>Polearms / Staves / Missile Weapons (4)</td>
               <td>Ral + Tir + Tal + Sol</td>
@@ -1953,7 +1997,7 @@
                 +2 To Mana After Each Kill<br>
                 23% Better Chance of Getting Magic Items</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-scepter rw-type-sword">
               <td><span style="font-weight:bold;">King's Grace</span></td>
               <td>Scepters / Swords (3)</td>
               <td>Amn + Ral + Thul</td>
@@ -1967,7 +2011,7 @@
                 +100 To Attack Rating Against Undead<br>
                 7% Life Stolen Per Hit</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-axe rw-type-sword">
               <td><span style="font-weight:bold;">Kingslayer</span></td>
               <td>Axes / Swords (4)</td>
               <td>Mal + Um + Gul + Fal</td>
@@ -1982,7 +2026,7 @@
                 +10 To Strength<br>
                 40% Extra Gold From Monsters</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-axes rw-type-hammer rw-type-sword">
               <td><span style="font-weight:bold;">Last Wish</span></td>
               <td>Axes / Hammers / Swords (6)</td>
               <td>Jah + Mal + Jah + Sur + Jah + Ber</td>
@@ -1997,7 +2041,7 @@
                 Hit Blinds Target<br>
                 +(0.5 per character level) 0.5-49.5% Chance of Getting Magic Items (Based on Character Level)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-hammer rw-type-scepter rw-type-sword">
               <td><span style="font-weight:bold;">Lawbringer</span></td>
               <td>Hammers / Scepters / Swords (3)</td>
               <td>Amn + Lem + Ko</td>
@@ -2012,7 +2056,7 @@
                 +10 To Dexterity<br>
                 75% Extra Gold From Monsters</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-stave">
               <td><span style="font-weight:bold;">Leaf</span></td>
               <td>Staves (2)</td>
               <td>Tir + Ral</td>
@@ -2025,7 +2069,7 @@
                 + (2 Per Character Level) +2-198 To Defense (Based On Character Level)<br>
                 Cold Resist +33%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-melee">
               <td><span style="font-weight:bold;">Malice</span></td>
               <td>Melee Weapons (3)</td>
               <td>Ith + El + Eth</td>
@@ -2038,7 +2082,7 @@
                 +50 To Attack Rating<br>
                 Drain Life -5</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-missile">
               <td><span style="font-weight:bold;">Melody</span></td>
               <td>Missile Weapons (3)</td>
               <td>Shael + Ko + Nef</td>
@@ -2052,7 +2096,7 @@
                 +10 To Dexterity<br>
                 Knockback</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-stave">
               <td><span style="font-weight:bold;">Memory</span></td>
               <td>Staves (4)</td>
               <td>Lum + Io + Sol + Eth</td>
@@ -2068,7 +2112,7 @@
                 Magic Damage Reduced By 7<br>
                 +50% Enhanced Defense</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-missile">
               <td><span style="font-weight:bold;">Mist</span></td>
               <td>Missile Weaopns (5)</td>
               <td>Cham + Shael + Gul + Thul + Ith</td>
@@ -2084,7 +2128,7 @@
                 +24 Vitality<br>
                 All Resistances +40</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw">
               <td><span style="font-weight:bold;">Mosaic</span><br>(Single Player / Ladder)</td>
               <td>Claws (3)</td>
               <td>Mal + Gul + Amn</td>
@@ -2101,7 +2145,7 @@
                 Adds 3-14 Cold Damage<br>
                 Prevent Monster Heal</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-axe rw-type-mace rw-type-sword">
               <td><span style="font-weight:bold;">Oath</span></td>
               <td>Axes / Maces / Swords (4)</td>
               <td>Shael + Pul + Mal + Lum</td>
@@ -2117,7 +2161,7 @@
                 Level 16 Heart Of Wolverine (20 Charges)<br>
                 Level 17 Iron Golem (14 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-polearm rw-type-spear rw-type-amazonspear">
               <td><span style="font-weight:bold;">Obedience</span></td>
               <td>Polearms / Spears / Amazon Spears (5)</td>
               <td>Hel + Ko + Thul + Eth + Fal</td>
@@ -2134,7 +2178,7 @@
                 All Resistances +20-30 (varies)<br>
                 Requirements -20%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-stave">
               <td><span style="font-weight:bold;">Obsession</span></td>
               <td>Staves (6)</td>
               <td>Zod + Ist + Lem + Lum + Io + Nef</td>
@@ -2152,7 +2196,7 @@
                 75% Extra Gold from Monsters<br>
                 30% Better Chance of Getting Magic Items</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
               <td><span style="font-weight:bold;">Passion</span></td>
               <td>Weapons (4)</td>
               <td>Dol + Ort + Eld + Lem</td>
@@ -2169,7 +2213,7 @@
                 75% Extra Gold From Monsters<br>
                 Level 3 Heart of Wolverine (12 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw">
               <td><span style="font-weight:bold;">Pattern</span></td>
               <td>Claws (3)</td>
               <td>Tal + Ort + Thul</td>
@@ -2184,7 +2228,7 @@
                 +6 to Dexterity<br>
                 All Resistances +15</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
               <td><span style="font-weight:bold;">Phoenix</span></td>
               <td>Weapons (4)</td>
               <td>Vex + Vex + Lo + Jah</td>
@@ -2199,7 +2243,7 @@
                 +350-400 Defense Vs. Missile (varies)<br>
                 +15-21 Fire Absorb (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw rw-type-dagger rw-type-sword">
               <td><span style="font-weight:bold;">Plague</span></td>
               <td>Claws / Daggers / Swords (3)</td>
               <td>Cham + Shael + Um</td>
@@ -2214,7 +2258,7 @@
                 +25% Chance of Open Wounds<br>
                 Freezes Target +3</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-polearm rw-type-spear rw-type-amazonspear">
               <td><span style="font-weight:bold;">Pride</span></td>
               <td>Polearms / Spears / Amazon Spears (4)</td>
               <td>Cham + Sur + Io + Lo</td>
@@ -2230,7 +2274,7 @@
                 Replenish Life +8<br>
                 1.875-185.625% Extra Gold From Monsters (Based on Character Level)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-scepter rw-type-polearm">
               <td><span style="font-weight:bold;">Rift</span></td>
               <td>Scepters / Polearms (4)</td>
               <td>Hel + Ko + Lem + Gul</td>
@@ -2246,7 +2290,7 @@
                 Level 15 Iron Maiden (40 Charges)<br>
                 Requirements -20% </td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-weaopn">
               <td><span style="font-weight:bold;">Silence</span></td>
               <td>Weapons (6)</td>
               <td>Dol + Eld + Hel + Ist + Tir + Vex</td>
@@ -2264,7 +2308,7 @@
                 +2 To Mana After Each Kill<br>
                 30% Better Chance Of Getting Magic Items</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-sword">
               <td><span style="font-weight:bold;">Spirit</span></td>
               <td>Swords (4)</td>
               <td>Tal + Thul + Ort + Amn</td>
@@ -2280,7 +2324,7 @@
                 +89-112 To Mana (varies)<br>
                 +3-8 Magic Absorb (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-axe rw-type-mace rw-type-sword">
               <td><span style="font-weight:bold;">Steel</span></td>
               <td>Axes / Maces / Swords (2)</td>
               <td>Tir + El</td>
@@ -2293,7 +2337,7 @@
                 +2 To Mana After Each Kill<br>
                 +1 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-melee">
               <td><span style="font-weight:bold;">Strength</span></td>
               <td>Melee Weapons (2)</td>
               <td>Amn + Tir</td>
@@ -2304,7 +2348,7 @@
                 +20 To Strength<br>
                 +10 To Vitality</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-sword">
               <td><span style="font-weight:bold;">Unbending Will</span></td>
               <td>Swords (6)</td>
               <td>Fal + Io + Ith + Eld + El + Hel</td>
@@ -2324,7 +2368,7 @@
                 +1 Light Radius<br>
                 Requirements -20%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-weapon">
               <td><span style="font-weight:bold;">Venom</span></td>
               <td>Weapons (3)</td>
               <td>Tal + Dol + Mal</td>
@@ -2336,7 +2380,7 @@
                 Level 13 Poison Nova (11 Charges)<br>
                 +273 Poison Damage Over 6 seconds</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-mace rw-type-sword">
               <td><span style="font-weight:bold;">Voice of Reason</span></td>
               <td>Maces / Swords (4)</td>
               <td>Lem + Ko + El + Eld</td>
@@ -2353,7 +2397,7 @@
                 75% Extra Gold From Monsters<br>
                 +1 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-wand">
               <td><span style="font-weight:bold;">White</span></td>
               <td>Wands (2)</td>
               <td>Dol + Io</td>
@@ -2367,7 +2411,7 @@
                 20% Faster Cast Rate<br>
                 +13 To Mana</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-melee">
               <td><span style="font-weight:bold;">Wind</span></td>
               <td>Melee Weapons (2)</td>
               <td>Sur + El</td>
@@ -2382,7 +2426,7 @@
                 +1 To Light Radius<br>
                 Level 13 Twister (127 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
               <td><span style="font-weight:bold;">Wrath</span></td>
               <td>Missile Weapons (4)</td>
               <td>Pul + Lum + Ber + Mal</td>
@@ -2398,7 +2442,7 @@
                 +10 To Energy<br>
                 Cannot Be Frozen</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-missile">
               <td><span style="font-weight:bold;">Zephyr</span></td>
               <td>Missile Weapons (2)</td>
               <td>Ort + Eth</td>
@@ -2413,9 +2457,21 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-runewordsbodyarmor">
+        <div class="sectiondisplay hide" id="content-runewordsbodyarmors">
+          <div id="define-rw-bodyarmors">
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-0" name="define-rw-bodyarmors-sockets" value="0" checked="checked">
+            <label for="define-rw-bodyarmors-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-2" name="define-rw-bodyarmors-sockets" value="2">
+            <label for="define-rw-bodyarmors-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-3" name="define-rw-bodyarmors-sockets" value="3">
+            <label for="define-rw-bodyarmors-sockets-3">: 3 Sockets</label>
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-4" name="define-rw-bodyarmors-sockets" value="4">
+            <label for="define-rw-bodyarmors-sockets-4">: 4 Sockets</label><br>
+            <input onclick="DefineRuneWords('bodyarmors');" type="checkbox" class="define-rw-bodyarmors-checkbox" id="define-rw-bodyarmors-type-classbodyarmor" value="classbodyarmor">
+            <label for="define-rw-bodyarmors-type-classbodyarmor">: Class Armor</label><br>
+          </div>
           <table>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Bone</span></td>
               <td>Body Armor (3)</td>
               <td>Sol + Um + Um</td>
@@ -2426,7 +2482,7 @@
                 All Resistances +30<br>
                 Damage Reduced By 7</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
               <td><span style="font-weight:bold;">Bramble</span></td>
               <td>Body Armor (4)</td>
               <td>Ral + Ohm + Sur + Eth</td>
@@ -2442,7 +2498,7 @@
                 +13 Life After Each Kill<br>
                 Level 13 Spirit of Barbs (33 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
               <td><span style="font-weight:bold;">Chains of Honor</span></td>
               <td>Body Armor (4)</td>
               <td>Dol + Um + Ber + Ist</td>
@@ -2457,7 +2513,7 @@
                 Damage Reduced By 8%<br>
                 25% Better Chance of Getting Magic Items</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Duress</span></td>
               <td>Body Armor (3)</td>
               <td>Shael + Um + Thul</td>
@@ -2473,7 +2529,7 @@
                 Fire Resist +15%<br>
                 Poison Resist +15%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Dragon</span></td>
               <td>Body Armor (3)</td>
               <td>Sur + Lo + Sol</td>
@@ -2488,7 +2544,7 @@
                 +5% To Maximum Lightning Resist<br>
                 Damage Reduced by 7</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Enigma</span></td>
               <td>Body Armor (3)</td>
               <td>Jah + Ith + Ber</td>
@@ -2503,7 +2559,7 @@
                 15% Damage Taken Goes To Mana<br>
                 + (1 Per Character Level) +1-99% Better Chance of Getting Magic Items (Based On Character Level)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Enlightenment</span></td>
               <td>Body Armor (3)</td>
               <td>Pul + Ral + Sol</td>
@@ -2515,7 +2571,7 @@
                 Fire Resist +30%<br>
                 Damage Reduced By 7</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
               <td><span style="font-weight:bold;">Fortitude</span></td>
               <td>Body Armor (4)</td>
               <td>El + Sol + Dol + Lo</td>
@@ -2532,7 +2588,7 @@
                 12% Damage Taken Goes To Mana<br>
                 +1 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Gloom</span></td>
               <td>Body Armor (3)</td>
               <td>Fal + Um + Pul</td>
@@ -2545,7 +2601,7 @@
               5% Damage Taken Goes To Mana<br>
               -3 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Hustle</span><br>(Single Player / Ladder)</td>
               <td>Body Armor (3)</td>
               <td>Shael + Ko + Eld</td>
@@ -2557,7 +2613,7 @@
                 50% Slower Stamina Drain<br>
                 All Resistances +10</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Lionheart</span></td>
               <td>Body Armor (3)</td>
               <td>Hel + Lum + Fal</td>
@@ -2570,7 +2626,7 @@
                 +50 To Life<br>
                 All Resistances +30</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Myth</span></td>
               <td>Body Armor (3)</td>
               <td>Hel + Amn + Nef</td>
@@ -2582,7 +2638,7 @@
                 Attacker Takes Damage of 14<br>
                 Requirements -15%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Peace</span></td>
               <td>Body Armor (3)</td>
               <td>Shael + Thul + Amn</td>
@@ -2594,7 +2650,7 @@
                 Cold Resist +30%<br>
                 Attacker Takes Damage of 14</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Principle</span></td>
               <td>Body Armor (3)</td>
               <td>Ral + Gul + Eld</td>
@@ -2606,7 +2662,7 @@
                 +5% To Maximum Poison Resist<br>
                 Fire Resist +30%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-2">
               <td><span style="font-weight:bold;">Prudence</span></td>
               <td>Body Armor (2)</td>
               <td>Mal + Tir</td>
@@ -2619,7 +2675,7 @@
                 +1 To Light Radius<br>
                 Repairs Durability 1 In 4 Seconds</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Rain</span></td>
               <td>Body Armor (3)</td>
               <td>Ort + Mal + Ith</td>
@@ -2631,7 +2687,7 @@
                 Magic Damage Reduced By 7<br>
                 15% Damage Taken Goes to Mana</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-2">
               <td><span style="font-weight:bold;">Smoke</span></td>
               <td>Body Armor (2)</td>
               <td>Nef + Lum</td>
@@ -2643,7 +2699,7 @@
                 +10 To Energy<br>
                 -1 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-2">
               <td><span style="font-weight:bold;">Stealth</span></td>
               <td>Body Armor (2)</td>
               <td>Tal + Eth</td>
@@ -2656,7 +2712,7 @@
                 25% Faster Cast Rate<br>
                 25% Faster Hit Recovery</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
               <td><span style="font-weight:bold;">Stone</span></td>
               <td>Body Armor (4)</td>
               <td>Shael + Um + Pul + Lum</td>
@@ -2670,7 +2726,7 @@
                 Level 16 Molten Boulder (80 Charges)<br>
                 Level 16 Clay Golem (16 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
               <td><span style="font-weight:bold;">Treachery</span></td>
               <td>Body Armor (3)</td>
               <td>Shael + Thul + Lem</td>
@@ -2682,7 +2738,7 @@
                 Cold Resist +30%<br>
                 50% Extra Gold From Monsters</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
               <td><span style="font-weight:bold;">Wealth</span></td>
               <td>Body Armor (3)</td>
               <td>Lem + Ko + Tir</td>
@@ -2693,9 +2749,17 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-runewordshelms">
+        <div class="sectiondisplay hide" id="content-runewordshelms">
+          <div id="define-rw-helms">
+            <input onclick="DefineRuneWords('helms');" type="radio" id="define-rw-helms-sockets-0" name="define-rw-helms-sockets" value="0" checked="checked">
+            <label for="define-rw-helms-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('helms');" type="radio" id="define-rw-helms-sockets-2" name="define-rw-helms-sockets" value="2">
+            <label for="define-rw-helms-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('helms');" type="radio" id="define-rw-helms-sockets-3" name="define-rw-helms-sockets" value="3">
+            <label for="define-rw-helms-sockets-3">: 3 Sockets</label>
+          </div>
           <table>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Bulwark</span><br>(Single Player / Ladder)</td>
               <td>Helms (3)</td>
               <td>Shael + Io + Sol</td>
@@ -2708,7 +2772,7 @@
                 Damage Reduced by 7<br>
                 Physical Damage Received Reduced by 10-15% (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Cure</span><br>(Single Player / Ladder)</td>
               <td>Helms (3)</td>
               <td>Shael + Io + Tal</td>
@@ -2720,7 +2784,7 @@
                 Poison Resist +40-60% (varies)<br>
                 Poison Length Reduced by 50%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Delirium</span></td>
               <td>Helms (3)</td>
               <td>Lem + Ist + Io</td>
@@ -2735,7 +2799,7 @@
                 25% Better Chance of Getting Magic Items<br>
                 Level 17 Attract (60 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Dream</span></td>
               <td>Helms (3)</td>
               <td>Io + Jah + Pul</td>
@@ -2750,7 +2814,7 @@
                 All Resistances +5-20 (varies)<br>
                 12-25% Better Chance of Getting Magic Items (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Flickering Flame</span></td>
               <td>Helms (3)</td>
               <td>Nef + Pul + Vex</td>
@@ -2764,7 +2828,7 @@
                 +5% to Maximum Fire Resist<br>
                 Poison Length Reduced by 50%</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Ground</span><br>(Single Player / Ladder)</td>
               <td>Helms (3)</td>
               <td>Shael + Io + Ort</td>
@@ -2775,7 +2839,7 @@
                 Lightning Resist +40-60% (varies)<br>
                 Lightning Absorb +10-15% (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Hearth</span><br>(Single Player / Ladder)</td>
               <td>Helms (3)</td>
               <td>Shael + Io + Thul</td>
@@ -2787,7 +2851,7 @@
                 Cold Absorb +10-15% (varies)<br>
                 Cannot be Frozen</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-2">
               <td><span style="font-weight:bold;">Lore</span></td>
               <td>Helms (2)</td>
               <td>Ort + Sol</td>
@@ -2798,7 +2862,7 @@
                 Damage Reduced By 7<br>
                 +2 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Metamorphosis</span><br>(Single Player / Ladder)</td>
               <td>Helms (3)</td>
               <td>Io + Cham + Fal</td>
@@ -2818,7 +2882,7 @@
                 All Resistances +10<br>
                 Cannot be Frozen</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-2">
               <td><span style="font-weight:bold;">Nadir</span></td>
               <td>Helms (2)</td>
               <td>Nef + Tir</td>
@@ -2831,7 +2895,7 @@
                 -33% Extra Gold From Monsters<br>
                 -3 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Radiance</span></td>
               <td>Helms (3)</td>
               <td>Nef + Sol + Ith</td>
@@ -2845,7 +2909,7 @@
                 Damage Reduced By 7<br>
                 +5 To Light Radius</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Temper</span><br>(Single Player / Ladder)</td>
               <td>Helms (3)</td>
               <td>Shael + Io + Ral</td>
@@ -2856,7 +2920,7 @@
                 Fire Resist +40-60% (varies)<br>
                 Fire Absorb +10-15% (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
               <td><span style="font-weight:bold;">Wisdom</span></td>
               <td>Helms (3)</td>
               <td>Pul + Ith + Eld</td>
@@ -2872,9 +2936,21 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-runewordsshields">
+        <div class="sectiondisplay hide" id="content-runewordsshields">
+          <div id="define-rw-shields">
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-0" name="define-rw-shields-sockets" value="0" checked="checked">
+            <label for="define-rw-shields-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-2" name="define-rw-shields-sockets" value="2">
+            <label for="define-rw-shields-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-3" name="define-rw-shields-sockets" value="3">
+            <label for="define-rw-shields-sockets-3">: 3 Sockets</label>
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-4" name="define-rw-shields-sockets" value="4">
+            <label for="define-rw-shields-sockets-4">: 4 Sockets</label><br>
+            <input onclick="DefineRuneWords('shields');" type="checkbox" class="define-rw-shields-checkbox" id="define-rw-shields-type-paladinshields" value="paladinshields">
+            <label for="define-rw-shields-type-paladinshields">: Paladin Shields</label>
+          </div>
           <table>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
               <td><span style="font-weight:bold;">Ancient's Pledge</span></td>
               <td>Shields (3)</td>
               <td>Ral + Ort + Tal</td>
@@ -2885,7 +2961,7 @@
                 Poison Resist +48%<br>
                 10% Damage Goes To Mana</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
               <td><span style="font-weight:bold;">Dragon</span></td>
               <td>Shields (3)</td>
               <td>Sur + Lo + Sol</td>
@@ -2900,7 +2976,7 @@
                 +5% To Maximum Lightning Resist<br>
                 Damage Reduced by 7</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
               <td><span style="font-weight:bold;">Dream</span></td>
               <td>Shields (3)</td>
               <td>Io + Jah + Pul</td>
@@ -2915,7 +2991,7 @@
                 All Resistances +5-20 (varies)<br>
                 12-25% Better Chance of Getting Magic Items (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-4 rw-type-shields rw-type-paladinshields">
               <td><span style="font-weight:bold;">Exile</span></td>
               <td>Paladin Shields (4)</td>
               <td>Vex + Ohm + Ist + Dol</td>
@@ -2931,7 +3007,7 @@
                 25% Better Chance Of Getting Magic Items<br>
                 Repairs 1 Durability in 4 Seconds</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-4 rw-type-shields">
               <td><span style="font-weight:bold;">Phoenix</span></td>
               <td>Shields (4)</td>
               <td>Vex + Vex + Lo + Jah</td> 
@@ -2946,7 +3022,7 @@
                 +10% To Maximum Fire Resist<br>
                 +15-21 Fire Absorb (varies)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-2 rw-type-shields">
               <td><span style="font-weight:bold;">Rhyme</span></td>
               <td>Shields (2)</td>
               <td>Shael + Eth</td> 
@@ -2958,7 +3034,7 @@
                 50% Extra Gold From Monsters<br>
                 25% Better Chance Of Getting Magic Items</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
               <td><span style="font-weight:bold;">Sanctuary</span></td>
               <td>Shields (3)</td>
               <td>Ko + Ko + Mal</td>
@@ -2972,7 +3048,7 @@
                 Magic Damage Reduced By 7<br>
                 Level 12 Slow Missiles (60 Charges)</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-4 rw-type-shields">
               <td><span style="font-weight:bold;">Spirit</span></td>
               <td>Shields (4)</td>
               <td>Tal + Thul + Ort + Amn</td>
@@ -2988,7 +3064,7 @@
                 +3-8 Magic Absorb (varies)<br>
                 Attacker Takes Damage of 14</td>
             </tr>
-            <tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-2 rw-type-shields">
               <td><span style="font-weight:bold;">Splendor</span></td>
               <td>Shields (2)</td>
               <td>Eth + Lum</td>
@@ -3004,7 +3080,7 @@
             </tr>
           </table>
         </div>
-        <div class="display hide" id="content-cube">
+        <div class="sectiondisplay hide" id="content-cube">
           <span style="font-weight:bold;">Rune Upgrades:</span><br>
           3 Thul Runes + Chipped Topaz -> Amn Rune<br>
           3 Amn Runes + Chipped Amethyst -> Sol Rune<br>
@@ -3049,7 +3125,7 @@
           Repair + Recharge Weapon: Ort Rune + 1 Chipped Gem<br>
           Repair + Recharge Armor: Ral Rune + 1 Flawed Gem
         </div>
-        <div class="display hide" id="content-calc">
+        <div class="sectiondisplay hide" id="content-calc">
           <table>
             <tr>
               <th colspan="2">Item Defense</th>
@@ -3106,38 +3182,42 @@
         </div>
       </div>
       <div id="notes">
-        <div class="display hide" id="notes-breakpoints">
-          <p>*1H swinging weapons are: 1-handed axes, 1-handed maces, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, orbs, scepters and wands.<br>
-          Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a></p>
+        <div id="notes-left"></div>
+        <div id="notes-middle">
+          <div class="sectiondisplay hide" id="notes-breakpoints">
+            <p>*1H swinging weapons are: 1-handed axes, 1-handed maces, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, orbs, scepters and wands.<br>
+            Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-craftingitem">
+            <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br>
+            **Rods are: scepters, staves and wands.<br>
+            Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-craftingrune">
+            <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br>
+            **Rods are: scepters, staves and wands.<br>
+            Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordsweapons">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordsbodyarmors">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordshelms">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordsshields">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-cube">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/cube.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-calc">
+            <p></p>
+          </div>
         </div>
-        <div class="display hide" id="notes-craftingitem">
-          <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br>
-          **Rods are: scepters, staves and wands.<br>
-          Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-craftingrune">
-          <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br>
-          **Rods are: scepters, staves and wands.<br>
-          Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-runewordsweapons">
-          <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-runewordsbodyarmor">
-          <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-runewordshelms">
-          <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-runewordsshields">
-          <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-cube">
-          <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/cube.shtml">The Arreat Summit</a></p>
-        </div>
-        <div class="display hide" id="notes-calc">
-          <p></p>
-        </div>
+        <div id="notes-right"></div>
       </div>
     </div>
   </body>
