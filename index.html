@@ -1,0 +1,3225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Diablo II Info</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="ActivateSection('breakpoints');DefineRuneWords('weapons');DefineRuneWords('bodyarmors');DefineRuneWords('helms');DefineRuneWords('shields');">
+    <div id="page">
+      <div id="header">
+        <div id="header-left">
+          <span>(middle section scrolls)</span>
+        </div>
+        <div id="header-middle">
+          <button class="sectiondisplay" id="button-breakpoints" onclick="ActivateSection('breakpoints')">Break Points</button>
+          <button class="sectiondisplay" id="button-craftingitem" onclick="ActivateSection('craftingitem')">Crafting (by item)</button>
+          <button class="sectiondisplay" id="button-craftingrune" onclick="ActivateSection('craftingrune')">Crafting (by rune)</button>
+          <button class="sectiondisplay" id="button-cube" onclick="ActivateSection('cube')">Cube Recipes</button>
+          <div>
+            <button class="sectiondisplay" id="button-runewords" onclick="ToggleDropdownDisplay('runewords')">Rune Words</button>
+            <div class="dropdowncontent dropdowndisplay hide" id="dropdown-runewords">
+              <span class="sectiondisplay" id="button-runewordsweapons" onclick="ActivateSection('runewordsweapons');ToggleDropdownDisplay('runewords');">Weapons</span>
+              <span class="sectiondisplay" id="button-runewordsbodyarmors" onclick="ActivateSection('runewordsbodyarmors');ToggleDropdownDisplay('runewords');">Body Armor</span>
+              <span class="sectiondisplay" id="button-runewordshelms" onclick="ActivateSection('runewordshelms');ToggleDropdownDisplay('runewords');">Helms</span>
+              <span class="sectiondisplay" id="button-runewordsshields" onclick="ActivateSection('runewordsshields');ToggleDropdownDisplay('runewords');">Shields</span>
+            </div>
+          </div>
+          <button class="sectiondisplay" id="button-calc" onclick="ActivateSection('calc')">Calculator</button>
+        </div>
+        <div id="header-right"></div>
+      </div>
+      <div id="content">
+        <div class="sectiondisplay hide" id="content-breakpoints">
+          <table>
+            <tr>
+              <th rowspan="2">Character</th>
+              <th rowspan="2">Skill / Form</th>
+              <th colspan="17">Casting Frames</th>
+            </tr>
+            <tr>
+              <th>23</th>
+              <th>22</th>
+              <th>21</th>
+              <th>20</th>
+              <th>19</th>
+              <th>18</th>
+              <th>17</th>
+              <th>16</th>
+              <th>15</th>
+              <th>14</th>
+              <th>13</th>
+              <th>12</th>
+              <th>11</th>
+              <th>10</th>
+              <th>9</th>
+              <th>8</th>
+              <th>7</th>
+            </tr>
+            <tr>
+              <td>Amazon</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>14</td>
+              <td>22</td>
+              <td>32</td>
+              <td>48</td>
+              <td>68</td>
+              <td>99</td>
+              <td>152</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Assassin</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>8</td>
+              <td>16</td>
+              <td>27</td>
+              <td>42</td>
+              <td>65</td>
+              <td>102</td>
+              <td>174</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Barbarian</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>9</td>
+              <td>20</td>
+              <td>37</td>
+              <td>63</td>
+              <td>105</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Druid</td>
+              <td>Human</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>4</td>
+              <td>10</td>
+              <td>19</td>
+              <td>30</td>
+              <td>46</td>
+              <td>68</td>
+              <td>99</td>
+              <td>163</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bear form</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>26</td>
+              <td>40</td>
+              <td>63</td>
+              <td>99</td>
+              <td>163</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Wolf form</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>6</td>
+              <td>14</td>
+              <td>26</td>
+              <td>40</td>
+              <td>60</td>
+              <td>95</td>
+              <td>157</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Necromancer</td>
+              <td>Human</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>9</td>
+              <td>18</td>
+              <td>30</td>
+              <td>48</td>
+              <td>75</td>
+              <td>125</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Vampire</td>
+              <td>0</td>
+              <td>6</td>
+              <td>11</td>
+              <td>18</td>
+              <td>24</td>
+              <td>35</td>
+              <td>48</td>
+              <td>65</td>
+              <td>86</td>
+              <td>120</td>
+              <td>180</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Paladin</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>9</td>
+              <td>18</td>
+              <td>30</td>
+              <td>48</td>
+              <td>75</td>
+              <td>125</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Sorceress</td>
+              <td>Lightning / Chain Lightning</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>23</td>
+              <td>35</td>
+              <td>52</td>
+              <td>78</td>
+              <td>117</td>
+              <td>194</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>other spells</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>9</td>
+              <td>20</td>
+              <td>37</td>
+              <td>63</td>
+              <td>105</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Merc Act 3</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>8</td>
+              <td>15</td>
+              <td>26</td>
+              <td>39</td>
+              <td>58</td>
+              <td>86</td>
+              <td>138</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <th rowspan="2">Character</th>
+              <th rowspan="2">Equipped weapon</th>
+              <th colspan="16">Hit Recovery Frames</th>
+            </tr>
+            <tr>
+              <th>17</th>
+              <th>16</th>
+              <th>15</th>
+              <th>14</th>
+              <th>13</th>
+              <th>12</th>
+              <th>11</th>
+              <th>10</th>
+              <th>9</th>
+              <th>8</th>
+              <th>7</th>
+              <th>6</th>
+              <th>5</th>
+              <th>4</th>
+              <th>3</th>
+              <th>2</th>
+            </tr>
+            <tr>
+              <td>Amazon</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>6</td>
+              <td>13</td>
+              <td>20</td>
+              <td>32</td>
+              <td>52</td>
+              <td>86</td>
+              <td>174</td>
+              <td>600</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Assassin</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>27</td>
+              <td>48</td>
+              <td>86</td>
+              <td>200</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Barbarian</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>27</td>
+              <td>48</td>
+              <td>86</td>
+              <td>200</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Druid; <i>Human form</i></td>
+              <td>1H swinging weapons*</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>3</td>
+              <td>7</td>
+              <td>13</td>
+              <td>19</td>
+              <td>29</td>
+              <td>42</td>
+              <td>63</td>
+              <td>99</td>
+              <td>174</td>
+              <td>456</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Other weapons</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>5</td>
+              <td>10</td>
+              <td>16</td>
+              <td>26</td>
+              <td>39</td>
+              <td>56</td>
+              <td>86</td>
+              <td>152</td>
+              <td>377</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Druid; <i>Bear form</i></td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>5</td>
+              <td>10</td>
+              <td>16</td>
+              <td>24</td>
+              <td>37</td>
+              <td>54</td>
+              <td>86</td>
+              <td>152</td>
+              <td>360</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Druid; <i>Wolf form</i></td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>9</td>
+              <td>20</td>
+              <td>42</td>
+              <td>86</td>
+              <td>280</td>
+            </tr>
+            <tr>
+              <td>Necromancer; <i>Human form</i></td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>5</td>
+              <td>10</td>
+              <td>16</td>
+              <td>26</td>
+              <td>39</td>
+              <td>56</td>
+              <td>86</td>
+              <td>152</td>
+              <td>377</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Necromancer; <i>Vampire form</i></td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>2</td>
+              <td>6</td>
+              <td>10</td>
+              <td>16</td>
+              <td>24</td>
+              <td>34</td>
+              <td>48</td>
+              <td>72</td>
+              <td>117</td>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+              <td>?</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Paladin</td>
+              <td>Spears and staves</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>3</td>
+              <td>7</td>
+              <td>13</td>
+              <td>20</td>
+              <td>32</td>
+              <td>48</td>
+              <td>75</td>
+              <td>129</td>
+              <td>280</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Other weapons</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>27</td>
+              <td>48</td>
+              <td>86</td>
+              <td>200</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Sorceress</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>5</td>
+              <td>9</td>
+              <td>14</td>
+              <td>20</td>
+              <td>30</td>
+              <td>42</td>
+              <td>60</td>
+              <td>86</td>
+              <td>142</td>
+              <td>280</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Merc Act 1</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>6</td>
+              <td>13</td>
+              <td>20</td>
+              <td>32</td>
+              <td>52</td>
+              <td>86</td>
+              <td>174</td>
+              <td>600</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Merc Act 2</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>5</td>
+              <td>9</td>
+              <td>14</td>
+              <td>20</td>
+              <td>30</td>
+              <td>42</td>
+              <td>60</td>
+              <td>86</td>
+              <td>142</td>
+              <td>280</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Merc Act 3</td>
+              <td>all</td>
+              <td>0</td>
+              <td>5</td>
+              <td>8</td>
+              <td>13</td>
+              <td>18</td>
+              <td>24</td>
+              <td>32</td>
+              <td>46</td>
+              <td>63</td>
+              <td>86</td>
+              <td>133</td>
+              <td>232</td>
+              <td>600</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Merc Act 5</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>27</td>
+              <td>48</td>
+              <td>86</td>
+              <td>200</td>
+              <td></td>
+            </tr>
+          </table>
+          <br>
+          <table>
+            <tr>
+              <th rowspan="2">Character</th>
+              <th rowspan="2">Weapon / Skill / Form</th>
+              <th colspan="17">Block Frames</th>
+            </tr>
+            <tr>
+              <th>17</th>
+              <th>16</th>
+              <th>15</th>
+              <th>14</th>
+              <th>13</th>
+              <th>12</th>
+              <th>11</th>
+              <th>10</th>
+              <th>9</th>
+              <th>8</th>
+              <th>7</th>
+              <th>6</th>
+              <th>5</th>
+              <th>4</th>
+              <th>3</th>
+              <th>2</th>
+              <th>1</th>
+            </tr>
+            <tr>
+              <td rowspan="2">Amazon</td>
+              <td>1H swinging weapons*</td>
+              <td>0</td>
+              <td>4</td>
+              <td>6</td>
+              <td>11</td>
+              <td>15</td>
+              <td>23</td>
+              <td>29</td>
+              <td>40</td>
+              <td>56</td>
+              <td>80</td>
+              <td>120</td>
+              <td>200</td>
+              <td>480</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Other weapons</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>13</td>
+              <td>32</td>
+              <td>86</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Assassin</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>13</td>
+              <td>32</td>
+              <td>86</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Barbarian</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>9</td>
+              <td>20</td>
+              <td>42</td>
+              <td>86</td>
+              <td>280</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="3">Druid</td>
+              <td>Human form</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>6</td>
+              <td>13</td>
+              <td>20</td>
+              <td>32</td>
+              <td>52</td>
+              <td>86</td>
+              <td>174</td>
+              <td>600</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Bear form</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>5</td>
+              <td>10</td>
+              <td>16</td>
+              <td>27</td>
+              <td>40</td>
+              <td>65</td>
+              <td>109</td>
+              <td>223</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Wolf form</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>27</td>
+              <td>48</td>
+              <td>86</td>
+              <td>200</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Necromancer</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>6</td>
+              <td>13</td>
+              <td>20</td>
+              <td>32</td>
+              <td>52</td>
+              <td>86</td>
+              <td>174</td>
+              <td>600</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td rowspan="2">Paladin</td>
+              <td>normal</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>13</td>
+              <td>32</td>
+              <td>86</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>with Holy Shield</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>86</td>
+            </tr>
+            <tr>
+              <td>Sorceress</td>
+              <td>all</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>0</td>
+              <td>7</td>
+              <td>15</td>
+              <td>27</td>
+              <td>48</td>
+              <td>86</td>
+              <td>200</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-craftingitem">
+          <table>
+            <tr>
+              <th colspan="3">HIT POWER</th>
+            </tr>
+            <tr>
+              <th>Chain Boots</th>
+              <td>Sapphire</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Chain Gloves</th>
+              <td>Sapphire</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Heavy Belt</th>
+              <td>Sapphire</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Sapphire</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Sapphire</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)</td>
+            </tr>
+            <tr>
+              <th>Full Helm</th>
+              <td>Sapphire</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Gothic Shield</th>
+              <td>Sapphire</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Field Plate</th>
+              <td>Sapphire</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Blunt Weapon*</th>
+              <td>Sapphire</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+          </table>
+          <table id="craftingitem-bordermod">
+            <tr>
+              <th colspan="3">BLOOD</th>
+            </tr>
+            <tr>
+              <th>Light Plated Boots</th>
+              <td>Ruby</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Heavy Gloves</th>
+              <td>Ruby</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Belt</th>
+              <td>Ruby</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Ruby</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Ruby</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Helm</th>
+              <td>Ruby</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Spiked Shield</th>
+              <td>Ruby</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Plate Mail</th>
+              <td>Ruby</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Axe</th>
+              <td>Ruby</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+          </table>
+          <table id="craftingitem-bordermod">
+            <tr>
+              <th colspan="3">CASTER</th>
+            </tr>
+            <tr>
+              <th>Boots</th>
+              <td>Amethyst</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Leather Gloves</th>
+              <td>Amethyst</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Belt</th>
+              <td>Amethyst</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Amethyst</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Amethyst</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Mask</th>
+              <td>Amethyst</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Small Shield</th>
+              <td>Amethyst</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Plate</th>
+              <td>Amethyst</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Rod**</th>
+              <td>Amethyst</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+          </table>
+          <table id="craftingitem-bordermod">
+            <tr>
+              <th colspan="3">SAFETY</th>
+            </tr>
+            <tr>
+              <th>Greaves</th>
+              <td>Emerald</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Gauntlets</th>
+              <td>Emerald</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Sash</th>
+              <td>Emerald</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Emerald</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Emerald</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Crown</th>
+              <td>Emerald</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Kite Shield</th>
+              <td>Emerald</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Breast Plate</th>
+              <td>Emerald</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Spear or Javelin</th>
+              <td>Emerald</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-craftingrune">
+          <table>
+            <tr>
+              <th colspan="3">HIT POWER</th>
+            </tr>
+            <tr>
+              <th>Blunt Weapon*</th>
+              <td>Sapphire</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Field Plate</th>
+              <td>Sapphire</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Gothic Shield</th>
+              <td>Sapphire</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Full Helm</th>
+              <td>Sapphire</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Heavy Belt</th>
+              <td>Sapphire</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Chain Boots</th>
+              <td>Sapphire</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Chain Gloves</th>
+              <td>Sapphire</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Sapphire</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Sapphire</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)</td>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+          </table>
+          <table id="craftingrune-bordermod">
+            <tr>
+              <th colspan="3">BLOOD</th>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+            <tr>
+              <th>Heavy Gloves</th>
+              <td>Ruby</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Light Plated Boots</th>
+              <td>Ruby</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Spiked Shield</th>
+              <td>Ruby</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Belt</th>
+              <td>Ruby</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Helm</th>
+              <td>Ruby</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Axe</th>
+              <td>Ruby</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Plate Mail</th>
+              <td>Ruby</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Ruby</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Ruby</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+          </table>
+          <table id="craftingrune-bordermod">
+            <tr>
+              <th colspan="3">CASTER</th>
+            </tr>
+            <tr>
+              <th>Rod**</th>
+              <td>Amethyst</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Mask</th>
+              <td>Amethyst</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Small Shield</th>
+              <td>Amethyst</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Belt</th>
+              <td>Amethyst</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Plate</th>
+              <td>Amethyst</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Amethyst</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Leather Gloves</th>
+              <td>Amethyst</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Boots</th>
+              <td>Amethyst</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Amethyst</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+          </table>
+          <table id="craftingrune-bordermod">
+            <tr>
+              <th colspan="3">SAFETY</th>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+            <tr>
+              <th>Kite Shield</th>
+              <td>Emerald</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Breast Plate</th>
+              <td>Emerald</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Crown</th>
+              <td>Emerald</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Sash</th>
+              <td>Emerald</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Gauntlets</th>
+              <td>Emerald</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Greaves</th>
+              <td>Emerald</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Emerald</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Emerald</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Spear or Javelin</th>
+              <td>Emerald</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-runewordsweapons">
+          <div id="define-rw-weapons">
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-0" name="define-rw-weapons-sockets" value="0" checked="checked">
+            <label for="define-rw-weapons-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-2" name="define-rw-weapons-sockets" value="2">
+            <label for="define-rw-weapons-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-3" name="define-rw-weapons-sockets" value="3">
+            <label for="define-rw-weapons-sockets-3">: 3 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-4" name="define-rw-weapons-sockets" value="4">
+            <label for="define-rw-weapons-sockets-4">: 4 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-5" name="define-rw-weapons-sockets" value="5">
+            <label for="define-rw-weapons-sockets-5">: 5 Sockets</label>
+            <input onclick="DefineRuneWords('weapons');" type="radio" id="define-rw-weapons-sockets-6" name="define-rw-weapons-sockets" value="6">
+            <label for="define-rw-weapons-sockets-6">: 6 Sockets</label><br>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-weapon" value="weapon">
+            <label for="define-rw-weapons-type-weapon">: All Weapon Types</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-melee" value="melee">
+            <label for="define-rw-weapons-type-melee">: Melee Weapons</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-missile" value="missile">
+            <label for="define-rw-weapons-type-missile">: Missile Weapons</lable><br>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-axe" value="axe">
+            <label for="define-rw-weapons-type-axe">: Axes</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-club" value="club">
+            <label for="define-rw-weapons-type-club">: Clubs</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-hammer" value="hammer">
+            <label for="define-rw-weapons-type-hammer">: Hammers</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-mace" value="mace">
+            <label for="define-rw-weapons-type-mace">: Maces</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-polearm" value="polearm">
+            <label for="define-rw-weapons-type-polearm">: Polearms</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-scepter" value="scepter">
+            <label for="define-rw-weapons-type-scepter">: Scepters</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-spear" value="spear">
+            <label for="define-rw-weapons-type-spear">: Spears</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-stave" value="stave">
+            <label for="define-rw-weapons-type-stave">: Staves</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-sword" value="sword">
+            <label for="define-rw-weapons-type-sword">: Swords</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-wand" value="wand">
+            <label for="define-rw-weapons-type-wand">: Wands</lable><br>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-amazonspear" value="amazonspear">
+            <label for="define-rw-weapons-type-amazonspear">: Amazon Spears</lable>
+            <input onclick="DefineRuneWords('weapons');" type="checkbox" class="define-rw-weapons-checkbox" id="define-rw-weapons-type-claw" value="claw">
+            <label for="define-rw-weapons-type-claw">: Claws</lable>
+          </div>
+          <table>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-hammer rw-type-scepter">
+              <td><span style="font-weight:bold;">Beast</span></td>
+              <td>Axes / Hammers / Scepters (5)</td>
+              <td>Ber + Tir + Um + Mal + Lum</td>
+              <td>Level 9 Fanaticism Aura When Equipped<br>
+                +40% Increased Attack Speed<br>
+                +240-270% Enhanced Damage (varies)<br>
+                20% Chance of Crushing Blow<br>
+                25% Chance of Open Wounds<br>
+                +3 To Werebear<br>
+                +3 To Lycanthropy<br>
+                Prevent Monster Heal<br>
+                +25-40 To Strength (varies)<br>
+                +10 To Energy<br>
+                +2 To Mana After Each Kill<br>
+                Level 13 Summon Grizzly (5 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-club rw-type-hammer rw-type-mace">
+              <td><span style="font-weight:bold;">Black</span></td>
+              <td>Clubs / Hammers / Maces (3)</td>
+              <td>Thul + Io + Nef</td>
+              <td>+120% Enhanced Damage<br>
+                40% Chance Of Crushing Blow<br>
+                +200 To Attack Rating<br>
+                Adds 3-14 Cold Damage - Cold Duration 3 Seconds<br>
+                +10 To Vitality<br>
+                15% Increased Attack Speed<br>
+                Knockback<br>
+                Magic Damage Reduced By 2<br>
+                Level 4 Corpse Explosion (12 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
+              <td><span style="font-weight:bold;">Brand</span></span></td>
+              <td>Missile Weapons (4)</td>
+              <td>Jah + Lo + Mal + Gul</td>
+              <td>35% Chance To Cast Level 14 Amplify Damage When Struck<br>
+                100% Chance To Cast Level 18 Bone Spear On Striking<br>
+                +260-340% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                20% Bonus to Attack Rating<br>
+                +280-330% Damage To Demons (varies)<br>
+                20% Deadly Strike<br>
+                Prevent Monster Heal<br>
+                Knockback<br>
+                Fires Explosive Arrows or Bolts (15)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-weapon">
+              <td><span style="font-weight:bold;">Breath of the Dying</span></td>
+              <td>Weapons (6)</td>
+              <td>Vex + Hel + El + Eld + Zod + Eth</td>
+              <td>50% Chance To Cast Level 20 Poison Nova When You Kill An Enemy<br>
+                Indestructible<br>
+                +60% Increased Attack Speed<br>
+                +350-400% Enhanced Damage (varies)<br>
+                +200% Damage To Undead<br>
+                -25% Target Defense<br>
+                +50 To Attack Rating<br>
+                +50 To Attack Rating Against Undead<br>
+                7% Mana Stolen Per Hit<br>
+                12-15% Life Stolen Per Hit (varies)<br>
+                Prevent Monster Heal<br>
+                +30 To All Attributes<br>
+                +1 To Light Radius<br>
+                Requirements -20%</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-weapon">
+              <td><span style="font-weight:bold;">Call to Arms</span></td>
+              <td>Weapons (5)</td>
+              <td>Amn + Ral + Mal + Ist + Ohm</td>
+              <td>+1 To All Skills<br>
+                +40% Increased Attack Speed<br>
+                +250-290% Enhanced Damage (varies)<br>
+                Adds 5-30 Fire Damage<br>
+                7% Life Stolen Per Hit<br>
+                +2-6 To Battle Command (varies)<br>
+                +1-6 To Battle Orders (varies)<br>
+                +1-4 To Battle Cry (varies)<br>
+                Prevent Monster Heal<br>
+                Replenish Life +12<br>
+                30% Better Chance of Getting Magic Items</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw">
+              <td><span style="font-weight:bold;">Chaos</span></td>
+              <td>Claws (3)</td>
+              <td>Fal + Ohm + Um</td>
+              <td>9% Chance To Cast Level 11 Frozen Orb On Striking<br>
+                11% Chance To Cast Level 9 Charged Bolt On Striking<br>
+                +35% Increased Attack Speed<br>
+                +290-340% Enhanced Damage (varies)<br>
+                Adds 216-471 Magic Damage<br>
+                25% Chance of Open Wounds<br>
+                +1 To Whirlwind<br>
+                +10 To Strength<br>
+                +15 Life After Each Demon Kill</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-axe rw-type-sword rw-type polearm">
+              <td><span style="font-weight:bold;">Crescent Moon</span></td>
+              <td>Axes / Swords / Polearms (3)</td>
+              <td>Shael + Um + Tir</td>
+              <td>10% Chance To Cast Level 17 Chain Lightning On Striking<br>
+                7% Chance To Cast Level 13 Static Field On Striking<br>
+                +20% Increased Attack Speed<br>
+                +180-220% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                -35% To Enemy Lightning Resistance<br>
+                25% Chance of Open Wounds<br>
+                +9-11 Magic Absorb (varies)<br>
+                +2 To Mana After Each Kill<br>
+                Level 18 Summon Spirit Wolf (30 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-sword">
+              <td><span style="font-weight:bold;">Death</span></td>
+              <td>Axes / Swords (5)</td>
+              <td>Hel + El + Vex + Ort + Gul</td>
+              <td>100% Chance To Cast Level 44 Chain Lightning When You Die<br>
+                25% Chance To Cast Level 18 Glacial Spike On Attack<br>
+                Indestructible<br>
+                +300-385% Enhanced Damage (varies)<br>
+                20% Bonus To Attack Rating<br>
+                +50 To Attack Rating<br>
+                Adds 1-50 Lightning Damage<br>
+                7% Mana Stolen Per Hit<br>
+                50% Chance of Crushing Blow<br>
+                +(0.5 per Character Level) 0.5-49.5% Deadly Strike (Based on Character Level)<br>
+                +1 To Light Radius<br>
+                Level 22 Blood Golem (15 Charges)<br>
+                Requirements -20%</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-sword rw-type-polearm">
+              <td><span style="font-weight:bold;">Destruction</span></td>
+              <td>Swords / Polearms (5)</td>
+              <td>Vex + Lo + Ber + Jah + Ko</td>
+              <td>23% Chance To Cast Level 12 Volcano On Striking<br>
+                5% Chance To Cast Level 23 Molten Boulder On Striking<br>
+                100% Chance To Cast level 45 Meteor When You Die<br>
+                15% Chance To Cast Level 22 Nova On Attack<br>
+                +350% Enhanced Damage<br>
+                Ignore Target's Defense<br>
+                Adds 100-180 Magic Damage<br>
+                7% Mana Stolen Per Hit<br>
+                20% Chance Of Crushing Blow<br>
+                20% Deadly Strike<br>
+                Prevent Monster Heal<br>
+                +10 To Dexterity</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-hammer rw-type-polearm">
+              <td><span style="font-weight:bold;">Doom</span></td>
+              <td>Axes / Hammers / Polearms (5)</td>
+              <td>Hel + Ohm + Um + Lo + Cham</td>
+              <td>5% Chance To Cast Level 18 Volcano On Striking<br>
+                Level 12 Holy Freeze Aura When Equipped<br>
+                +2 To All Skills<br>
+                +45% Increased Attack Speed<br>
+                +330-370% Enhanced Damage (varies)<br>
+                -(40-60)% To Enemy Cold Resistance (varies)<br>
+                20% Deadly Strike<br>
+                25% Chance of Open Wounds<br>
+                Prevent Monster Heal<br>
+                Freezes Target +3<br>
+                Requirements -20% </td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-missile">
+              <td><span style="font-weight:bold;">Edge</span></td>
+              <td>Missile Weapons (3)</td>
+              <td>Tir + Tal + Amn</td>
+              <td>Level 15 Thorns Aura When Equipped<br>
+                +35% Increased Attack Speed<br>
+                +320-380% Damage To Demons (varies)<br>
+                +280% Damage To Undead<br>
+                +75 Poison Damage Over 5 Seconds<br>
+                7% Life Stolen Per Hit<br>
+                Prevent Monster Heal<br>
+                +5-10 To All Attributes (varies)<br>
+                +2 To Mana After Each Kill<br>
+                Reduces All Vendor Prices 15%</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-melee">
+              <td><span style="font-weight:bold;">Eternity</span></td>
+              <td>Melee Weapons (5)</td>
+              <td>Amn + Ber + Ist + Sol + Sur</td>
+              <td>Indestructible<br>
+                +260-310% Enhanced Damage (varies)<br>
+                +9 To Minimum Damage<br>
+                7% Life Stolen Per Hit<br>
+                20% Chance of Crushing Blow<br>
+                Hit Blinds Target<br>
+                Slows Target By 33%<br>
+                Regenerate Mana 16%<br>
+                Replenish Life +16<br>
+                Cannot Be Frozen<br>
+                30% Better Chance Of Getting Magic Items<br>
+                Level 8 Revive (88 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
+              <td><span style="font-weight:bold;">Faith</span></td>
+              <td>Missile Weapons (4)</td>
+              <td>Ohm + Jah + Lem + Eld</td>
+              <td>Level 12-15 Fanaticism Aura When Equipped (varies)<br>
+                +1-2 To All Skills (varies)<br>
+                +330% Enhanced Damage<br>
+                Ignore Target's Defense<br>
+                300% Bonus To Attack Rating<br>
+                +75% Damage To Undead<br>
+                +50 To Attack Rating Against Undead<br>
+                +120 Fire Damage<br>
+                All Resistances +15<br>
+                10% Reanimate As: Returned<br>
+                75% Extra Gold From Monsters</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-axe rw-type-hammer">
+              <td><span style="font-weight:bold;">Famine</span></td>
+              <td>Axes / Hammers (4)</td>
+              <td>Fal + Ohm + Ort + Jah</td>
+              <td>+30% Increased Attack Speed<br>
+                +320-370% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                Adds 180-200 Magic Damage<br>
+                Adds 50-200 Fire Damage<br>
+                Adds 51-250 Lightning Damage<br>
+                Adds 50-200 Cold Damage<br>
+                12% Life Stolen Per Hit<br>
+                Prevent Monster Heal<br>
+                +10 To Strength</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
+              <td><span style="font-weight:bold;">Fortitude</span></td>
+              <td>Weapons (4)</td>
+              <td>El + Sol + Dol + Lo</td>
+              <td>20% Chance To Cast Level 15 Chilling Armor when Struck<br>
+                +25% Faster Cast Rate<br>
+                +300% Enhanced Damage<br>
+                +9 To Minimum Damage<br>
+                +50 To Attack Rating<br>
+                20% Deadly Strike<br>
+                Hit Causes Monster To Flee 25%<br>
+                +200% Enhanced Defense<br>
+                +X To Life (Based on Character Level)*<br>
+                All Resistances +25-30 (varies)<br>
+                12% Damage Taken Goes To Mana<br>
+                +1 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-melee">
+              <td><span style="font-weight:bold;">Fury</span></td>
+              <td>Melee Weapons (3)</td>
+              <td>Jah + Gul + Eth</td>
+              <td>+209% Enhanced Damage<br>
+                40% Increased Attack Speed<br>
+                Prevent Monster Heal<br>
+                66% Chance Of Open Wounds<br>
+                33% Deadly Strike<br>
+                Ignore Target's Defense<br>
+                -25% Target Defense<br>
+                20% Bonus To Attack Rating<br>
+                6% Life Stolen Per Hit<br>
+                +5 To Frenzy (Barbarian Only)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-axe rw-type-sword">
+              <td><span style="font-weight:bold;">Grief</span></td>
+              <td>Axes / Swords (5)</td>
+              <td>Eth + Tir + Lo + Mal + Ral</td>
+              <td>35% Chance To Cast Level 15 Venom On Striking<br>
+                +30-40% Increased Attack Speed (varies)<br>
+                Damage +340-400 (varies)<br>
+                Ignore Target's Defense<br>
+                -25% Target Defense<br>
+                +(1.875 per character level) 1.875-185.625% Damage To Demons (Based on Character Level)<br>
+                Adds 5-30 Fire Damage<br>
+                -20-25% To Enemy Poison Resistance (varies)<br>
+                20% Deadly Strike<br>
+                Prevent Monster Heal<br>
+                +2 To Mana After Each Kill<br>
+                +10-15 Life After Each Kill (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
+              <td><span style="font-weight:bold;">Hand of Justice</span></td>
+              <td>Weapons (4)</td>
+              <td>Sur + Cham + Amn + Lo</td>
+              <td>100% Chance To Cast Level 36 Blaze When You Level-Up<br>
+                100% Chance To Cast Level 48 Meteor When You Die<br>
+                Level 16 Holy Fire Aura When Equipped<br>
+                +33% Increased Attack Speed<br>
+                +280-330% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                7% Life Stolen Per Hit<br>
+                -20% To Enemy Fire Resistance<br>
+                20% Deadly Strike<br>
+                Hit Blinds Target<br>
+                Freezes Target +3</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
+              <td><span style="font-weight:bold;">Harmony</span></td>
+              <td>Missile Weapons (4)</td>
+              <td>Tir + Ith + Sol + Ko</td>
+              <td>Level 10 Vigor Aura When Equipped<br>
+                +200-275% Enhanced Damage (varies)<br>
+                +9 To Minimum Damage<br>
+                +9 To Maximum Damage<br>
+                Adds 55-160 Lightning Damage<br>
+                Adds 55-160 Fire Damage<br>
+                Adds 55-160 Cold Damage<br>
+                +2-6 To Valkyrie (varies)<br>
+                +10 To Dexterity<br>
+                Regenerate Mana 20%<br>
+                +2 To Mana After Each Kill<br>
+                +2 To Light Radius<br>
+                Level 20 Revive (25 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-mace rw-type-stave" >
+              <td><span style="font-weight:bold;">Heart of the Oak</span></td>
+              <td>Maces / Staves (4)</td>
+              <td>Ko + Vex + Pul + Thul</td>
+              <td>+3 To All Skills<br>
+                +40% Faster Cast Rate<br>
+                +75% Damage To Demons<br>
+                +100 To Attack Rating Against Demons<br>
+                Adds 3-14 Cold Damage, 3 sec. Duration (Normal)<br>
+                7% Mana Stolen Per Hit<br>
+                +10 To Dexterity<br>
+                Replenish Life +20<br>
+                Increase Maximum Mana 15%<br>
+                All Resistances +30-40 (varies)<br>
+                Level 4 Oak Sage (25 Charges)<br>
+                Level 14 Raven (60 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-scepter">
+              <td><span style="font-weight:bold;">Holy Thunder</span></td>
+              <td>Scepters (4)</td>
+              <td>Eth + Ral + Ort + Tal</td>
+              <td>+60% Enhanced Damage<br>
+                -25% Target Defense<br>
+                Adds 5-30 Fire Damage<br>
+                Adds 21-110 Lightning Damage<br>
+                +75 Poison Damage Over 5 Seconds<br>
+                +10 To Maximum Damage<br>
+                Lightning Resistance +60%<br>
+                +5 To Maximum Lightning Resistance<br>
+                +3 To Holy Shock (Paladin Only)<br>
+                Level 7 Chain Lightning (60 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-melee">
+              <td><span style="font-weight:bold;">Honor</span></td>
+              <td>Melee Weapons (5)</td>
+              <td>Amn + El + Ith + Tir + Sol</td>
+              <td>+160% Enhanced Damage<br>
+                +9 To Minimum Damage<br>
+                +9 To Maximum Damage<br>
+                25% Deadly Strike<br>
+                +250 To Attack Rating<br>
+                +1 to All Skills<br>
+                7% Life Stolen Per Hit<br>
+                Replenish Life +10<br>
+                +10 To Strength<br>
+                +1 To Light Radius<br>
+                +2 To Mana After Each Kill</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-weapon">
+              <td><span style="font-weight:bold;">Hustle</span><br>(Single Player / Ladder)</td>
+              <td>Weapons (3)</td>
+              <td>Shael + Ko + Eld</td>
+              <td>5% Chance to cast level 1 Burst of Speed on striking<br>
+                Level 1 Fanaticism Aura When Equipped<br>
+                +30% Increased Attack Speed<br>
+                +180-200% Enhanced Damage (varies)<br>
+                +75% Damage to Undead<br>
+                +50 to Attack Rating against Undead<br>
+                +10 to Dexterity</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
+              <td><span style="font-weight:bold;">Ice</span></td>
+              <td>Missile Weapons (4)</td>
+              <td>Amn + Shael + Jah + Lo</td>
+              <td>100% Chance To Cast Level 40 Blizzard When You Level-up<br>
+                25% Chance To Cast Level 22 Frost Nova On Striking<br>
+                Level 18 Holy Freeze Aura When Equipped<br>
+                +20% Increased Attack Speed<br>
+                +140-210% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                +25-30% To Cold Skill Damage (varies)<br>
+                -20% To Enemy Cold Resistance<br>
+                7% Life Stolen Per Hit<br>
+                20% Deadly Strike<br>
+                3.125-309.375 Extra Gold From Monsters (Based on Character Level)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-polearm rw-type-spear rw-type-amazonspear">
+              <td><span style="font-weight:bold;">Infinity</span></td>
+              <td>Polearms / Spears / Amazon Spears (4)</td>
+              <td>Ber + Mal + Ber + Ist</td>
+              <td>50% Chance To Cast Level 20 Chain Lightning When You Kill An Enemy<br>
+                Level 12 Conviction Aura When Equipped<br>
+                +35% Faster Run/Walk<br>
+                +255-325% Enhanced Damage (varies)<br>
+                -(45-55)% To Enemy Lightning Resistance (varies)<br>
+                40% Chance of Crushing Blow<br>
+                Prevent Monster Heal<br>
+                0.5-49.5 To Vitality (Based on Character Level)<br>
+                30% Better Chance of Getting Magic Items<br>
+                Level 21 Cyclone Armor (30 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-polearm rw-type-stave rw-type-missile">
+              <td><span style="font-weight:bold;">Insight</span></td>
+              <td>Polearms / Staves / Missile Weapons (4)</td>
+              <td>Ral + Tir + Tal + Sol</td>
+              <td>Level 12-17 Meditation Aura When Equipped (varies)<br>
+                +35% Faster Cast Rate<br>
+                +200-260% Enhanced Damage (varies)<br>
+                +9 To Minimum Damage<br>
+                180-250% Bonus to Attack Rating (varies)<br>
+                Adds 5-30 Fire Damage<br>
+                +75 Poison Damage Over 5 Seconds<br>
+                +1-6 To Critical Strike (varies)<br>
+                +5 To All Attributes<br>
+                +2 To Mana After Each Kill<br>
+                23% Better Chance of Getting Magic Items</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-scepter rw-type-sword">
+              <td><span style="font-weight:bold;">King's Grace</span></td>
+              <td>Scepters / Swords (3)</td>
+              <td>Amn + Ral + Thul</td>
+              <td>+100% Enhanced Damage<br>
+                +100% Damage To Demons<br>
+                +50% Damage To Undead<br>
+                Adds 5-30 Fire Damage<br>
+                Adds 3-14 Cold Damage - 3 Second Duration<br>
+                +150 To Attack Rating<br>
+                +100 To Attack Rating Against Demons<br>
+                +100 To Attack Rating Against Undead<br>
+                7% Life Stolen Per Hit</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-axe rw-type-sword">
+              <td><span style="font-weight:bold;">Kingslayer</span></td>
+              <td>Axes / Swords (4)</td>
+              <td>Mal + Um + Gul + Fal</td>
+              <td>+30% Increased Attack Speed<br>
+                +230-270% Enhanced Damage (varies)<br>
+                -25% Target Defense<br>
+                20% Bonus To Attack Rating<br>
+                33% Chance of Crushing Blow<br>
+                50% Chance of Open Wounds<br>
+                +1 To Vengeance<br>
+                Prevent Monster Heal<br>
+                +10 To Strength<br>
+                40% Extra Gold From Monsters</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-axes rw-type-hammer rw-type-sword">
+              <td><span style="font-weight:bold;">Last Wish</span></td>
+              <td>Axes / Hammers / Swords (6)</td>
+              <td>Jah + Mal + Jah + Sur + Jah + Ber</td>
+              <td>6% Chance To Cast Level 11 Fade When Struck<br>
+                10% Chance To Cast Level 18 Life Tap On Striking<br>
+                20% Chance To Cast Level 20 Charged Bolt On Attack<br>
+                Level 17 Might Aura When Equipped<br>
+                +330-375% Enhanced Damage (varies)<br>
+                Ignore Target's Defense<br>
+                60-70% Chance of Crushing Blow (varies)<br>
+                Prevent Monster Heal<br>
+                Hit Blinds Target<br>
+                +(0.5 per character level) 0.5-49.5% Chance of Getting Magic Items (Based on Character Level)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-hammer rw-type-scepter rw-type-sword">
+              <td><span style="font-weight:bold;">Lawbringer</span></td>
+              <td>Hammers / Scepters / Swords (3)</td>
+              <td>Amn + Lem + Ko</td>
+              <td>20% Chance To Cast Level 15 Decrepify On Striking<br>
+                Level 16-18 Sanctuary Aura When Equipped (varies)<br>
+                -50% Target Defense<br>
+                Adds 150-210 Fire Damage<br>
+                Adds 130-180 Cold Damage<br>
+                7% Life Stolen Per Hit<br>
+                Slain Monsters Rest In Peace<br>
+                +200-250 Defense Vs. Missile (varies)<br>
+                +10 To Dexterity<br>
+                75% Extra Gold From Monsters</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-stave">
+              <td><span style="font-weight:bold;">Leaf</span></td>
+              <td>Staves (2)</td>
+              <td>Tir + Ral</td>
+              <td>Adds 5-30 Fire Damage<br>
+                +3 To Fire Skills<br>
+                +3 To Fire Bolt (Sorceress Only)<br>
+                +3 To Inferno (Sorceress Only)<br>
+                +3 To Warmth (Sorceress Only)<br>
+                +2 To Mana After Each Kill<br>
+                + (2 Per Character Level) +2-198 To Defense (Based On Character Level)<br>
+                Cold Resist +33%</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-melee">
+              <td><span style="font-weight:bold;">Malice</span></td>
+              <td>Melee Weapons (3)</td>
+              <td>Ith + El + Eth</td>
+              <td>+33% Enhanced Damage<br>
+                +9 To Maximum Damage<br>
+                100% Chance Of Open Wounds<br>
+                -25% Target Defense<br>
+                -100 To Monster Defense Per Hit<br>
+                Prevent Monster Heal<br>
+                +50 To Attack Rating<br>
+                Drain Life -5</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-missile">
+              <td><span style="font-weight:bold;">Melody</span></td>
+              <td>Missile Weapons (3)</td>
+              <td>Shael + Ko + Nef</td>
+              <td>+50% Enhanced Damage<br>
+                +300% Damage To Undead<br>
+                +3 To Bow and Crossbow Skills (Amazon Only)<br>
+                +3 To Critical Strike (Amazon Only)<br>
+                +3 To Dodge (Amazon Only)<br>
+                +3 To Slow Missiles (Amazon Only)<br>
+                20% Increased Attack Speed<br>
+                +10 To Dexterity<br>
+                Knockback</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-stave">
+              <td><span style="font-weight:bold;">Memory</span></td>
+              <td>Staves (4)</td>
+              <td>Lum + Io + Sol + Eth</td>
+              <td>+3 to Sorceress Skill Levels<br>
+                33% Faster Cast Rate<br>
+                Increase Maximum Mana 20%<br>
+                +3 Energy Shield (Sorceress Only)<br>
+                +2 Static Field (Sorceress Only)<br>
+                +10 To Energy<br>
+                +10 To Vitality<br>
+                +9 To Minimum Damage<br>
+                -25% Target Defense<br>
+                Magic Damage Reduced By 7<br>
+                +50% Enhanced Defense</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-missile">
+              <td><span style="font-weight:bold;">Mist</span></td>
+              <td>Missile Weaopns (5)</td>
+              <td>Cham + Shael + Gul + Thul + Ith</td>
+              <td>Level 8-12 Concentration Aura When Equipped (varies)<br>
+                +3 to All Skills<br>
+                +20% Increased Attack Speed<br>
+                +100% Piercing Attack<br>
+                +325-375% Enhanced Damage (varies)<br>
+                +9 to Maximum Damage<br>
+                20% Bonus to Attack Rating<br>
+                Adds 3-14 Cold Damage<br>
+                Freezes Target +3<br>
+                +24 Vitality<br>
+                All Resistances +40</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw">
+              <td><span style="font-weight:bold;">Mosaic</span><br>(Single Player / Ladder)</td>
+              <td>Claws (3)</td>
+              <td>Mal + Gul + Amn</td>
+              <td>+50% chance for finishing moves to not consume charges<br>
+                When a finisher is executed this way, it now refreshes the expiration timer of the stack<br>
+                +2 to Martial Arts (Assassin only)<br>
+                +20% Increased Attack Speed<br>
+                +200-250% Enhanced Damage (varies)<br>
+                +20% Bonus to Attack Rating<br>
+                7% Life Stolen Per Hit<br>
+                +8-15% to Cold Skill Damage (varies)<br>
+                +8-15% to Lightning Skill Damage (varies)<br>
+                +8-15% to Fire Skill Damage (varies)<br>
+                Adds 3-14 Cold Damage<br>
+                Prevent Monster Heal</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-axe rw-type-mace rw-type-sword">
+              <td><span style="font-weight:bold;">Oath</span></td>
+              <td>Axes / Maces / Swords (4)</td>
+              <td>Shael + Pul + Mal + Lum</td>
+              <td>30% Chance To Cast Level 20 Bone Spirit On Striking<br>
+                Indestructible<br>
+                +50% Increased Attack Speed<br>
+                +210-340% Enhanced Damage (varies)<br>
+                +75% Damage To Demons<br>
+                +100 To Attack Rating Against Demons<br>
+                Prevent Monster Heal<br>
+                +10 To Energy<br>
+                +10-15 Magic Absorb (varies)<br>
+                Level 16 Heart Of Wolverine (20 Charges)<br>
+                Level 17 Iron Golem (14 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-5 rw-type-polearm rw-type-spear rw-type-amazonspear">
+              <td><span style="font-weight:bold;">Obedience</span></td>
+              <td>Polearms / Spears / Amazon Spears (5)</td>
+              <td>Hel + Ko + Thul + Eth + Fal</td>
+              <td>30% Chance To Cast Level 21 Enchant When You Kill An Enemy<br>
+                40% Faster Hit Recovery<br>
+                +370% Enhanced Damage<br>
+                -25% Target Defense<br>
+                Adds 3-14 Cold Damage 3 Second Duration (Normal)<br>
+                -25% To Enemy Fire Resistance<br>
+                40% Chance of Crushing Blow<br>
+                +200-300 Defense (varies)<br>
+                +10 To Strength<br>
+                +10 To Dexterity<br>
+                All Resistances +20-30 (varies)<br>
+                Requirements -20%</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-stave">
+              <td><span style="font-weight:bold;">Obsession</span></td>
+              <td>Staves (6)</td>
+              <td>Zod + Ist + Lem + Lum + Io + Nef</td>
+              <td>Indestructable<br>
+                24% Chance to cast level 10 Weaken when struck<br>
+                +4 to All Skills<br>
+                +65% Faster Cast Rate<br>
+                +60% Faster Hit Recovery<br>
+                Knockback<br>
+                +10 to Vitality<br>
+                +10 to Energy<br>
+                Increase Maximum Life 15-25% (varies)<br>
+                Regenerate Mana +15-30% (varies)<br>
+                All Resistances 60-70 (varies)<br>
+                75% Extra Gold from Monsters<br>
+                30% Better Chance of Getting Magic Items</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
+              <td><span style="font-weight:bold;">Passion</span></td>
+              <td>Weapons (4)</td>
+              <td>Dol + Ort + Eld + Lem</td>
+              <td>+25% Increased Attack Speed<br>
+                +160-210% Enhanced Damage (varies)<br>
+                50-80% Bonus To Attack Rating (varies)<br>
+                +75% Damage To Undead<br>
+                +50 To Attack Rating Against Undead<br>
+                Adds 1-50 Lightning Damage<br>
+                +1 To Berserk<br>
+                +1 To Zeal<br>
+                Hit Blinds Target +10<br>
+                Hit Causes Monster To Flee 25%<br>
+                75% Extra Gold From Monsters<br>
+                Level 3 Heart of Wolverine (12 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw">
+              <td><span style="font-weight:bold;">Pattern</span></td>
+              <td>Claws (3)</td>
+              <td>Tal + Ort + Thul</td>
+              <td>+30% Faster Block Rate<br>
+                +40-80% Enhanced Damage (varies)<br>
+                10% Bonus to Attack Rating<br>
+                Adds 17-62 Fire Damage<br>
+                Adds 1-50 Lightning Damage<br>
+                Adds 3-14 Cold Damage<br>
+                +75 Poison Damage Over 5 Seconds<br>
+                +6 to Strength<br>
+                +6 to Dexterity<br>
+                All Resistances +15</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-weapon">
+              <td><span style="font-weight:bold;">Phoenix</span></td>
+              <td>Weapons (4)</td>
+              <td>Vex + Vex + Lo + Jah</td>
+              <td>100% Chance To Cast level 40 Blaze When You Level-up<br>
+                40% Chance To Cast Level 22 Firestorm On Striking<br>
+                Level 10-15 Redemption Aura When Equipped (varies)<br>
+                +350-400% Enhanced Damage (varies)<br>
+                Ignores Target's Defense<br>
+                14% Mana Stolen Per Hit<br>
+                -28% To Enemy Fire Resistance<br>
+                20% Deadly Strike<br>
+                +350-400 Defense Vs. Missile (varies)<br>
+                +15-21 Fire Absorb (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-claw rw-type-dagger rw-type-sword">
+              <td><span style="font-weight:bold;">Plague</span></td>
+              <td>Claws / Daggers / Swords (3)</td>
+              <td>Cham + Shael + Um</td>
+              <td>20% Chance to cast level 12 Lower Resist when struck<br>
+                25% Chance to cast level 15 Poison Nova on striking<br>
+                Level 13-17 Cleansing Aura When Equipped (varies)<br>
+                +1-2 to All Skills (varies)<br>
+                20% Increased Attack Speed<br>
+                +220-320% Enhanced Damage (varies)<br>
+                -23% To Enemy Poison Resistance<br>
+                0.3% (0-29.7) Deadly Strike (Based on Character Level)<br>
+                +25% Chance of Open Wounds<br>
+                Freezes Target +3</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-polearm rw-type-spear rw-type-amazonspear">
+              <td><span style="font-weight:bold;">Pride</span></td>
+              <td>Polearms / Spears / Amazon Spears (4)</td>
+              <td>Cham + Sur + Io + Lo</td>
+              <td>25% Chance To Cast Level 17 Fire Wall When Struck<br>
+                Level 16-20 Concentration Aura When Equipped (varies)<br>
+                260-300% Bonus To Attack Rating (varies)<br>
+                +1-99% Damage To Demons (Based on Character Level)<br>
+                Adds 50-280 Lightning Damage<br>
+                20% Deadly Strike<br>
+                Hit Blinds Target<br>
+                Freezes Target +3<br>
+                +10 To Vitality<br>
+                Replenish Life +8<br>
+                1.875-185.625% Extra Gold From Monsters (Based on Character Level)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-scepter rw-type-polearm">
+              <td><span style="font-weight:bold;">Rift</span></td>
+              <td>Scepters / Polearms (4)</td>
+              <td>Hel + Ko + Lem + Gul</td>
+              <td>20% Chance To Cast Level 16 Tornado On Striking<br>
+                16% Chance To Cast Level 21 Frozen Orb On Attack<br>
+                20% Bonus To Attack Rating<br>
+                Adds 160-250 Magic Damage<br>
+                Adds 60-180 Fire Damage<br>
+                +5-10 To All Stats (varies)<br>
+                +10 To Dexterity<br>
+                38% Damage Taken Goes To Mana<br>
+                75% Extra Gold From Monsters<br>
+                Level 15 Iron Maiden (40 Charges)<br>
+                Requirements -20% </td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-weaopn">
+              <td><span style="font-weight:bold;">Silence</span></td>
+              <td>Weapons (6)</td>
+              <td>Dol + Eld + Hel + Ist + Tir + Vex</td>
+              <td>200% Enhanced Damage<br>
+                +75% Damage To Undead<br>
+                Requirements -20%<br>
+                20% Increased Attack Speed<br>
+                +50 To Attack Rating Against Undead<br>
+                +2 To All Skills<br>
+                All Resistances +75<br>
+                20% Faster Hit Recovery<br>
+                11% Mana Stolen Per Hit<br>
+                Hit Causes Monster To Flee 25%<br>
+                Hit Blinds Target +33<br>
+                +2 To Mana After Each Kill<br>
+                30% Better Chance Of Getting Magic Items</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-sword">
+              <td><span style="font-weight:bold;">Spirit</span></td>
+              <td>Swords (4)</td>
+              <td>Tal + Thul + Ort + Amn</td>
+              <td>+2 To All Skills<br>
+                +25-35% Faster Cast Rate (varies)<br>
+                +55% Faster Hit Recovery<br>
+                Adds 1-50 Lightning Damage<br>
+                Adds 3-14 Cold Damage 3 Second Duration (Normal)<br>
+                +75 Poison Damage Over 5 Seconds<br>
+                7% Life Stolen Per Hit<br>
+                +250 Defense Vs. Missile<br>
+                +22 To Vitality<br>
+                +89-112 To Mana (varies)<br>
+                +3-8 Magic Absorb (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-axe rw-type-mace rw-type-sword">
+              <td><span style="font-weight:bold;">Steel</span></td>
+              <td>Axes / Maces / Swords (2)</td>
+              <td>Tir + El</td>
+              <td>20% Enhanced Damage<br>
+                +3 To Minimum Damage<br>
+                +3 To Maximum Damage<br>
+                +50 To Attack Rating<br>
+                50% Chance Of Open Wounds<br>
+                25% Increased Attack Speed<br>
+                +2 To Mana After Each Kill<br>
+                +1 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-melee">
+              <td><span style="font-weight:bold;">Strength</span></td>
+              <td>Melee Weapons (2)</td>
+              <td>Amn + Tir</td>
+              <td>35% Enhanced Damage<br>
+                25% Chance Of Crushing Blow<br>
+                7% Life Stolen Per Hit<br>
+                +2 To Mana After Each Kill<br>
+                +20 To Strength<br>
+                +10 To Vitality</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-6 rw-type-sword">
+              <td><span style="font-weight:bold;">Unbending Will</span></td>
+              <td>Swords (6)</td>
+              <td>Fal + Io + Ith + Eld + El + Hel</td>
+              <td>18% Chance to cast level 18 Taunt on striking<br>
+                +3 to Combat Skills (Barbarian Only)<br>
+                +20-30% Increased Attack Speed<br>
+                +300-350% Enhanced Damage (varies)<br>
+                +9 to Maximum Damage<br>
+                +50 to Attack Rating<br>
+                +75% Damage to Undead<br>
+                +50 Attack Rating Against Undead<br>
+                8-10% Life Stolen Per Hit (varies)<br>
+                Prevent Monster Heal<br>
+                +10 to Strength<br>
+                +10 to Vitality<br>
+                Damage Reduced by 8<br>
+                +1 Light Radius<br>
+                Requirements -20%</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-3 rw-type-weapon">
+              <td><span style="font-weight:bold;">Venom</span></td>
+              <td>Weapons (3)</td>
+              <td>Tal + Dol + Mal</td>
+              <td>Hit Causes Monster To Flee 25%<br>
+                Prevent Monster Heal<br>
+                Ignore Target's Defense<br>
+                7% Mana Stolen Per Hit<br>
+                Level 15 Poison Explosion (27 Charges)<br>
+                Level 13 Poison Nova (11 Charges)<br>
+                +273 Poison Damage Over 6 seconds</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-mace rw-type-sword">
+              <td><span style="font-weight:bold;">Voice of Reason</span></td>
+              <td>Maces / Swords (4)</td>
+              <td>Lem + Ko + El + Eld</td>
+              <td>15% Chance To Cast Level 13 Frozen Orb On Striking<br>
+                18% Chance To Cast Level 20 Ice Blast On Striking<br>
+                +50 To Attack Rating<br>
+                +220-350% Damage To Demons<br>
+                +355-375% Damage To Undead (varies)<br>
+                +50 To Attack Rating Against Undead<br>
+                Adds 100-220 Cold Damage<br>
+                -24% To Enemy Cold Resistance<br>
+                +10 To Dexterity<br>
+                Cannot Be Frozen<br>
+                75% Extra Gold From Monsters<br>
+                +1 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-wand">
+              <td><span style="font-weight:bold;">White</span></td>
+              <td>Wands (2)</td>
+              <td>Dol + Io</td>
+              <td>Hit Causes Monster To Flee 25%<br>
+                +10 To Vitality<br>
+                +3 To Poison And Bone Skills (Necromancer Only)<br>
+                +3 To Bone Armor (Necromancer Only)<br>
+                +2 To Bone Spear (Necromancer Only)<br>
+                +4 To Skeleton Mastery (Necromancer Only)<br>
+                Magic Damage Reduced By 4<br>
+                20% Faster Cast Rate<br>
+                +13 To Mana</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-melee">
+              <td><span style="font-weight:bold;">Wind</span></td>
+              <td>Melee Weapons (2)</td>
+              <td>Sur + El</td>
+              <td>10% Chance To Cast Level 9 Tornado On Striking<br>
+                +20% Faster Run/Walk<br>
+                +40% Increased Attack Speed<br>
+                +15% Faster Hit Recovery<br>
+                +120-160% Enhanced Damage (varies)<br>
+                -50% Target Defense<br>
+                +50 To Attack Rating<br>
+                Hit Blinds Target<br>
+                +1 To Light Radius<br>
+                Level 13 Twister (127 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-4 rw-type-missile">
+              <td><span style="font-weight:bold;">Wrath</span></td>
+              <td>Missile Weapons (4)</td>
+              <td>Pul + Lum + Ber + Mal</td>
+              <td>30% Chance To Cast Level 1 Decrepify On Striking<br>
+                5% Chance To Cast Level 10 Life Tap On Striking<br>
+                +375% Damage To Demons<br>
+                +100 To Attack Rating Against Demons<br>
+                +250-300% Damage To Undead (varies)<br>
+                Adds 85-120 Magic Damage<br>
+                Adds 41-240 Lightning Damage<br>
+                20% Chance of Crushing Blow<br>
+                Prevent Monster Heal<br>
+                +10 To Energy<br>
+                Cannot Be Frozen</td>
+            </tr>
+            <tr class="runeworddisplay rw-weapons rw-sockets-2 rw-type-missile">
+              <td><span style="font-weight:bold;">Zephyr</span></td>
+              <td>Missile Weapons (2)</td>
+              <td>Ort + Eth</td>
+              <td>+33% Enhanced Damage<br>
+                +66 To Attack Rating<br>
+                Adds 1-50 Lightning Damage<br>
+                -25% Target Defense<br>
+                +25 Defense<br>
+                25% Faster Run/Walk<br>
+                25% Increased Attack Speed<br>
+                7% Chance To Cast Level 1 Twister When Struck</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-runewordsbodyarmors">
+          <div id="define-rw-bodyarmors">
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-0" name="define-rw-bodyarmors-sockets" value="0" checked="checked">
+            <label for="define-rw-bodyarmors-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-2" name="define-rw-bodyarmors-sockets" value="2">
+            <label for="define-rw-bodyarmors-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-3" name="define-rw-bodyarmors-sockets" value="3">
+            <label for="define-rw-bodyarmors-sockets-3">: 3 Sockets</label>
+            <input onclick="DefineRuneWords('bodyarmors');" type="radio" id="define-rw-bodyarmors-sockets-4" name="define-rw-bodyarmors-sockets" value="4">
+            <label for="define-rw-bodyarmors-sockets-4">: 4 Sockets</label><br>
+            <input onclick="DefineRuneWords('bodyarmors');" type="checkbox" class="define-rw-bodyarmors-checkbox" id="define-rw-bodyarmors-type-classbodyarmor" value="classbodyarmor">
+            <label for="define-rw-bodyarmors-type-classbodyarmor">: Class Armor</label><br>
+          </div>
+          <table>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Bone</span></td>
+              <td>Body Armor (3)</td>
+              <td>Sol + Um + Um</td>
+              <td>15% Chance To Cast level 10 Bone Armor When Struck<br>
+                15% Chance To Cast level 10 Bone Spear On Striking<br>
+                +2 To Necromancer Skill Levels<br>
+                +100-150 To Mana (varies)<br>
+                All Resistances +30<br>
+                Damage Reduced By 7</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
+              <td><span style="font-weight:bold;">Bramble</span></td>
+              <td>Body Armor (4)</td>
+              <td>Ral + Ohm + Sur + Eth</td>
+              <td>Level 15-21 Thorns Aura When Equipped (varies)<br>
+                +50% Faster Hit Recovery<br>
+                +25-50% To Poison Skill Damage (varies)<br>
+                +300 Defense<br>
+                Increase Maximum Mana 5%<br>
+                Regenerate Mana 15%<br>
+                +5% To Maximum Cold Resist<br>
+                Fire Resist +30%<br>
+                Poison Resist +100%<br>
+                +13 Life After Each Kill<br>
+                Level 13 Spirit of Barbs (33 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
+              <td><span style="font-weight:bold;">Chains of Honor</span></td>
+              <td>Body Armor (4)</td>
+              <td>Dol + Um + Ber + Ist</td>
+              <td>+2 To All Skills<br>
+                +200% Damage To Demons<br>
+                +100% Damage To Undead<br>
+                8% Life Stolen Per Hit<br>
+                +70% Enhanced Defense<br>
+                +20 To Strength<br>
+                Replenish Life +7<br>
+                All Resistances +65<br>
+                Damage Reduced By 8%<br>
+                25% Better Chance of Getting Magic Items</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Duress</span></td>
+              <td>Body Armor (3)</td>
+              <td>Shael + Um + Thul</td>
+              <td>+40% Faster Hit Recovery<br>
+                +10-20% Enhanced Damage (varies)<br>
+                Adds 37-133 Cold Damage 2 sec. Duration (Normal)<br>
+                15% Chance of Crushing Blow<br>
+                33% Chance of Open Wounds<br>
+                +150-200% Enhanced Defense (varies)<br>
+                -20% Slower Stamina Drain<br>
+                Cold Resist +45%<br>
+                Lightning Resist +15%<br>
+                Fire Resist +15%<br>
+                Poison Resist +15%</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Dragon</span></td>
+              <td>Body Armor (3)</td>
+              <td>Sur + Lo + Sol</td>
+              <td>20% Chance to Cast Level 18 Venom When Struck<br>
+                12% Chance To Cast Level 15 Hydra On Striking<br>
+                Level 14 Holy Fire Aura When Equipped<br>
+                +360 Defense<br>
+                +230 Defense Vs. Missile<br>
+                +3-5 To All Attributes (varies)<br>
+                +0.375-37.125 To Strength (Based on Character Level)<br>
+                Increase Maximum Mana 5%<br>
+                +5% To Maximum Lightning Resist<br>
+                Damage Reduced by 7</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Enigma</span></td>
+              <td>Body Armor (3)</td>
+              <td>Jah + Ith + Ber</td>
+              <td>+2 To All Skills<br>
+                +45% Faster Run/Walk<br>
+                +1 To Teleport<br>
+                +750-775 Defense (varies)<br>
+                + (0.75 Per Character Level) +0-74 To Strength (Based On Character Level)<br>
+                Increase Maximum Life 5%<br>
+                Damage Reduced By 8%<br>
+                +14 Life After Each Kill<br>
+                15% Damage Taken Goes To Mana<br>
+                + (1 Per Character Level) +1-99% Better Chance of Getting Magic Items (Based On Character Level)</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Enlightenment</span></td>
+              <td>Body Armor (3)</td>
+              <td>Pul + Ral + Sol</td>
+              <td>5% Chance To Cast Level 15 Blaze When Struck<br>
+                5% Chance To Cast level 15 Fire Ball On Striking<br>
+                +2 To Sorceress Skill Levels<br>
+                +1 To Warmth<br>
+                +30% Enhanced Defense<br>
+                Fire Resist +30%<br>
+                Damage Reduced By 7</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
+              <td><span style="font-weight:bold;">Fortitude</span></td>
+              <td>Body Armor (4)</td>
+              <td>El + Sol + Dol + Lo</td>
+              <td>20% Chance To Cast Level 15 Chilling Armor when Struck<br>
+                +25% Faster Cast Rate<br>
+                +300% Enhanced Damage<br>
+                +9 To Minimum Damage<br>
+                +50 To Attack Rating<br>
+                20% Deadly Strike<br>
+                Hit Causes Monster To Flee 25%<br>
+                +200% Enhanced Defense<br>
+                +X To Life (Based on Character Level)*<br>
+                All Resistances +25-30 (varies)<br>
+                12% Damage Taken Goes To Mana<br>
+                +1 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Gloom</span></td>
+              <td>Body Armor (3)</td>
+              <td>Fal + Um + Pul</td>
+              <td>15% Chance To Cast Level 3 Dim Vision When Struck<br>
+              +10% Faster Hit Recovery<br>
+              +200-260% Enhanced Defense (varies)<br>
+              +10 To Strength<br>
+              All Resistances +45<br>
+              Half Freeze Duration<br>
+              5% Damage Taken Goes To Mana<br>
+              -3 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Hustle</span><br>(Single Player / Ladder)</td>
+              <td>Body Armor (3)</td>
+              <td>Shael + Ko + Eld</td>
+              <td>+65% Faster Run/Walk<br>
+                +40% Increased Attack Speed<br>
+                +20% Faster Hit Recovery<br>
+                +6 to Evade<br>
+                +10 to Dexterity<br>
+                50% Slower Stamina Drain<br>
+                All Resistances +10</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Lionheart</span></td>
+              <td>Body Armor (3)</td>
+              <td>Hel + Lum + Fal</td>
+              <td>+20% Enhanced Damage<br>
+                Requirements -15%<br>
+                +25 To Strength<br>
+                +10 To Energy<br>
+                +20 To Vitality<br>
+                +15 To Dexterity<br>
+                +50 To Life<br>
+                All Resistances +30</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Myth</span></td>
+              <td>Body Armor (3)</td>
+              <td>Hel + Amn + Nef</td>
+              <td>3% Chance To Cast Level 1 Howl When Struck<br>
+                10% Chance To Cast Level 1 Taunt On Striking<br>
+                +2 To Barbarian Skill Levels<br>
+                +30 Defense Vs. Missile<br>
+                Replenish Life +10<br>
+                Attacker Takes Damage of 14<br>
+                Requirements -15%</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Peace</span></td>
+              <td>Body Armor (3)</td>
+              <td>Shael + Thul + Amn</td>
+              <td>4% Chance To Cast Level 5 Slow Missiles When Struck<br>
+                2% Chance To Cast level 15 Valkyrie On Striking<br>
+                +2 To Amazon Skill Levels<br>
+                +20% Faster Hit Recovery<br>
+                +2 To Critical Strike<br>
+                Cold Resist +30%<br>
+                Attacker Takes Damage of 14</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Principle</span></td>
+              <td>Body Armor (3)</td>
+              <td>Ral + Gul + Eld</td>
+              <td>100% Chance To Cast Level 5 Holy Bolt On Striking<br>
+                +2 To Paladin Skill Levels<br>
+                +50% Damage to Undead<br>
+                +100-150 To Life (varies)<br>
+                15% Slower Stamina Drain<br>
+                +5% To Maximum Poison Resist<br>
+                Fire Resist +30%</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-2">
+              <td><span style="font-weight:bold;">Prudence</span></td>
+              <td>Body Armor (2)</td>
+              <td>Mal + Tir</td>
+              <td>+25% Faster Hit Recovery<br>
+                +140-170% Enhanced Defense (varies)<br>
+                All Resistances +25-35 (varies)<br>
+                Damage Reduced by 3<br>
+                Magic Damage Reduced by 17<br>
+                +2 To Mana After Each Kill<br>
+                +1 To Light Radius<br>
+                Repairs Durability 1 In 4 Seconds</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Rain</span></td>
+              <td>Body Armor (3)</td>
+              <td>Ort + Mal + Ith</td>
+              <td>5% Chance To Cast Level 15 Cyclone Armor When Struck<br>
+                5% Chance To Cast Level 15 Twister On Striking<br>
+                +2 To Druid Skills<br>
+                +100-150 To Mana (varies)<br>
+                Lightning Resist +30%<br>
+                Magic Damage Reduced By 7<br>
+                15% Damage Taken Goes to Mana</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-2">
+              <td><span style="font-weight:bold;">Smoke</span></td>
+              <td>Body Armor (2)</td>
+              <td>Nef + Lum</td>
+              <td>+75% Enhanced Defense<br>
+                +280 Defense Vs. Missile<br>
+                All Resistances +50<br>
+                20% Faster Hit Recovery<br>
+                Level 6 Weaken (18 Charges)<br>
+                +10 To Energy<br>
+                -1 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-2">
+              <td><span style="font-weight:bold;">Stealth</span></td>
+              <td>Body Armor (2)</td>
+              <td>Tal + Eth</td>
+              <td>Magic Damage Reduced By 3<br>
+                +6 To Dexterity<br>
+                +15 To Maximum Stamina<br>
+                Poison Resist +30%<br>
+                Regenerate Mana 15%<br>
+                25% Faster Run/Walk<br>
+                25% Faster Cast Rate<br>
+                25% Faster Hit Recovery</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-4">
+              <td><span style="font-weight:bold;">Stone</span></td>
+              <td>Body Armor (4)</td>
+              <td>Shael + Um + Pul + Lum</td>
+              <td>+60% Faster Hit Recovery<br>
+                +250-290% Enhanced Defense (varies)<br>
+                +300 Defense Vs. Missile<br>
+                +16 To Strength<br>
+                +16 To Vitality<br>
+                +10 To Energy<br>
+                All Resistances +15<br>
+                Level 16 Molten Boulder (80 Charges)<br>
+                Level 16 Clay Golem (16 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3 rw-type-classbodyarmor">
+              <td><span style="font-weight:bold;">Treachery</span></td>
+              <td>Body Armor (3)</td>
+              <td>Shael + Thul + Lem</td>
+              <td>5% Chance To Cast Level 15 Fade When Struck<br>
+                25% Chance To Cast level 15 Venom On Striking<br>
+                +2 To Assassin Skills<br>
+                +45% Increased Attack Speed<br>
+                +20% Faster Hit Recovery<br>
+                Cold Resist +30%<br>
+                50% Extra Gold From Monsters</td>
+            </tr>
+            <tr class="runeworddisplay rw-bodyarmors rw-sockets-3">
+              <td><span style="font-weight:bold;">Wealth</span></td>
+              <td>Body Armor (3)</td>
+              <td>Lem + Ko + Tir</td>
+              <td>300% Extra Gold From Monsters<br>
+                100% Better Chance Of Getting Magic Items<br>
+                +2 To Mana After Each Kill<br>
+                +10 To Dexterity</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-runewordshelms">
+          <div id="define-rw-helms">
+            <input onclick="DefineRuneWords('helms');" type="radio" id="define-rw-helms-sockets-0" name="define-rw-helms-sockets" value="0" checked="checked">
+            <label for="define-rw-helms-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('helms');" type="radio" id="define-rw-helms-sockets-2" name="define-rw-helms-sockets" value="2">
+            <label for="define-rw-helms-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('helms');" type="radio" id="define-rw-helms-sockets-3" name="define-rw-helms-sockets" value="3">
+            <label for="define-rw-helms-sockets-3">: 3 Sockets</label>
+          </div>
+          <table>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Bulwark</span><br>(Single Player / Ladder)</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Sol</td>
+              <td>+20% Faster Hit Recovery<br>
+                +4-6% Life Stolen Per Hit (varies)<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Replenish Life +30<br>
+                Damage Reduced by 7<br>
+                Physical Damage Received Reduced by 10-15% (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Cure</span><br>(Single Player / Ladder)</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Tal</td>
+              <td>Level 1 Cleansing Aura when Equipped<br>
+                +20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Poison Resist +40-60% (varies)<br>
+                Poison Length Reduced by 50%</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Delirium</span></td>
+              <td>Helms (3)</td>
+              <td>Lem + Ist + Io</td>
+              <td>1% Chance To Cast Level 50 Delirium (morph) When Struck<br>
+                6% Chance To Cast Level 14 Mind Blast When Struck<br>
+                14% Chance To Cast Level 13 Terror When Struck<br>
+                11% Chance To Cast Level 18 Confuse On Striking<br>
+                +2 To All Skills<br>
+                +261 Defense<br>
+                +10 To Vitality<br>
+                50% Extra Gold From Monsters<br>
+                25% Better Chance of Getting Magic Items<br>
+                Level 17 Attract (60 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Dream</span></td>
+              <td>Helms (3)</td>
+              <td>Io + Jah + Pul</td>
+              <td>10% Chance To Cast Level 15 Confuse When Struck<br>
+                Level 15 Holy Shock Aura When Equipped<br>
+                +20-30% Faster Hit Recovery (varies)<br>
+                +30% Enhanced Defense<br>
+                +150-220 Defense (varies)<br>
+                +10 To Vitality<br>
+                Increase Maximum Life 5%<br>
+                +0.625-61.875 To Mana (Based On Character Level)<br>
+                All Resistances +5-20 (varies)<br>
+                12-25% Better Chance of Getting Magic Items (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Flickering Flame</span></td>
+              <td>Helms (3)</td>
+              <td>Nef + Pul + Vex</td>
+              <td>Level 4-8 Resist Fire Aura When Equipped (varies)<br>
+                +3 to Fire Skills<br>
+                -10-15% to Enemy Fire Resistance (varies)<br>
+                +30% Enhanced Defense<br>
+                +30 Defense vs. Missiles<br>
+                +50-75 to Mana (varies)<br>
+                Half Freeze Duration<br>
+                +5% to Maximum Fire Resist<br>
+                Poison Length Reduced by 50%</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Ground</span><br>(Single Player / Ladder)</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Ort</td>
+              <td>+20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Lightning Resist +40-60% (varies)<br>
+                Lightning Absorb +10-15% (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Hearth</span><br>(Single Player / Ladder)</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Thul</td>
+              <td>+20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Cold Resist +40-60% (varies)<br>
+                Cold Absorb +10-15% (varies)<br>
+                Cannot be Frozen</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-2">
+              <td><span style="font-weight:bold;">Lore</span></td>
+              <td>Helms (2)</td>
+              <td>Ort + Sol</td>
+              <td>+1 To All Skill Levels<br>
+                +10 To Energy<br>
+                +2 To Mana After Each Kill<br>
+                Lightning Resist +30%<br>
+                Damage Reduced By 7<br>
+                +2 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Metamorphosis</span><br>(Single Player / Ladder)</td>
+              <td>Helms (3)</td>
+              <td>Io + Cham + Fal</td>
+              <td>Werewolf strikes grant Mark for 180 seconds<br>
+                Mark of the Wolf:<br>
+                - +30% Bonus to Attack Rating<br>
+                - Increase Maximum Life 40%<br>
+                Werebear strikes grant Mark for 180 seconds<br>
+                Mark of the Bear:<br>
+                - +25% Attack Speed<br>
+                - Physical Damage Received Reduced by 20%<br>
+                +5 to Shape Shifting Skills (Druid only)<br>
+                +25% Chance of Crushing Blow<br>
+                +50-80% Enhanced Defense (varies)<br>
+                +10 to Strength<br>
+                +10 to Vitality<br>
+                All Resistances +10<br>
+                Cannot be Frozen</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-2">
+              <td><span style="font-weight:bold;">Nadir</span></td>
+              <td>Helms (2)</td>
+              <td>Nef + Tir</td>
+              <td>+50% Enhanced Defense<br>
+                +10 Defense<br>
+                +30 Defense vs. Missile<br>
+                Level 13 Cloak of Shadows (9 Charges)<br>
+                +2 To Mana After Each Kill<br>
+                +5 To Strength<br>
+                -33% Extra Gold From Monsters<br>
+                -3 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Radiance</span></td>
+              <td>Helms (3)</td>
+              <td>Nef + Sol + Ith</td>
+              <td>+75% Enhanced Defense<br>
+                +30 Defense Vs. Missile<br>
+                +10 To Energy<br>
+                +10 To Vitality<br>
+                15% Damage Goes To Mana<br>
+                Magic Damage Reduced By 3<br>
+                +33 To Mana<br>
+                Damage Reduced By 7<br>
+                +5 To Light Radius</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Temper</span><br>(Single Player / Ladder)</td>
+              <td>Helms (3)</td>
+              <td>Shael + Io + Ral</td>
+              <td>+20% Faster Hit Recovery<br>
+                +75-100% Enhanced Defense (varies)<br>
+                +10 to Vitality<br>
+                Increase Maximum Life 5%<br>
+                Fire Resist +40-60% (varies)<br>
+                Fire Absorb +10-15% (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-helms rw-sockets-3">
+              <td><span style="font-weight:bold;">Wisdom</span></td>
+              <td>Helms (3)</td>
+              <td>Pul + Ith + Eld</td>
+              <td>+33% Piercing Attack<br>
+                +15-25% Bonus to Attack Rating (varies)<br>
+                4-8% Mana Stolen Per Hit (varies)<br>
+                +30% Enhanced Defense<br>
+                +10 to Energy<br>
+                15% Slower Stamina Drain<br>
+                Cannot Be Frozen<br>
+                +5 to Mana After Each Kill<br>
+                15% Damage Taken Goes to Mana</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-runewordsshields">
+          <div id="define-rw-shields">
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-0" name="define-rw-shields-sockets" value="0" checked="checked">
+            <label for="define-rw-shields-sockets-0">: Any Sockets</label>
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-2" name="define-rw-shields-sockets" value="2">
+            <label for="define-rw-shields-sockets-2">: 2 Sockets</label>
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-3" name="define-rw-shields-sockets" value="3">
+            <label for="define-rw-shields-sockets-3">: 3 Sockets</label>
+            <input onclick="DefineRuneWords('shields');" type="radio" id="define-rw-shields-sockets-4" name="define-rw-shields-sockets" value="4">
+            <label for="define-rw-shields-sockets-4">: 4 Sockets</label><br>
+            <input onclick="DefineRuneWords('shields');" type="checkbox" class="define-rw-shields-checkbox" id="define-rw-shields-type-paladinshields" value="paladinshields">
+            <label for="define-rw-shields-type-paladinshields">: Paladin Shields</label>
+          </div>
+          <table>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
+              <td><span style="font-weight:bold;">Ancient's Pledge</span></td>
+              <td>Shields (3)</td>
+              <td>Ral + Ort + Tal</td>
+              <td>+50% Enhanced Defense<br>
+                Cold Resist +43%<br>
+                Fire Resist +48%<br>
+                Lightning Resist +48%<br>
+                Poison Resist +48%<br>
+                10% Damage Goes To Mana</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
+              <td><span style="font-weight:bold;">Dragon</span></td>
+              <td>Shields (3)</td>
+              <td>Sur + Lo + Sol</td>
+              <td>20% Chance to Cast Level 18 Venom When Struck<br>
+                12% Chance To Cast Level 15 Hydra On Striking<br>
+                Level 14 Holy Fire Aura When Equipped<br>
+                +360 Defense<br>
+                +230 Defense Vs. Missile<br>
+                +3-5 To All Attributes (varies)<br>
+                +0.375-37.125 To Strength (Based on Character Level)<br>
+                +50 To Mana<br>
+                +5% To Maximum Lightning Resist<br>
+                Damage Reduced by 7</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
+              <td><span style="font-weight:bold;">Dream</span></td>
+              <td>Shields (3)</td>
+              <td>Io + Jah + Pul</td>
+              <td>10% Chance To Cast Level 15 Confuse When Struck<br>
+                Level 15 Holy Shock Aura When Equipped<br>
+                +20-30% Faster Hit Recovery (varies)<br>
+                +30% Enhanced Defense<br>
+                +150-220 Defense (varies)<br>
+                +10 To Vitality<br>
+                +50 To Life<br>
+                +0.625-61.875 To Mana (Based On Character Level)<br>
+                All Resistances +5-20 (varies)<br>
+                12-25% Better Chance of Getting Magic Items (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-4 rw-type-shields rw-type-paladinshields">
+              <td><span style="font-weight:bold;">Exile</span></td>
+              <td>Paladin Shields (4)</td>
+              <td>Vex + Ohm + Ist + Dol</td>
+              <td>15% Chance To Cast Level 5 Life Tap On Striking<br>
+                Level 13-16 Defiance Aura When Equipped (varies)<br>
+                +2 To Offensive Auras (Paladin Only)<br>
+                +30% Faster Block Rate<br>
+                Freezes Target<br>
+                +220-260% Enhanced Defense (varies)<br>
+                Replenish Life +7<br>
+                +5% To Maximum Cold Resist<br>
+                +5% To Maximum Fire Resist<br>
+                25% Better Chance Of Getting Magic Items<br>
+                Repairs 1 Durability in 4 Seconds</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-4 rw-type-shields">
+              <td><span style="font-weight:bold;">Phoenix</span></td>
+              <td>Shields (4)</td>
+              <td>Vex + Vex + Lo + Jah</td> 
+              <td>100% Chance To Cast level 40 Blaze When You Level-up<br>
+                40% Chance To Cast Level 22 Firestorm On Striking<br>
+                Level 10-15 Redemption Aura When Equipped (varies)<br>
+                +350-400 Defense Vs. Missile (varies)<br>
+                +350-400% Enhanced Damage (varies)<br>
+                -28% To Enemy Fire Resistance<br>
+                +50 To Life<br>
+                +5% To Maximum Lightning Resist<br>
+                +10% To Maximum Fire Resist<br>
+                +15-21 Fire Absorb (varies)</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-2 rw-type-shields">
+              <td><span style="font-weight:bold;">Rhyme</span></td>
+              <td>Shields (2)</td>
+              <td>Shael + Eth</td> 
+              <td>20% Increased Chance of Blocking<br>
+                40% Faster Block Rate<br>
+                All Resistances +25<br>
+                Regenerate Mana 15%<br>
+                Cannot Be Frozen<br>
+                50% Extra Gold From Monsters<br>
+                25% Better Chance Of Getting Magic Items</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-3 rw-type-shields">
+              <td><span style="font-weight:bold;">Sanctuary</span></td>
+              <td>Shields (3)</td>
+              <td>Ko + Ko + Mal</td>
+              <td>+20% Faster Hit Recovery<br>
+                +20% Faster Block Rate<br>
+                20% Increased Chance of Blocking<br>
+                +130-160% Enhanced Defense (varies)<br>
+                +250 Defense vs. Missile<br>
+                +20 To Dexterity<br>
+                All Resistances +50-70 (varies)<br>
+                Magic Damage Reduced By 7<br>
+                Level 12 Slow Missiles (60 Charges)</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-4 rw-type-shields">
+              <td><span style="font-weight:bold;">Spirit</span></td>
+              <td>Shields (4)</td>
+              <td>Tal + Thul + Ort + Amn</td>
+              <td>+2 To All Skills<br>
+                +25-35% Faster Cast Rate (varies)<br>
+                +55% Faster Hit Recovery<br>
+                +250 Defense Vs. Missile<br>
+                +22 To Vitality<br>
+                +89-112 To Mana (varies)<br>
+                Cold Resist +35%<br>
+                Lightning Resist +35%<br>
+                Poison Resist +35%<br>
+                +3-8 Magic Absorb (varies)<br>
+                Attacker Takes Damage of 14</td>
+            </tr>
+            <tr class="runeworddisplay rw-shields rw-sockets-2 rw-type-shields">
+              <td><span style="font-weight:bold;">Splendor</span></td>
+              <td>Shields (2)</td>
+              <td>Eth + Lum</td>
+              <td>+1 To All Skills<br>
+                +10% Faster Cast Rate<br>
+                +20% Faster Block Rate<br>
+                +60-100% Enhanced Defense (varies)<br>
+                +10 To Energy<br>
+                Regenerate Mana 15%<br>
+                50% Extra Gold From Monsters<br>
+                20% Better Chance of Getting Magic Items<br>
+                +3 To Light Radius</td>
+            </tr>
+          </table>
+        </div>
+        <div class="sectiondisplay hide" id="content-cube">
+          <span style="font-weight:bold;">Rune Upgrades:</span><br>
+          3 Thul Runes + Chipped Topaz -> Amn Rune<br>
+          3 Amn Runes + Chipped Amethyst -> Sol Rune<br>
+          3 Sol Runes + Chipped Sapphire -> Shael Rune<br>
+          3 Shael Runes + Chipped Ruby -> Dol Rune<br>
+          3 Dol Runes + Chipped Emerald -> Hel Rune<br>
+          3 Hel Runes + Chipped Diamond -> Io Rune<br>
+          3 Io Runes + Flawed Topaz -> Lum Rune<br>
+          3 Lum Runes + Flawed Amethyst -> Ko Rune<br>
+          3 Ko Runes + Flawed Sapphire -> Fal Rune<br>
+          3 Fal Runes + Flawed Ruby -> Lem Rune<br>
+          3 Lem Runes + Flawed Emerald -> Pul Rune<br>
+          2 Pul Runes + Flawed Diamond -> Um Rune<br>
+          2 Um Runes + Topaz -> Mal Rune<br>
+          2 Mal Runes + Amethyst -> Ist Rune<br>
+          2 Ist Runes + Sapphire -> Gul Rune<br>
+          2 Gul Runes + Ruby -> Vex Rune<br>
+          2 Vex Runes + Emerald -> Ohm Rune<br>
+          2 Ohm Runes + Diamond -> Lo Rune<br>
+          2 Lo Runes + Flawless Topaz -> Sur Rune<br>
+          2 Sur Runes + Flawless Amethyst -> Ber Rune<br>
+          2 Ber Runes + Flawless Sapphire -> Jah Rune<br>
+          2 Jah Runes + Flawless Ruby -> Cham Rune<br>
+          2 Cham Runes + Flawless Emerald -> Zod Rune<br><br>
+          <span style="font-weight:bold;">Gear Upgrades:</span><br>
+          Rare Weapon (Normal to Exceptional): Ort Rune + Amn Rune + Perfect Sapphire<br>
+          Rare Weapon (Exceptional to Elite): Fal Rune + Um Rune + Perfect Sapphire<br>
+          Rare Armor (Normal to Exceptional): Ral Rune + Thul Rune + Perfect Amethyst<br>
+          Rare Armor (Exceptional to Elite): Ko Rune + Pul Rune + Perfect Amethyst<br>
+          Set or Unique Weapon (Normal to Exceptional): Ral Rune + Sol Rune + Perfect Emerald<br>
+          Set or Unique Weapon (Exceptional to Elite): Lum Rune + Pul Rune + Perfect Emerald<br>
+          Set or Unique Armor (Normal to Exceptional): Tal Rune + Shael Rune + Perfect Diamond<br>
+          Set or Unique Armor (Exceptional to Elite): Ko Rune + Lem Rune + Perfect Diamond<br><br>
+          <span style="font-weight:bold;">Gear Socketing:</span><br>
+          Weapon: Ral Rune + Amn Rune + Perfect Amethyst<br>
+          Body Armor: Tal Rune + Thul Rune + Perfect Topaz<br>
+          Helm: Ral Rune + Thul Rune + Perfect Sapphire<br>
+          Shield: Tal Rune + Amn Rune + Perfect Ruby<br><br>
+          <span style="font-weight:bold;">Gear Repair/Recharge:</span><br>
+          Repair Weapon: Ort Rune<br>
+          Repair Armor: Ral Rune<br>
+          Repair + Recharge Weapon: Ort Rune + 1 Chipped Gem<br>
+          Repair + Recharge Armor: Ral Rune + 1 Flawed Gem
+        </div>
+        <div class="sectiondisplay hide" id="content-calc">
+          <table>
+            <tr>
+              <th colspan="2">Item Defense</th>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr>
+              <td>Ethereal Defense:</td>
+              <td><input id="calc-input-eth" type="number" value="0" min="0" max="999" onchange="CalcEth()"></td>
+            </tr>
+            <tr>
+              <td colspan="2">non-eth: <span id="calc-result-eth" style="font-weight:bold;">0</span></td>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr>
+              <td>Defense:</td>
+              <td><input id="calc-input-beforeed-defense" type="number" value="0" min="0" max="9999" onchange="CalcBeforeEd()"></td>
+            </tr>
+            <tr>
+              <td>%ED:</td>
+              <td><input id="calc-input-beforeed-ed" type="number" value="0" min="0" max="999" onchange="CalcBeforeEd()"></td>
+            </tr>
+            <tr>
+              <td colspan="2">before ed: <span id="calc-result-beforeed" style="font-weight:bold;">0</span></td>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr>
+              <td>Defense:</td>
+              <td><input id="calc-input-aftered-defense" type="number" value="0" min="0" max="9999" onchange="CalcAfterEd()"></td>
+            </tr>
+            <tr>
+              <td>%ED:</td>
+              <td><input id="calc-input-aftered-ed" type="number" value="0" min="0" max="999" onchange="CalcAfterEd()"></td>
+            </tr>
+            <tr>
+              <td colspan="2">after ed: <span id="calc-result-aftered" style="font-weight:bold;">0</span></td>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr>
+              <th colspan="2">Affix Level</th>
+            </tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr>
+              <td>ilvl:</td>
+              <td><input id="calc-input-affix-ilvl" type="number" value="0" min="0" max="99" onchange="CalcAffixLevel()"></td>
+            </tr>
+            <tr>
+              <td>qlvl:</td>
+              <td><input id="calc-input-affix-qlvl" type="number" value="0" min="0" max="99"  onchange="CalcAffixLevel()"></td>
+            </tr>
+            <tr>
+              <td colspan="2">affix lvl: <span id="calc-result-affix" style="font-weight:bold;">0</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="notes">
+        <div id="notes-left"></div>
+        <div id="notes-middle">
+          <div class="sectiondisplay hide" id="notes-breakpoints">
+            <p>*1H swinging weapons are: 1-handed axes, 1-handed maces, 1-handed swords, 2-handed swords wielded in one hand, throwing axes, orbs, scepters and wands.<br>
+            Source: <a target="_blank" href="https://diablo2.diablowiki.net/Breakpoints">Diablo 2 Wiki</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-craftingitem">
+            <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br>
+            **Rods are: scepters, staves and wands.<br>
+            Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-craftingrune">
+            <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.<br>
+            **Rods are: scepters, staves and wands.<br>
+            Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordsweapons">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordsbodyarmors">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordshelms">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-runewordsshields">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/runewords.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-cube">
+            <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/cube.shtml">The Arreat Summit</a></p>
+          </div>
+          <div class="sectiondisplay hide" id="notes-calc">
+            <p></p>
+          </div>
+        </div>
+        <div id="notes-right"></div>
+      </div>
+    </div>
+  </body>
+</html>
+
