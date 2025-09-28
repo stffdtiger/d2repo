@@ -3130,50 +3130,58 @@
             <tr>
               <th colspan="2">Item Defense</th>
             </tr>
-            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr><td colspan="2"><hr></td></tr>
+            <tr>
+              <td>Non-Ethereal Defense:</td>
+              <td><input class="calcinput" id="calc-input-eth" type="number" value="0" min="0" max="999" onchange="CalcEth()"></td>
+            </tr>
+            <tr>
+              <td colspan="2">eth: <span id="calc-result-eth" style="font-weight:bold;">0</span></td>
+            </tr>
+            <tr><td colspan="2"><hr></td></tr>
             <tr>
               <td>Ethereal Defense:</td>
-              <td><input id="calc-input-eth" type="number" value="0" min="0" max="999" onchange="CalcEth()"></td>
+              <td><input class="calcinput" id="calc-input-noneth" type="number" value="0" min="0" max="999" onchange="CalcNonEth()"></td>
             </tr>
             <tr>
-              <td colspan="2">non-eth: <span id="calc-result-eth" style="font-weight:bold;">0</span></td>
+              <td colspan="2">non-eth: <span id="calc-result-noneth" style="font-weight:bold;">0</span></td>
             </tr>
-            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr><td colspan="2"><hr></td></tr>
             <tr>
               <td>Defense:</td>
-              <td><input id="calc-input-beforeed-defense" type="number" value="0" min="0" max="9999" onchange="CalcBeforeEd()"></td>
+              <td><input class="calcinput" id="calc-input-beforeed-defense" type="number" value="0" min="0" max="9999" onchange="CalcBeforeEd()"></td>
             </tr>
             <tr>
               <td>%ED:</td>
-              <td><input id="calc-input-beforeed-ed" type="number" value="0" min="0" max="999" onchange="CalcBeforeEd()"></td>
+              <td><input class="calcinput" id="calc-input-beforeed-ed" type="number" value="0" min="0" max="999" onchange="CalcBeforeEd()"></td>
             </tr>
             <tr>
               <td colspan="2">before ed: <span id="calc-result-beforeed" style="font-weight:bold;">0</span></td>
             </tr>
-            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr><td colspan="2"><hr></td></tr>
             <tr>
               <td>Defense:</td>
-              <td><input id="calc-input-aftered-defense" type="number" value="0" min="0" max="9999" onchange="CalcAfterEd()"></td>
+              <td><input class="calcinput" id="calc-input-aftered-defense" type="number" value="0" min="0" max="9999" onchange="CalcAfterEd()"></td>
             </tr>
             <tr>
               <td>%ED:</td>
-              <td><input id="calc-input-aftered-ed" type="number" value="0" min="0" max="999" onchange="CalcAfterEd()"></td>
+              <td><input class="calcinput" id="calc-input-aftered-ed" type="number" value="0" min="0" max="999" onchange="CalcAfterEd()"></td>
             </tr>
             <tr>
               <td colspan="2">after ed: <span id="calc-result-aftered" style="font-weight:bold;">0</span></td>
             </tr>
-            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr><td colspan="2"><hr></td></tr>
             <tr>
               <th colspan="2">Affix Level</th>
             </tr>
-            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr><td colspan="2"><hr></td></tr>
             <tr>
               <td>ilvl:</td>
-              <td><input id="calc-input-affix-ilvl" type="number" value="0" min="0" max="99" onchange="CalcAffixLevel()"></td>
+              <td><input class="calcinput" id="calc-input-affix-ilvl" type="number" value="0" min="0" max="99" onchange="CalcAffixLevel()"></td>
             </tr>
             <tr>
               <td>qlvl:</td>
-              <td><input id="calc-input-affix-qlvl" type="number" value="0" min="0" max="99"  onchange="CalcAffixLevel()"></td>
+              <td><input class="calcinput" id="calc-input-affix-qlvl" type="number" value="0" min="0" max="99"  onchange="CalcAffixLevel()"></td>
             </tr>
             <tr>
               <td colspan="2">affix lvl: <span id="calc-result-affix" style="font-weight:bold;">0</span></td>

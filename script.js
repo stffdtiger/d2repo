@@ -68,14 +68,26 @@ function DefineRuneWords(group) {
 function CalcEth() {
   var def = parseInt(document.getElementById("calc-input-eth").value);
   var result;
+  result = def * 1.5;
+  result = Math.floor(result);
+  if (isNaN(result)) {
+    document.getElementById("calc-result-eth").innerHTML = "error!";
+  } else {
+    document.getElementById("calc-result-eth").innerHTML = result;
+  }
+}
+
+function CalcNonEth() {
+  var def = parseInt(document.getElementById("calc-input-noneth").value);
+  var result;
   result = def * (100 / 150);
   if (result != Math.floor(result)) {
     result = Math.floor(result) + 1;
   }
   if (isNaN(result)) {
-    document.getElementById("calc-result-eth").innerHTML = "0";
+    document.getElementById("calc-result-noneth").innerHTML = "error!";
   } else {
-    document.getElementById("calc-result-eth").innerHTML = result;
+    document.getElementById("calc-result-noneth").innerHTML = result;
   }
 }
 
@@ -88,7 +100,7 @@ function CalcBeforeEd() {
     result = Math.floor(result) + 1;
   }
   if (isNaN(result)) {
-    document.getElementById("calc-result-beforeed").innerHTML = "0";
+    document.getElementById("calc-result-beforeed").innerHTML = "error!";
   } else {
     document.getElementById("calc-result-beforeed").innerHTML = result;
   }
@@ -103,7 +115,7 @@ function CalcAfterEd() {
     result = Math.floor(result);
   }
   if (isNaN(result)) {
-    document.getElementById("calc-result-aftered").innerHTML = "0";
+    document.getElementById("calc-result-aftered").innerHTML = "error!";
   } else {
     document.getElementById("calc-result-aftered").innerHTML = result;
   }
@@ -125,7 +137,7 @@ function CalcAffixLevel() {
     result = ilvl * 2 - 99;
   }
   if (isNaN(result)) {
-    document.getElementById("calc-result-affix").innerHTML = "0";
+    document.getElementById("calc-result-affix").innerHTML = "error!";
   } else {
     document.getElementById("calc-result-affix").innerHTML = result;
   }
