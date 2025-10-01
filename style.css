@@ -35,15 +35,6 @@ button:focus { outline: none }
 td.linealign { height: 72px; }
 td.rowalign  { height: 91px }
 
-.hide      { display: none }
-.showblock { display: block }
-.calcinput { width: 100px; min-width: 100px; text-align: right }
-.highlight { color: #F1F1F1 }
-
-.dropdowncontent            { position: absolute; z-index: 3 }
-.dropdowncontent span       { display: block; width: 100px; min-width: 100px; padding: 5px 0px; background-color: #1F1F1F; cursor: pointer }
-.dropdowncontent span:hover { background-color: #A1A1A1; color: #1F1F1F; transition: 0.3s }
-
 a:link    { color: #B1B1B1 }
 a:visited { color: #B1B1B1 }
 a:hover   { color: #B1B1B1 }
@@ -63,17 +54,72 @@ a:active  { color: #B1B1B1 }
   height: 40px;
   min-height: 40px;
   background-image: linear-gradient(to right, #060606, #262626, #060606);
+  position: fixed;
+  top: 0px;
   display: flex;
   justify-content: space-evenly;
   z-index: 2
 }
 
+#header-left {
+  width: 200px;
+}
+
+#header-middle {
+  width: 800px;
+  min-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+#header-right {
+  width: 200px;
+}
+
 #content {
-  flex: 1;
   width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  top: 40px;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow-y: auto
+}
+
+#content > div { height: 100% }
+
+#content-breakpoints > table   { width: 800px; min-width: 800px}
+#content-craftingitem > table  { display: inline-table }
+#content-craftingrune > table  { display: inline-table }
+#rw-weapons-display > table    { width: 1000px; min-width: 1000px }
+#rw-bodyarmors-display > table { width: 1000px; min-width: 1000px }
+#rw-helms-display > table      { width: 1000px; min-width: 1000px }
+#rw-shields-display > table    { width: 1000px; min-width: 1000px }
+#content-cube                  { text-align: left }
+
+#content-runewordsweapons tr:nth-child(even)    { background-color: #060606 }
+#content-runewordsbodyarmors tr:nth-child(even) { background-color: #060606 }
+#content-runewordshelms tr:nth-child(even)      { background-color: #060606 }
+#content-runewordsshields tr:nth-child(even)    { background-color: #060606 }
+
+#rw-weapons-display {
+  height: calc(100% - 100px);
+  overflow-y: auto
+}
+
+#rw-bodyarmors-display {
+  height: calc(100% - 100px);
+  overflow-y: auto
+}
+
+#rw-helms-display {
+  height: calc(100% - 100px);
+  overflow-y: auto
+}
+
+#rw-shields-display {
+  height: calc(100% - 100px);
   overflow-y: auto
 }
 
@@ -83,41 +129,15 @@ a:active  { color: #B1B1B1 }
   height: 60px;
   min-height: 60px;
   background-image: linear-gradient(to right, #060606, #262626, #060606);
+  position: fixed;
+  bottom: 0px;
   display: flex;
   justify-content: space-evenly;
   z-index: 1
 }
 
-#header-left {
-  width: 200px;
-  min-width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-
-#header-middle {
-  width: 800px;
-  min-width: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-
-#header-right {
-  width: 200px;
-  min-width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-
-#content::-webkit-scrollbar { display: none }
-#content { -ms-overflow-style: none; scrollbar-width: none }
-
 #notes-left {
   width: 200px;
-  min-width: 200px
 }
 
 #notes-middle {
@@ -127,20 +147,14 @@ a:active  { color: #B1B1B1 }
 
 #notes-right {
   width: 200px;
-  min-width: 200px
 }
 
-#content-breakpoints > table         { width: 800px }
-#content-craftingitem > table        { display: inline-table }
-#content-craftingrune > table        { display: inline-table }
-#content-runewordsweapons > table    { width: 1000px }
-#content-runewordsbodyarmors > table { width: 1000px }
-#content-runewordshelms > table      { width: 1000px }
-#content-runewordsshields > table    { width: 1000px }
-#content-cube                        { text-align: left }
+.hide      { display: none }
+.showblock { display: block }
+.calcinput { width: 100px; min-width: 100px; text-align: right }
+.highlight { color: #F1F1F1 }
 
-#content-runewordsweapons tr:nth-child(even)    { background-color: #060606 }
-#content-runewordsbodyarmors tr:nth-child(even) { background-color: #060606 }
-#content-runewordshelms tr:nth-child(even)      { background-color: #060606 }
-#content-runewordsshields tr:nth-child(even)    { background-color: #060606 }
+.dropdowncontent            { position: absolute; z-index: 3 }
+.dropdowncontent span       { display: block; width: 100px; min-width: 100px; padding: 5px 0px; background-color: #1F1F1F; cursor: pointer }
+.dropdowncontent span:hover { background-color: #A1A1A1; color: #1F1F1F; transition: 0.3s }
 

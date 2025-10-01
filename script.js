@@ -12,11 +12,12 @@ function ActivateSection(section) {
       elements[0].classList.remove("highlight");
       elements = document.getElementsByClassName("sectiondisplay highlight");
     }
-    document.getElementById("content-" + section).classList.add("showblock");
+    element.classList.add("showblock");
     document.getElementById("notes-" + section).classList.add("showblock");
+    if (section.indexOf("runewords") != -1) { document.getElementById("button-runewords").classList.add("highlight"); }
     document.getElementById("button-" + section).classList.add("highlight");
   }
-}
+}  
 
 function ToggleDropdownDisplay(dropdown) {
   if (dropdown == undefined) { return false; }
