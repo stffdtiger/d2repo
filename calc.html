@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Diablo II Info</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="page">
+      <div id="header">
+        <div id="header-left"></div>
+        <div id="header-middle">
+          <a href="alvl85.html"><button>Area Level 85 Zones</button></a>
+          <a href="index.html"><button>Break Points</button></a>
+          <a href="calc.html"><button class="highlight">Calculator</button></a>
+          <a href="crafting.html"><button>Crafting</button></a>
+          <a href="cube.html"><button>Cube Recipes</button></a>
+          <a href="runewords.html"><button>Rune Words</button></a>
+        </div><!-- header-middle -->
+        <div id="header-right"></div>
+      </div><!-- header -->
+      <div id="content-calc">
+        <table>
+          <tr>
+            <th colspan="2">Item Defense</th>
+          </tr>
+          <tr><td colspan="2"><hr></td></tr>
+          <tr>
+            <td>Non-Ethereal Defense:</td>
+            <td><input class="calcinput" id="calc-input-eth" type="number" value="0" min="0" max="999" onchange="CalcEth()"></td>
+          </tr>
+          <tr>
+            <td colspan="2">eth: <span id="calc-result-eth" style="font-weight:bold;">0</span></td>
+          </tr>
+          <tr><td colspan="2"><hr></td></tr>
+          <tr>
+            <td>Ethereal Defense:</td>
+            <td><input class="calcinput" id="calc-input-noneth" type="number" value="0" min="0" max="999" onchange="CalcNonEth()"></td>
+          </tr>
+          <tr>
+            <td colspan="2">non-eth: <span id="calc-result-noneth" style="font-weight:bold;">0</span></td>
+          </tr>
+          <tr><td colspan="2"><hr></td></tr>
+          <tr>
+            <td>Defense:</td>
+            <td><input class="calcinput" id="calc-input-beforeed-defense" type="number" value="0" min="0" max="9999" onchange="CalcBeforeEd()"></td>
+          </tr>
+          <tr>
+            <td>%ED:</td>
+            <td><input class="calcinput" id="calc-input-beforeed-ed" type="number" value="0" min="0" max="999" onchange="CalcBeforeEd()"></td>
+          </tr>
+          <tr>
+            <td colspan="2">before ed: <span id="calc-result-beforeed" style="font-weight:bold;">0</span></td>
+          </tr>
+          <tr><td colspan="2"><hr></td></tr>
+          <tr>
+            <td>Defense:</td>
+            <td><input class="calcinput" id="calc-input-aftered-defense" type="number" value="0" min="0" max="9999" onchange="CalcAfterEd()"></td>
+          </tr>
+          <tr>
+            <td>%ED:</td>
+            <td><input class="calcinput" id="calc-input-aftered-ed" type="number" value="0" min="0" max="999" onchange="CalcAfterEd()"></td>
+          </tr>
+          <tr>
+            <td colspan="2">after ed: <span id="calc-result-aftered" style="font-weight:bold;">0</span></td>
+          </tr>
+          <tr><td colspan="2"><hr></td></tr>
+          <tr>
+            <th colspan="2">Affix Level</th>
+          </tr>
+          <tr><td colspan="2"><hr></td></tr>
+          <tr>
+            <td>ilvl:</td>
+            <td><input class="calcinput" id="calc-input-affix-ilvl" type="number" value="0" min="0" max="99" onchange="CalcAffixLevel()"></td>
+          </tr>
+          <tr>
+            <td>qlvl:</td>
+            <td><input class="calcinput" id="calc-input-affix-qlvl" type="number" value="0" min="0" max="99"  onchange="CalcAffixLevel()"></td>
+          </tr>
+          <tr>
+            <td colspan="2">affix lvl: <span id="calc-result-affix" style="font-weight:bold;">0</span></td>
+          </tr>
+        </table>
+      </div><!-- content-calc -->
+      <div id="notes">
+        <div id="notes-left">
+          <p style="font-weight: bold">[Notes]</p>
+        </div>
+        <div id="notes-middle">
+            <p></p>
+        </div><!-- notes-middle -->
+        <div id="notes-right"></div>
+      </div><!-- notes -->
+    </div><!-- page -->
+  </body>
+</html>
+

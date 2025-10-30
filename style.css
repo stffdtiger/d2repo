@@ -50,58 +50,54 @@ a:active  { color: #B1B1B1 }
 
 #header {
   width: 100%;
-  min-width: 1200px;
   height: 40px;
   min-height: 40px;
   background-image: linear-gradient(to right, #060606, #262626, #060606);
-  position: fixed;
-  top: 0px;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   z-index: 2
 }
 
 #header-left {
-  width: 200px;
+  min-width: 325px
 }
 
 #header-middle {
-  width: 800px;
-  min-width: 800px;
+  min-width: 600px;
   display: flex;
-  justify-content: space-between;
-  align-items: center
+  align-items: center;
+  justify-content: space-between
 }
 
 #header-right {
-  width: 200px;
-}
-
-#content {
-  width: 100%;
-  height: calc(100vh - 100px);
-  position: relative;
-  top: 40px;
+  min-width: 325px;
   display: flex;
-  justify-content: center;
-  overflow-y: auto
+  align-items: center;
+  justify-content: space-evenly
 }
 
-#content > div { height: 100% }
+#content-alvl85      { width: 100%; height: 100%; display: flex; justify-content: center; overflow-y: auto }
+#content-breakpoints { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; overflow-y: auto }
+#content-calc        { width: 100%; height: 100%; display: flex; justify-content: center; overflow-y: auto }
+#content-crafting    { width: 100%; height: 100%; display: flex; justify-content: center; overflow-y: auto }
+#content-cube        { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; overflow-y: auto }
+#content-runewords   { width: 100%; height: 100%; display: flex; justify-content: center; overflow-y: auto }
 
-#content-breakpoints > table   { width: 800px; min-width: 800px}
-#content-craftingitem > table  { display: inline-table }
-#content-craftingrune > table  { display: inline-table }
+#content-breakpoints > table { width: 800px; min-width: 800px }
+
+#crafting-item > table { display: inline-table }
+#crafting-rune > table { display: inline-table }
+
 #rw-weapons-display > table    { width: 1000px; min-width: 1000px }
 #rw-bodyarmors-display > table { width: 1000px; min-width: 1000px }
 #rw-helms-display > table      { width: 1000px; min-width: 1000px }
 #rw-shields-display > table    { width: 1000px; min-width: 1000px }
-#content-cube                  { text-align: left }
 
-#content-runewordsweapons tr:nth-child(even)    { background-color: #060606 }
-#content-runewordsbodyarmors tr:nth-child(even) { background-color: #060606 }
-#content-runewordshelms tr:nth-child(even)      { background-color: #060606 }
-#content-runewordsshields tr:nth-child(even)    { background-color: #060606 }
+#runewords-weapons tr:nth-child(even)    { background-color: #060606 }
+#runewords-bodyarmors tr:nth-child(even) { background-color: #060606 }
+#runewords-helms tr:nth-child(even)      { background-color: #060606 }
+#runewords-shields tr:nth-child(even)    { background-color: #060606 }
 
 #rw-weapons-display {
   height: calc(100% - 100px);
@@ -129,15 +125,10 @@ a:active  { color: #B1B1B1 }
   height: 60px;
   min-height: 60px;
   background-image: linear-gradient(to right, #060606, #262626, #060606);
-  position: fixed;
-  bottom: 0px;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   z-index: 1
-}
-
-#notes-left {
-  width: 200px;
 }
 
 #notes-middle {
@@ -145,16 +136,13 @@ a:active  { color: #B1B1B1 }
   min-width: 1020px
 }
 
-#notes-right {
-  width: 200px;
-}
+.dropdowncontent            { position: absolute; z-index: 3 }
+.dropdowncontent span       { display: block; width: 100px; min-width: 100px; padding: 5px 0px; background-color: #1F1F1F }
+.dropdowncontent span:hover { background-color: #A1A1A1; color: #1F1F1F; transition: 0.3s }
 
-.hide      { display: none }
-.showblock { display: block }
 .calcinput { width: 100px; min-width: 100px; text-align: right }
 .highlight { color: #F1F1F1 }
 
-.dropdowncontent            { position: absolute; z-index: 3 }
-.dropdowncontent span       { display: block; width: 100px; min-width: 100px; padding: 5px 0px; background-color: #1F1F1F; cursor: pointer }
-.dropdowncontent span:hover { background-color: #A1A1A1; color: #1F1F1F; transition: 0.3s }
+.hide      { display: none }
+.showblock { display: block }
 

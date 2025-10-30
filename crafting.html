@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Diablo II Info</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="ActivateSection('crafting', 'item');">
+    <div id="page">
+      <div id="header">
+        <div id="header-left"></div>
+        <div id="header-middle">
+          <a href="alvl85.html"><button>Area Level 85 Zones</button></a>
+          <a href="index.html"><button>Break Points</button></a>
+          <a href="calc.html"><button>Calculator</button></a>
+          <a href="crafting.html"><button class="highlight">Crafting</button></a>
+          <a href="cube.html"><button>Cube Recipes</button></a>
+          <a href="runewords.html"><button>Rune Words</button></a>
+        </div><!-- header-middle -->
+        <div id="header-right">
+          <button onclick="ActivateSection('crafting', 'item');">Crafting by Item</button>
+          <button onclick="ActivateSection('crafting', 'rune');">Crafting by Rune</button>
+        </div>
+      </div><!-- header -->
+      <div id="content-crafting">
+        <div class="sectiondisplay hide" id="crafting-item">
+          <table>
+            <tr>
+              <th colspan="3">HIT POWER</th>
+            </tr>
+            <tr>
+              <th>Chain Boots</th>
+              <td>Sapphire</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Chain Gloves</th>
+              <td>Sapphire</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Heavy Belt</th>
+              <td>Sapphire</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Sapphire</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Sapphire</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)</td>
+            </tr>
+            <tr>
+              <th>Full Helm</th>
+              <td>Sapphire</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Gothic Shield</th>
+              <td>Sapphire</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Field Plate</th>
+              <td>Sapphire</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Blunt Weapon*</th>
+              <td>Sapphire</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+          </table>
+          <table id="craftingitem-bordermod">
+            <tr>
+              <th colspan="3">BLOOD</th>
+            </tr>
+            <tr>
+              <th>Light Plated Boots</th>
+              <td>Ruby</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Heavy Gloves</th>
+              <td>Ruby</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Belt</th>
+              <td>Ruby</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Ruby</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Ruby</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Helm</th>
+              <td>Ruby</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Spiked Shield</th>
+              <td>Ruby</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Plate Mail</th>
+              <td>Ruby</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Axe</th>
+              <td>Ruby</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+          </table>
+          <table id="craftingitem-bordermod">
+            <tr>
+              <th colspan="3">CASTER</th>
+            </tr>
+            <tr>
+              <th>Boots</th>
+              <td>Amethyst</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Leather Gloves</th>
+              <td>Amethyst</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Belt</th>
+              <td>Amethyst</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Amethyst</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Amethyst</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Mask</th>
+              <td>Amethyst</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Small Shield</th>
+              <td>Amethyst</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Plate</th>
+              <td>Amethyst</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Rod**</th>
+              <td>Amethyst</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+          </table>
+          <table id="craftingitem-bordermod">
+            <tr>
+              <th colspan="3">SAFETY</th>
+            </tr>
+            <tr>
+              <th>Greaves</th>
+              <td>Emerald</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Gauntlets</th>
+              <td>Emerald</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Sash</th>
+              <td>Emerald</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Emerald</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Emerald</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Crown</th>
+              <td>Emerald</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Kite Shield</th>
+              <td>Emerald</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Breast Plate</th>
+              <td>Emerald</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Spear or Javelin</th>
+              <td>Emerald</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+          </table>
+        </div><!-- crafting-item -->
+        <div class="sectiondisplay hide" id="crafting-rune">
+          <table>
+            <tr>
+              <th colspan="3">HIT POWER</th>
+            </tr>
+            <tr>
+              <th>Blunt Weapon*</th>
+              <td>Sapphire</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Field Plate</th>
+              <td>Sapphire</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(10-20)% Faster Hit Recovery<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Gothic Shield</th>
+              <td>Sapphire</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance of Blocking<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Full Helm</th>
+              <td>Sapphire</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Missiles<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Heavy Belt</th>
+              <td>Sapphire</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Damage Goes to Mana<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Chain Boots</th>
+              <td>Sapphire</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(25-50) Defense vs. Melee<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Chain Gloves</th>
+              <td>Sapphire</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Knockback<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-7)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Sapphire</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Hit Causes Monster To Flee (3-11)%<br>5% Chance To Cast Level 4 Frost Nova when Struck<br>Attacker Takes Damage of (3-10)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Sapphire</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Dexterity<br>5% Chance To Cast Level 4 Frost Nova When Struck<br>Attacker Takes Damage of (3-6)</td>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+          </table>
+          <table id="craftingrune-bordermod">
+            <tr>
+              <th colspan="3">BLOOD</th>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+            <tr>
+              <th>Heavy Gloves</th>
+              <td>Ruby</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Crushing Blow (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Light Plated Boots</th>
+              <td>Ruby</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Replenish Life +(5-10)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Spiked Shield</th>
+              <td>Ruby</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Attacker Takes Damage of (4-7)<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Belt</th>
+              <td>Ruby</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Open Wounds (5-10)%<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Helm</th>
+              <td>Ruby</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Deadly Strike<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Axe</th>
+              <td>Ruby</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(35-60)% Enhanced Damage<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Plate Mail</th>
+              <td>Ruby</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Life Per Demon Kill<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Ruby</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Run/Walk<br>(1-4)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Ruby</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Strength<br>(1-3)% Life Stolen Per Hit<br>+(10-20) To Life</td>
+            </tr>
+          </table>
+          <table id="craftingrune-bordermod">
+            <tr>
+              <th colspan="3">CASTER</th>
+            </tr>
+            <tr>
+              <th>Rod**</th>
+              <td>Amethyst</td>
+              <td>Tir</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (1-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Mask</th>
+              <td>Amethyst</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(1-4)% Mana Stolen Per Hit<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Small Shield</th>
+              <td>Amethyst</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Increased Chance Of Blocking<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Belt</th>
+              <td>Amethyst</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Light Plate</th>
+              <td>Amethyst</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Amethyst</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">(5-10)% Faster Cast Rate<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Leather Gloves</th>
+              <td>Amethyst</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-3) Mana Per Kill<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Boots</th>
+              <td>Amethyst</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">Increase Maximum Mana (2-5)%<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Amethyst</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Energy<br>Regenerate Mana (4-10)%<br>+(10-20) To Mana</td>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+          </table>
+          <table id="craftingrune-bordermod">
+            <tr>
+              <th colspan="3">SAFETY</th>
+            </tr>
+            <tr>
+              <td class="rowalign" colspan="3"></td>
+            </tr>
+            <tr>
+              <th>Kite Shield</th>
+              <td>Emerald</td>
+              <td>Nef</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Magic Resistance +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Breast Plate</th>
+              <td>Emerald</td>
+              <td>Eth</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Half Freeze Duration<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Crown</th>
+              <td>Emerald</td>
+              <td>Ith</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Lightning Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Sash</th>
+              <td>Emerald</td>
+              <td>Tal</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Poison Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Gauntlets</th>
+              <td>Emerald</td>
+              <td>Ral</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Cold Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Greaves</th>
+              <td>Emerald</td>
+              <td>Ort</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(10-30)% Enhanced Defense<br>Fire Resist +(5-10)%<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Amulet</th>
+              <td>Emerald</td>
+              <td>Thul</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-10)% Increased Chance Of Blocking<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Ring</th>
+              <td>Emerald</td>
+              <td>Amn</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(1-5) To Vitality<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+            <tr>
+              <th>Spear or Javelin</th>
+              <td>Emerald</td>
+              <td>Sol</td>
+            </tr>
+            <tr>
+              <td class="linealign" colspan="3">+(5-10)% Enhanced Defense<br>Magic Damage Reduced By (1-2)<br>Damage Reduced By (1-4)</td>
+            </tr>
+          </table>
+        </div><!-- crafting-rune -->
+      </div><!-- content-crafting -->
+      <div id="notes">
+        <div id="notes-left">
+          <p style="font-weight: bold">[Notes]</p>
+        </div>
+        <div id="notes-middle">
+          <p>*Blunt Weapons are: club, spiked club, mace, morning star, flail, war hammer, maul, great maul, scepters, staves and wands.</p>
+          <p>**Rods are: scepters, staves and wands.</p>
+          <p>Source: <a target="_blank" href="http://classic.battle.net/diablo2exp/items/crafted/hitpower.shtml">The Arreat Summit</a></p>
+        </div><!-- notes-middle -->
+        <div id="notes-right"></div>
+      </div><!-- notes -->
+    </div><!-- page -->
+  </body>
+</html>
+

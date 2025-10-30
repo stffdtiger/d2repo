@@ -1,23 +1,15 @@
-function ActivateSection(section) {
-  if (section == undefined) { return false; }
-  var element = document.getElementById("content-" + section);
+function ActivateSection(page, section) {
+  if (page == undefined || section == undefined) { return false; }
+  var element = document.getElementById(page + "-" + section);
   if (!element.classList.contains("showblock")) {
     var elements = document.getElementsByClassName("sectiondisplay showblock");
     while (elements[0]) {
       elements[0].classList.remove("showblock");
       elements = document.getElementsByClassName("sectiondisplay showblock");
     }
-    elements = document.getElementsByClassName("sectiondisplay highlight");
-    while (elements[0]) {
-      elements[0].classList.remove("highlight");
-      elements = document.getElementsByClassName("sectiondisplay highlight");
-    }
     element.classList.add("showblock");
-    document.getElementById("notes-" + section).classList.add("showblock");
-    if (section.indexOf("runewords") != -1) { document.getElementById("button-runewords").classList.add("highlight"); }
-    document.getElementById("button-" + section).classList.add("highlight");
   }
-}  
+}
 
 function ToggleDropdownDisplay(dropdown) {
   if (dropdown == undefined) { return false; }
